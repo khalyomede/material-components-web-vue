@@ -1,0 +1,46 @@
+{
+	"name": "material-components-web-vue",
+	"version": "0.1.0",
+	"description": "Material design components for Vue.js",
+	"main": "lib/index.js",
+	"repository": "https://github.com/khalyomede/material-design-components-vue",
+	"author": "Khalyomede <khalyomede@gmail.com>",
+	"license": "MIT",
+	"private": false,
+	"devDependencies": {
+		"@babel/core": "7.*",
+		"@babel/preset-env": "7.*",
+		"@babel/register": "7.*",
+		"babelify": "10.*",
+		"envify": "4.*",
+		"gulp": "4.*",
+		"gulp-autoprefixer": "6.*",
+		"gulp-bro": "1.*",
+		"gulp-clean": "0.*",
+		"gulp-clean-css": "4.*",
+		"gulp-plumber": "1.*",
+		"gulp-pug": "4.*",
+		"gulp-rename": "1.*",
+		"gulp-sass": "4.*",
+		"install": "^0.13.0",
+		"node-sass-tilde-importer": "1.*",
+		"normalize.css": "8.*",
+		"np": "5.*",
+		"prismjs": "1.*",
+		"tinyify": "2.*",
+		"vue": "2.*",
+		"vue-router": "3.*",
+		"vueify": "9.*"
+	},
+	"scripts": {
+		"build": "node extra/fix-vueify.js && gulp build",
+		"release": "np"
+	},
+	"dependencies": {
+		"material-components-web": "3.*"
+	},
+	"files": [
+		"lib",
+		"dist"
+	]
+}
