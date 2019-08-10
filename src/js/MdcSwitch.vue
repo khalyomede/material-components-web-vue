@@ -4,13 +4,12 @@
 			.mdc-switch__track
 			.mdc-switch__thumb-underlay
 				.mdc-switch__thumb
-					input#basic-switch.mdc-switch__native-control(type="checkbox" role="switch")
-		label(for="basic-switch") {{ off }} / {{ on }}
+					input.mdc-switch__native-control(type="checkbox" role="switch" :id="id" v-bind="$attrs" v-on="$listeners")
+		label(:for="id") {{ off }} / {{ on }}
 </template>
 <script>
 import { MDCSwitch } from "@material/switch";
-
-const nonEmpty = value => value.trim().length > 0;
+import nonEmpty from "../js/validator/non-empty";
 
 export default {
   props: {
@@ -26,6 +25,11 @@ export default {
     on: {
       type: String,
       default: "on",
+      validator: nonEmpty
+    },
+    id: {
+      type: String,
+      default: "12343434",
       validator: nonEmpty
     }
   },
