@@ -24,7 +24,7 @@ const docsJs = () =>
 			})
 		)
 		.pipe(dest("docs/js"))
-		.pipe(dest("docs/material-design-components-vue/js"));
+		.pipe(dest("docs/material-components-web-vue/js"));
 
 const docsHtml = () =>
 	src("src/docs/index.pug")
@@ -48,7 +48,7 @@ const docsCss = () =>
 			})
 		)
 		.pipe(dest("docs/css"))
-		.pipe(dest("docs/material-design-components-vue/css"));
+		.pipe(dest("docs/material-components-web-vue/css"));
 
 const libCss = () =>
 	src("src/css/*.sass")

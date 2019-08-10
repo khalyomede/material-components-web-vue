@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "Material design components for Vue.js",
 	"main": "lib/index.js",
-	"repository": "https://github.com/khalyomede/material-design-components-vue",
+	"repository": "https://github.com/khalyomede/material-components-web-vue",
 	"author": "Khalyomede <khalyomede@gmail.com>",
 	"license": "MIT",
 	"private": false,
