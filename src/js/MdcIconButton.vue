@@ -14,8 +14,7 @@ export default {
   props: {
     icon: {
       type: String,
-      required: true,
-      validator: nonEmpty
+      default: ""
     },
     ripple: {
       type: Boolean,
@@ -27,22 +26,18 @@ export default {
     },
     iconOn: {
       type: String,
-      required: true,
-      validator: nonEmpty
+      default: ""
     },
     iconOff: {
       type: String,
-      required: true,
-      validator: nonEmpty
+      default: ""
     },
     label: {
       type: String,
-      required: () => this.toggle,
-      validator: nonEmpty
+      default: ""
     }
   },
   mounted() {
-    console.log(this.$el);
     if (this.ripple) {
       const ripple = new MDCRipple(this.$el);
 

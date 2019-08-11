@@ -1,11 +1,11 @@
 <template lang="pug">
 	div
-		div(:class="{ 'mdc-switch': true, 'mdc-switch--checked': checked }")
+		div(ref="component" :class="{ 'mdc-switch': true, 'mdc-switch--checked': $attrs.checked }")
 			.mdc-switch__track
 			.mdc-switch__thumb-underlay
 				.mdc-switch__thumb
-					input.mdc-switch__native-control(type="checkbox" role="switch" :id="id" v-bind="$attrs" v-on="$listeners")
-		label(:for="id") {{ off }} / {{ on }}
+					input.mdc-switch__native-control(type="checkbox" role="switch" v-bind="$attrs" v-on="$listeners")
+		label(:for="$attrs.id") {{ off }} / {{ on }}
 </template>
 <script>
 import { MDCSwitch } from "@material/switch";
@@ -13,10 +13,6 @@ import nonEmpty from "../js/validator/non-empty";
 
 export default {
   props: {
-    checked: {
-      type: Boolean,
-      default: false
-    },
     off: {
       type: String,
       default: "off",
@@ -26,15 +22,14 @@ export default {
       type: String,
       default: "on",
       validator: nonEmpty
-    },
-    id: {
-      type: String,
-      default: "12343434",
-      validator: nonEmpty
     }
   },
   mounted() {
-    new MDCSwitch(document.querySelector(".mdc-switch"));
+    const component = new MDCSwitch(this.$refs.component);
+
+    if ("disabled" in this.$attrs) {
+      component.disabled = this.$attrs.disabled;
+    }
   }
 };
 </script>

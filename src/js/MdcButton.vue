@@ -32,8 +32,7 @@ export default {
     },
     icon: {
       type: String,
-      default: "",
-      validator: value => value.trim().length > 0
+      default: ""
     },
     iconDirection: {
       type: String,
