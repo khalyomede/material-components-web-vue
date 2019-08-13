@@ -1,43 +1,113 @@
 <template lang="pug">
 	div
+		mdc-top-app-bar
+			mdc-top-app-bar-title Material Components Web Vue
 		div
-			mdc-button Text
+			br
+			br
+			br
+			br
+		div Built entirely using the components showed in this documentation. 
 		div
 			br
 		div
-			mdc-button(raised) Raised
+			mdc-tab
+				mdc-tab-item(icon="desktop_mac" active) Visual
+				mdc-tab-item(icon="code") Code
+				mdc-tab-content(slot="content" v-text-center active)
+					br
+					mdc-button Text
+				mdc-tab-content(slot="content" v-text-center)
 		div
 			br
 		div
-			mdc-button(unelevated) Unelevated
+			mdc-tab
+				mdc-tab-item(icon="desktop_mac" active) Visual
+				mdc-tab-item(icon="code") Code
+				mdc-tab-content(slot="content" v-text-center active)
+					br
+					mdc-button(raised) Raised
+				mdc-tab-content(slot="content" v-text-center)
 		div
 			br
 		div
-			mdc-button(outlined) Outlined
+			mdc-tab
+				mdc-tab-item(icon="desktop_mac" active) Visual
+				mdc-tab-item(icon="code") Code
+				mdc-tab-content(slot="content" v-text-center active)
+					br
+					mdc-button(unelevated) Unelevated
+				mdc-tab-content(slot="content" v-text-center)
 		div
 			br
 		div
-			mdc-button(disabled) Disabled
+			mdc-tab
+				mdc-tab-item(icon="desktop_mac" active) Visual
+				mdc-tab-item(icon="code") Code
+				mdc-tab-content(slot="content" v-text-center active)
+					br
+					mdc-button(outlined) Outlined
+				mdc-tab-content(slot="content" v-text-center)
 		div
 			br
 		div
-			mdc-button(dense) Dense
+			mdc-tab
+				mdc-tab-item(icon="desktop_mac" active) Visual
+				mdc-tab-item(icon="code") Code
+				mdc-tab-content(slot="content" v-text-center active)
+					br
+					mdc-button(disabled) Disabled
+				mdc-tab-content(slot="content" v-text-center)
 		div
 			br
 		div
-			mdc-button(icon="favorite") Icon
+			mdc-tab
+				mdc-tab-item(icon="desktop_mac" active) Visual
+				mdc-tab-item(icon="code") Code
+				mdc-tab-content(slot="content" v-text-center active)
+					br
+					mdc-button(dense) Dense
+				mdc-tab-content(slot="content" v-text-center)
 		div
 			br
 		div
-			mdc-button(icon="favorite" icon-direction="right") Right icon
+			mdc-tab
+				mdc-tab-item(icon="desktop_mac" active) Visual
+				mdc-tab-item(icon="code") Code
+				mdc-tab-content(slot="content" v-text-center active)
+					br
+					mdc-button(icon="favorite") Icon
+				mdc-tab-content(slot="content")
 		div
 			br
 		div
-			mdc-button(:ripple="false") Without ripple
+			mdc-tab
+				mdc-tab-item(icon="desktop_mac" active) Visual
+				mdc-tab-item(icon="code") Code
+				mdc-tab-content(slot="content" v-text-center active)
+					br
+					mdc-button(icon="favorite" icon-direction="right") Right icon
+				mdc-tab-content(slot="content" v-text-center)
 		div
 			br
 		div
-			mdc-icon-button(icon="favorite")
+			mdc-tab
+				mdc-tab-item(icon="desktop_mac" active) Visual
+				mdc-tab-item(icon="code") Code
+				mdc-tab-content(slot="content" v-text-center active)
+					br
+					mdc-button(:ripple="false") Without ripple
+				mdc-tab-content(slot="content" v-text-center)
+		div
+			br
+		div
+			mdc-tab
+				mdc-tab-item(icon="desktop_mac" active) Visual
+				mdc-tab-item(icon="code") Code
+				mdc-tab-content(slot="content" v-text-center active)
+					br
+					mdc-icon-button(icon="favorite")
+				mdc-tab-content(slot="content" v-text-center)
 		div
 			br
 		div
@@ -76,6 +146,9 @@
 				mdc-tab-item(text="Favorites" icon="favorite" active)
 				mdc-tab-item(text="Face" icon="face")
 				mdc-tab-item(text="Without icons")
+			mdc-tab-content(active) Favorite content
+			mdc-tab-content Face content
+			mdc-tab-content Without icons content
 		div
 			br
 		div
@@ -86,7 +159,7 @@
 		div
 			br
 		div
-			mdc-data-list
+			mdc-data-list(label="Desserts")
 				thead
 					mdc-data-list-row(header)
 						mdc-data-list-cell(header) Dessert
@@ -211,8 +284,12 @@ import MdcImageListItem from "../../../js/MdcImageListItem.vue";
 import MdcRadio from "../../../js/MdcRadio.vue";
 import MdcSwitch from "../../../js/MdcSwitch.vue";
 import MdcTab from "../../../js/MdcTab.vue";
+import MdcTabContent from "../../../js/MdcTabContent.vue";
 import MdcTabItem from "../../../js/MdcTabItem.vue";
+import MdcTopAppBar from "../../../js/MdcTopAppBar.vue";
+import MdcTopAppBarTitle from "../../../js/MdcTopAppBarTitle.vue";
 import imageList from "../../../js/directive/image-list";
+import textCenter from "../../../js/directive/text-center";
 import Prism from "prismjs";
 
 import "prismjs/components/prism-sass";
@@ -234,10 +311,14 @@ export default {
     MdcRadio,
     MdcSwitch,
     MdcTab,
-    MdcTabItem
+    MdcTabContent,
+    MdcTabItem,
+    MdcTopAppBar,
+    MdcTopAppBarTitle
   },
   directives: {
-    imageList
+    imageList,
+    textCenter
   },
   mounted() {
     Prism.highlightAll();
