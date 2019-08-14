@@ -1,6 +1,6 @@
 @import "normalize.css/normalize"
 @import "prismjs/themes/prism"
-@import "https://fonts.googleapis.com/css?family=Roboto&display=swap"
+@import "https://fonts.googleapis.com/css?family=Roboto|Fira+Code&display=swap"
 @import "https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
 @import "../../css/button"
 @import "../../css/card"
@@ -9,6 +9,7 @@
 @import "../../css/icon-button"
 @import "../../css/elevation"
 @import "../../css/fab"
+@import "../../css/grid"
 @import "../../css/image-list"
 @import "../../css/typography"
 @import "../../css/radio"
@@ -17,8 +18,13 @@
 @import "../../css/top-app-bar"
 @import "../../css/directive/text-center"
 
-*:not(pre,code)
+*:not(pre code .token)
 	font-family: "Roboto", sans-serif
+
+pre code
+	font-family: "Fira Code", monospace !important
+	font-weight: bold
+
 table tr td
 	vertical-align: top
 	width: 33%

@@ -44,6 +44,8 @@ export default {
     classes() {
       return {
         "mdc-button": true,
+        "mdc-typography": true,
+        "mdc-typography--button": true,
         "mdc-button--raised": this.raised,
         "mdc-button--unelevated": this.unelevated,
         "mdc-button--outlined": this.outlined,

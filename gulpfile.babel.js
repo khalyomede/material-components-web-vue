@@ -14,7 +14,12 @@ const docsJs = () =>
 		.pipe(plumber())
 		.pipe(
 			browserify({
-				transform: [["babelify", { presets: ["@babel/preset-env"] }], "vueify", "envify"],
+				transform: [
+					["babelify", { presets: ["@babel/preset-env"], plugins: ["@babel/plugin-transform-runtime"] }],
+					"vueify",
+					"envify",
+					"brfs"
+				],
 				plugin: ["tinyify"]
 			})
 		)

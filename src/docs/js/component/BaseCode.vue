@@ -1,37 +1,14 @@
 <template lang="pug">
-	table
-		tbody
-			tr
-				td
-					pre
-						code.language-html {{ html }}
-				td
-					pre
-						code.language-javascript {{ javascript }}
-				td
-					pre
-						code.language-sass {{ sass }}
+	pre
+		code(ref="code" :class="`language-html`")
+			slot
 </template>
 <script>
-const nonEmpty = value => value.trim().length !== 0;
+import Prism from "prismjs";
 
 export default {
-  props: {
-    html: {
-      type: String,
-      required: true,
-      validator: nonEmpty
-    },
-    javascript: {
-      type: String,
-      required: true,
-      validator: nonEmpty
-	},
-	sass: {
-		type: String,
-		required: true,
-		validator: nonEmpty
-	}
+  mounted() {
+    Prism.highlightElement(this.$refs.code);
   }
 };
 </script>

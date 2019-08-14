@@ -1,5 +1,5 @@
 <template lang="pug">
-	.mdc-card
+	.mdc-layout-grid__inner
 		slot
 </template>
 <script>
