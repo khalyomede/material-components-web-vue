@@ -17,7 +17,7 @@
 							h2(v-typography="'headline6'") Button
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button Text
@@ -29,7 +29,7 @@
 							h2(v-typography="'headline6'") Raised button
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button(raised) Raised
@@ -41,7 +41,7 @@
 							h2(v-typography="'headline6'") Unelevated button
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button(unelevated) Unelevated
@@ -53,7 +53,7 @@
 							h2(v-typography="'headline6'") Outlined button
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button(outlined) Outlined
@@ -64,7 +64,7 @@
 							h2(v-typography="'headline6'") Disabled button
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button(disabled) Disabled
@@ -75,7 +75,7 @@
 							h2(v-typography="'headline6'") Dense button
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button(dense) Dense
@@ -86,7 +86,7 @@
 							h2(v-typography="'headline6'") Icon button
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button(icon="favorite") Icon
@@ -97,7 +97,7 @@
 							h2(v-typography="'headline6'") Right icon Button
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button(icon="favorite" icon-direction="right") Right icon
@@ -108,7 +108,7 @@
 							h2(v-typography="'headline6'") Button without ripple
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button(:ripple="false") Without ripple
@@ -119,7 +119,7 @@
 							h2(v-typography="'headline6'") Icon button only 
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-icon-button(icon="favorite")
@@ -130,7 +130,7 @@
 							h2(v-typography="'headline6'") Icon button only without ripple
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-icon-button(icon="favorite" :ripple="false")
@@ -141,7 +141,7 @@
 							h2(v-typography="'headline6'") Disabled icon button only
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-icon-button(icon="favorite" disabled)
@@ -152,7 +152,7 @@
 							h2(v-typography="'headline6'") Switch
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-switch
@@ -163,7 +163,7 @@
 							h2(v-typography="'headline6'") Switch with custom labels
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-switch(on="oui" off="non")
@@ -174,7 +174,7 @@
 							h2(v-typography="'headline6'") Disabled switch
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-switch(disabled)
@@ -185,7 +185,7 @@
 							h2(v-typography="'headline6'") Checkbox
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-checkbox(id="c4ca4238a0b923820dcc509a6f75849b" value="c4ca4238a0b923820dcc509a6f75849b" text="Unchecked")
@@ -198,7 +198,7 @@
 							h2(v-typography="'headline6'") Radio
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-radio(name="gender" id="woman" value="364dd90f4ca0a576f196b27651bd1852" text="Woman" checked)
@@ -212,7 +212,7 @@
 							h2(v-typography="'headline6'") Data list
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-data-table(label="Desserts" responsive)
@@ -242,10 +242,128 @@
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
+							h2(v-typography="'headline6'") List
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-list
+										mdc-list-item(v-ripple) Single-line item
+										mdc-list-item(v-ripple) Single-line item
+										mdc-list-item(v-ripple) Single-line item
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Two line List
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-list(two-line)
+										mdc-list-item
+											mdc-list-item-primary First-line text
+											mdc-list-item-secondary Second-line text
+										mdc-list-item
+											mdc-list-item-primary First-line text
+											mdc-list-item-secondary Second-line text
+										mdc-list-item
+											mdc-list-item-primary First-line text
+											mdc-list-item-secondary Second-line text
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") List groups
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									mdc-list-group
+										mdc-list-group-title List 1
+										mdc-list
+											mdc-list-item Line item
+											mdc-list-item Line item
+											mdc-list-item Line item
+										mdc-list-group-title List 2
+										mdc-list
+											mdc-list-item Line item
+											mdc-list-item Line item
+											mdc-list-item Line item
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") List dividers
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-list
+										mdc-list-item Item 1 - Division 1
+										mdc-list-item Item 2 - Division 1
+										mdc-list-divider
+										mdc-list-item Item 1 - Division 2
+										mdc-list-item Item 2 - Division 2
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Single Selection List
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-list(selectable)
+										mdc-list-item(selectable tabindex="0") Hot Dog
+										mdc-list-item(selectable) Hamburger
+										mdc-list-item(selectable) Tacos
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Pre-selected list item
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-list(selectable)
+										mdc-list-item(selectable tabindex="0") Ice cream
+										mdc-list-item(selectable active) Crumble
+										mdc-list-item(selectable) Black forest cake
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") List with radio group
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active) Comming next.
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") List with checkbox items
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active) Comming next.
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
 							h2(v-typography="'headline6'") Image list
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-image-list
@@ -280,7 +398,7 @@
 							h2(v-typography="'headline6'") Image list with text overlay
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-image-list(text-overlay)
@@ -315,7 +433,7 @@
 							h2(v-typography="'headline6'") Image list with text below
 						mdc-card-content(:padding="false")
 							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Visual
+								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-image-list
@@ -363,6 +481,13 @@ import MdcGridRow from "../../../js/MdcGridRow.vue";
 import MdcIconButton from "../../../js/MdcIconButton.vue";
 import MdcImageList from "../../../js/MdcImageList.vue";
 import MdcImageListItem from "../../../js/MdcImageListItem.vue";
+import MdcList from "../../../js/MdcList.vue";
+import MdcListDivider from "../../../js/MdcListDivider.vue";
+import MdcListGroup from "../../../js/MdcListGroup.vue";
+import MdcListGroupTitle from "../../../js/MdcListGroupTitle.vue";
+import MdcListItem from "../../../js/MdcListItem.vue";
+import MdcListItemPrimary from "../../../js/MdcListItemPrimary.vue";
+import MdcListItemSecondary from "../../../js/MdcListItemSecondary.vue";
 import MdcRadio from "../../../js/MdcRadio.vue";
 import MdcSwitch from "../../../js/MdcSwitch.vue";
 import MdcTab from "../../../js/MdcTab.vue";
@@ -372,6 +497,7 @@ import MdcTopAppBar from "../../../js/MdcTopAppBar.vue";
 import MdcTopAppBarTitle from "../../../js/MdcTopAppBarTitle.vue";
 
 import imageList from "../../../js/directive/image-list";
+import ripple from "../../../js/directive/ripple";
 import textCenter from "../../../js/directive/text-center";
 import typography from "../../../js/directive/typography";
 
@@ -402,6 +528,13 @@ export default {
     MdcIconButton,
     MdcImageList,
     MdcImageListItem,
+    MdcListItemPrimary,
+    MdcListItemSecondary,
+    MdcList,
+    MdcListDivider,
+    MdcListGroup,
+    MdcListGroupTitle,
+    MdcListItem,
     MdcRadio,
     MdcSwitch,
     MdcTab,
@@ -412,6 +545,7 @@ export default {
   },
   directives: {
     imageList,
+    ripple,
     textCenter,
     typography
   },
