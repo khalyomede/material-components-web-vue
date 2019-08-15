@@ -15,6 +15,7 @@
 		"@babel/runtime": "7.*",
 		"babelify": "10.*",
 		"brfs": "2.*",
+		"browser-sync": "2.*",
 		"envify": "4.*",
 		"gulp": "4.*",
 		"gulp-autoprefixer": "6.*",
@@ -26,7 +27,6 @@
 		"gulp-rename": "1.*",
 		"gulp-sass": "4.*",
 		"install": "^0.13.0",
-		"node-sass-tilde-importer": "1.*",
 		"normalize.css": "8.*",
 		"np": "5.*",
 		"prismjs": "1.*",
@@ -36,6 +36,7 @@
 		"vueify": "9.*"
 	},
 	"scripts": {
+		"start": "node extra/fix-vueify.js && gulp build && gulp start",
 		"build": "node extra/fix-vueify.js && gulp build",
 		"release": "np"
 	},
