@@ -19,6 +19,10 @@ export default {
     selectable: {
       type: Boolean,
       default: false
+    },
+    radio: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -29,7 +33,15 @@ export default {
       };
     },
     role() {
-      return this.selectable ? "listbox" : false;
+      if (this.selectable) {
+        return "listbox";
+      } else if (this.radio) {
+        return "radiogroup";
+      } else if (this.checkbox) {
+        return "group";
+      } else {
+        return false;
+      }
     }
   },
   mounted() {

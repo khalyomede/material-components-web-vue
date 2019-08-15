@@ -345,7 +345,11 @@
 							mdc-tab
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
-								mdc-tab-content(slot="content" v-text-center active) Comming next.
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-list(radio)
+										mdc-list-item-radio(name="flavor" id="c4ca4238a0b923820dcc509a6f75849b") Chocolate
+										mdc-list-item-radio(name="flavor" id="c81e728d9d4c2f636f067f89cc14862c") Vanilla
+										mdc-list-item-radio(name="flavor" id="eccbc87e4b5ce2fe28308fd9f2a7baf3") No flavor
 								mdc-tab-content(slot="content" v-text-center)
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
@@ -487,6 +491,7 @@ import MdcListGroup from "../../../js/MdcListGroup.vue";
 import MdcListGroupTitle from "../../../js/MdcListGroupTitle.vue";
 import MdcListItem from "../../../js/MdcListItem.vue";
 import MdcListItemPrimary from "../../../js/MdcListItemPrimary.vue";
+import MdcListItemRadio from "../../../js/MdcListItemRadio.vue";
 import MdcListItemSecondary from "../../../js/MdcListItemSecondary.vue";
 import MdcRadio from "../../../js/MdcRadio.vue";
 import MdcSwitch from "../../../js/MdcSwitch.vue";
@@ -533,6 +538,7 @@ export default {
     MdcList,
     MdcListDivider,
     MdcListGroup,
+    MdcListItemRadio,
     MdcListGroupTitle,
     MdcListItem,
     MdcRadio,
