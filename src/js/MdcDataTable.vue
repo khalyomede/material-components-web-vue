@@ -1,5 +1,5 @@
 <template lang="pug">
-	.mdc-data-table
+	div(:class="classes")
 		table.mdc-data-table__table(aria-label='Dessert calories')
 			slot
 </template>
@@ -13,6 +13,18 @@ export default {
       type: String,
       required: true,
       validator: nonEmpty
+    },
+    responsive: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    classes() {
+      return {
+        "mdc-data-table": true,
+        "mdc-data-table-responsive": this.responsive
+      };
     }
   },
   mounted() {

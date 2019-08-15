@@ -215,29 +215,29 @@
 								mdc-tab-item(icon="desktop_mac" active) Visual
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-data-list(label="Desserts")
+									mdc-data-table(label="Desserts" responsive)
 										thead
-											mdc-data-list-row(header)
-												mdc-data-list-cell(header) Dessert
-												mdc-data-list-cell(header numeric) Carbs (g)
-												mdc-data-list-cell(header numeric) Protein (g)
-												mdc-data-list-cell(header) Comments
+											mdc-data-table-row(header)
+												mdc-data-table-cell(header) Dessert
+												mdc-data-table-cell(header numeric) Carbs (g)
+												mdc-data-table-cell(header numeric) Protein (g)
+												mdc-data-table-cell(header) Comments
 										tbody
-											mdc-data-list-row
-												mdc-data-list-cell Frozen yogurt
-												mdc-data-list-cell(numeric) 24
-												mdc-data-list-cell(numeric) 4.0
-												mdc-data-list-cell Super tasty
-											mdc-data-list-row
-												mdc-data-list-cell Ice cream sandwich
-												mdc-data-list-cell(numeric) 37
-												mdc-data-list-cell(numeric) 4.3
-												mdc-data-list-cell I like ice cream more
-											mdc-data-list-row
-												mdc-data-list-cell Eclair
-												mdc-data-list-cell(numeric) 24
-												mdc-data-list-cell(numeric) 6.0
-												mdc-data-list-cell New filing flavor
+											mdc-data-table-row
+												mdc-data-table-cell Frozen yogurt
+												mdc-data-table-cell(numeric) 24
+												mdc-data-table-cell(numeric) 4.0
+												mdc-data-table-cell Super tasty
+											mdc-data-table-row
+												mdc-data-table-cell Ice cream sandwich
+												mdc-data-table-cell(numeric) 37
+												mdc-data-table-cell(numeric) 4.3
+												mdc-data-table-cell I like ice cream more
+											mdc-data-table-row
+												mdc-data-table-cell Eclair
+												mdc-data-table-cell(numeric) 24
+												mdc-data-table-cell(numeric) 6.0
+												mdc-data-table-cell New filing flavor
 								mdc-tab-content(slot="content" v-text-center)
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
@@ -353,9 +353,9 @@ import MdcButton from "../../../js/MdcButton.vue";
 import MdcCard from "../../../js/MdcCard.vue";
 import MdcCardContent from "../../../js/MdcCardContent.vue";
 import MdcCheckbox from "../../../js/MdcCheckbox.vue";
-import MdcDataList from "../../../js/MdcDataList.vue";
-import MdcDataListRow from "../../../js/MdcDataListRow.vue";
-import MdcDataListCell from "../../../js/MdcDataListCell.vue";
+import MdcDataTable from "../../../js/MdcDataTable.vue";
+import MdcDataTableRow from "../../../js/MdcDataTableRow.vue";
+import MdcDataTableCell from "../../../js/MdcDataTableCell.vue";
 import MdcFab from "../../../js/MdcFab.vue";
 import MdcGrid from "../../../js/MdcGrid.vue";
 import MdcGridCell from "../../../js/MdcGridCell.vue";
@@ -392,9 +392,9 @@ export default {
     MdcCard,
     MdcCardContent,
     MdcCheckbox,
-    MdcDataList,
-    MdcDataListCell,
-    MdcDataListRow,
+    MdcDataTable,
+    MdcDataTableCell,
+    MdcDataTableRow,
     MdcFab,
     MdcGrid,
     MdcGridCell,
