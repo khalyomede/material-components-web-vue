@@ -2,12 +2,12 @@
 	<mdc-button raised>Raised</mdc-button>
 </template>
 <script lang="javascript">
-	import { MdcButton } from "material-components-web-vue";
+import { MdcButton } from "material-components-web-vue";
 
-	export default {
-		MdcButton
-	}
+export default {
+  MdcButton
+};
 </script>
 <style lang="scss" scoped>
-	@import "material-components-web-vue/lib/css/button";
+@import "material-components-web-vue/lib/css/button";
 </style>
