@@ -359,7 +359,11 @@
 							mdc-tab
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
-								mdc-tab-content(slot="content" v-text-center active) Comming next.
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-list(checkbox)
+										mdc-list-item-checkbox(name="topping" id="c4ca4238a0b923820dcc509a6f75849b") Oreo topping
+										mdc-list-item-checkbox(name="topping" id="c81e728d9d4c2f636f067f89cc14862c") Kit kat topping
+										mdc-list-item-checkbox(name="topping" id="eccbc87e4b5ce2fe28308fd9f2a7baf3") With chocolatey sauce
 								mdc-tab-content(slot="content" v-text-center)
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
@@ -492,6 +496,7 @@ import MdcListGroupTitle from "../../../js/MdcListGroupTitle.vue";
 import MdcListItem from "../../../js/MdcListItem.vue";
 import MdcListItemPrimary from "../../../js/MdcListItemPrimary.vue";
 import MdcListItemRadio from "../../../js/MdcListItemRadio.vue";
+import MdcListItemCheckbox from "../../../js/MdcListItemCheckbox.vue";
 import MdcListItemSecondary from "../../../js/MdcListItemSecondary.vue";
 import MdcRadio from "../../../js/MdcRadio.vue";
 import MdcSwitch from "../../../js/MdcSwitch.vue";
@@ -539,6 +544,7 @@ export default {
     MdcListDivider,
     MdcListGroup,
     MdcListItemRadio,
+    MdcListItemCheckbox,
     MdcListGroupTitle,
     MdcListItem,
     MdcRadio,
@@ -557,8 +563,6 @@ export default {
   },
   mounted() {
     Prism.highlightAll();
-
-    console.log(this.examples);
   }
 };
 </script>
