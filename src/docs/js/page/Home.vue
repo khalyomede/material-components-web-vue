@@ -58,6 +58,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button(outlined) Outlined
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{button.outlined}}
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content

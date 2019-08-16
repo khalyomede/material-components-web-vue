@@ -23,6 +23,10 @@ export default {
     radio: {
       type: Boolean,
       default: false
+    },
+    checkbox: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
