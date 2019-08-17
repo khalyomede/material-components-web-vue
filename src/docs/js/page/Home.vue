@@ -372,6 +372,54 @@
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
+							h2(v-typography="'headline6'") Snackbar
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-snackbar(ref="snackbarNormal")
+										mdc-snackbar-label Chocolate soft baked cookies are on the way.
+										mdc-snackbar-action
+											mdc-button undo
+									mdc-button(@click="closeSnackbarNormal") Close
+									mdc-button(@click="openSnackbarNormal" unelevated) Open
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Stacked snackbar
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-snackbar(ref="snackbarStacked" stacked)
+										mdc-snackbar-label While you were offline, we backed for you a delicious white and black chocolate cake.
+										mdc-snackbar-action
+											mdc-button send
+									mdc-button(@click="closeSnackbarStacked") Close
+									mdc-button(@click="openSnackbarStacked" unelevated) Open
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Leading snackbar
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-snackbar(ref="snackbarLeading" leading)
+										mdc-snackbar-label Chocolate stock is at 12% right now.
+										mdc-snackbar-action
+											mdc-button refill
+									mdc-button(@click="closeSnackbarLeading") Close
+									mdc-button(@click="openSnackbarLeading" unelevated) Open
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
 							h2(v-typography="'headline6'") Image list
 						mdc-card-content(:padding="false")
 							mdc-tab
@@ -503,6 +551,9 @@ import MdcListItemRadio from "../../../js/MdcListItemRadio.vue";
 import MdcListItemCheckbox from "../../../js/MdcListItemCheckbox.vue";
 import MdcListItemSecondary from "../../../js/MdcListItemSecondary.vue";
 import MdcRadio from "../../../js/MdcRadio.vue";
+import MdcSnackbar from "../../../js/MdcSnackbar.vue";
+import MdcSnackbarLabel from "../../../js/MdcSnackbarLabel.vue";
+import MdcSnackbarAction from "../../../js/MdcSnackbarAction.vue";
 import MdcSwitch from "../../../js/MdcSwitch.vue";
 import MdcTab from "../../../js/MdcTab.vue";
 import MdcTabContent from "../../../js/MdcTabContent.vue";
@@ -555,6 +606,9 @@ export default {
     MdcListItem,
     MdcRadio,
     MdcSwitch,
+    MdcSnackbar,
+    MdcSnackbarAction,
+    MdcSnackbarLabel,
     MdcTab,
     MdcTabContent,
     MdcTabItem,
@@ -568,6 +622,26 @@ export default {
     ripple,
     textCenter,
     typography
+  },
+  methods: {
+    openSnackbarNormal() {
+      this.$refs.snackbarNormal.element.open();
+    },
+    openSnackbarStacked() {
+      this.$refs.snackbarStacked.element.open();
+    },
+    openSnackbarLeading() {
+      this.$refs.snackbarLeading.element.open();
+    },
+    closeSnackbarNormal() {
+      this.$refs.snackbarNormal.element.close();
+    },
+    closeSnackbarStacked() {
+      this.$refs.snackbarStacked.element.close();
+    },
+    closeSnackbarLeading() {
+      this.$refs.snackbarLeading.element.close();
+    }
   },
   mounted() {
     Prism.highlightAll();

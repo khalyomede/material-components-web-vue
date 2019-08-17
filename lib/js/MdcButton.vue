@@ -1,5 +1,5 @@
 <template lang="pug">
-	button(:class="classes")
+	button(:class="classes" v-on="$listeners")
 		i.material-icons.mdc-button__icon(v-if="icon && iconDirection == 'left'" aria-hidden="true") {{ icon }}
 		.mdc-button__label
 			slot
