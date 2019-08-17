@@ -1,11 +1,15 @@
 <template lang="pug">
 	div(:class="classes")
 		slot
+		.mdc-card__action-buttons
+			slot(name="button")
+		.mdc-card__action-icons
+			slot(name="icon")
 </template>
 <script>
 export default {
   props: {
-    outlined: {
+    fullBleed: {
       type: Boolean,
       default: false
     }
@@ -13,8 +17,8 @@ export default {
   computed: {
     classes() {
       return {
-        "mdc-card": true,
-        "mdc-card--outlined": this.outlined
+        "mdc-card__actions": true,
+        "mdc-card__actions--full-bleed": this.fullBleed
       };
     }
   }

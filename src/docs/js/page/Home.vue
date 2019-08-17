@@ -420,6 +420,112 @@
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
+							h2(v-typography="'headline6'") Card
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									mdc-card
+										mdc-card-content(v-typography="'body1'") Ice cream (derived from earlier iced cream or cream ice) is a sweetened frozen food typically eaten as a snack or dessert.
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Outlined card
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									mdc-card(outlined)
+										mdc-card-content(v-typography="'body1'") Chocolate is a usually sweet, brown food preparation of roasted and ground cacao seeds that is made in the form of a liquid, paste, or in a block, or used as a flavoring ingredient in other foods.
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Rich media card
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									mdc-card
+										mdc-card-media
+											picture
+												source(srcset="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" type="image/jpeg")
+												img(src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" alt="Vienna" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;")
+										mdc-card-content(v-typography="'body1'") An éclair (also known as a sweet baguette) is an oblong pastry made with choux dough filled with a cream and topped with chocolate icing.
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Card actions
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									mdc-card
+										mdc-card-content(v-typography="'body1'") A croissant is a buttery, flaky, viennoiserie pastry of Austrian and French origin, named for its historical crescent shape.
+										mdc-card-action.text-right
+											mdc-button(v-card-action-button) read more
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Full width card action
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									mdc-card
+										mdc-card-content(v-typography="'body1'") Black Forest gâteau (British English) or Black Forest cake (American English) is a chocolate sponge cake with a rich cherry filling based on the German dessert Schwarzwälder Kirschtorte, literally "Black Forest Cherry-torte".
+										mdc-card-action
+											mdc-button(v-card-action-button raised style="width: 100%;") order
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Card with actions icon and button
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									mdc-card
+										mdc-card-content(v-typography="'body1'") A macaron or French macaroon is a sweet meringue-based confection made with egg white, icing sugar, granulated sugar, almond powder or ground almond, and food coloring.
+										mdc-card-action
+											mdc-button(v-card-action-button slot="button") read more
+											mdc-button(v-card-action-button slot="button") share
+											mdc-icon-button(v-card-action-icon slot="icon" icon="bookmark_order")
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Combined example
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									mdc-card
+										mdc-card-content
+											h3(v-typography="'headline6'" style="margin: 0px") Google
+											span(v-typography="'overline'") 2 hours ago
+										mdc-card-media
+											picture
+												source(srcset="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" type="image/jpeg")
+												img(src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" alt="Vienna" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;")
+										mdc-card-content(v-typography="'body1'") Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest layer, consists of a mixture of soft, fresh cheese (typically cream cheese or ricotta), eggs, and sugar. If there is a bottom layer,
+										mdc-card-action
+											mdc-icon-button(v-card-action-icon slot="icon" icon="share")
+											mdc-icon-button(v-card-action-icon slot="icon" icon="favorite_border")
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
 							h2(v-typography="'headline6'") Image list
 						mdc-card-content(:padding="false")
 							mdc-tab
@@ -529,7 +635,9 @@
 import BaseCode from "../component/BaseCode.vue";
 import MdcButton from "../../../js/MdcButton.vue";
 import MdcCard from "../../../js/MdcCard.vue";
+import MdcCardAction from "../../../js/MdcCardAction.vue";
 import MdcCardContent from "../../../js/MdcCardContent.vue";
+import MdcCardMedia from "../../../js/MdcCardMedia.vue";
 import MdcCheckbox from "../../../js/MdcCheckbox.vue";
 import MdcDataTable from "../../../js/MdcDataTable.vue";
 import MdcDataTableRow from "../../../js/MdcDataTableRow.vue";
@@ -563,6 +671,8 @@ import MdcTopAppBarAction from "../../../js/MdcTopAppBarAction.vue";
 import MdcTopAppBarButton from "../../../js/MdcTopAppBarButton.vue";
 import MdcTopAppBarTitle from "../../../js/MdcTopAppBarTitle.vue";
 
+import cardActionButton from "../../../js/directive/card-action-button";
+import cardActionIconButton from "../../../js/directive/card-action-icon-button";
 import imageList from "../../../js/directive/image-list";
 import ripple from "../../../js/directive/ripple";
 import textCenter from "../../../js/directive/text-center";
@@ -583,7 +693,9 @@ export default {
     BaseCode,
     MdcButton,
     MdcCard,
+    MdcCardAction,
     MdcCardContent,
+    MdcCardMedia,
     MdcCheckbox,
     MdcDataTable,
     MdcDataTableCell,
@@ -618,6 +730,8 @@ export default {
     MdcTopAppBarTitle
   },
   directives: {
+    cardActionButton,
+    cardActionIconButton,
     imageList,
     ripple,
     textCenter,
