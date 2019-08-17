@@ -1,7 +1,10 @@
 <template lang="pug">
 	div
-		mdc-top-app-bar
-			mdc-top-app-bar-title Material Components Web Vue
+		mdc-top-app-bar(dense)
+			mdc-top-app-bar-button(slot="start") menu
+			mdc-top-app-bar-title(slot="start") Material Components Web vue
+			a(slot="end" href="https://github.com/khalyomede/material-components-web-vue" style="text-decoration: none")
+				mdc-button.mdc-top-app-bar__action-item Github
 		div
 			br
 			br
@@ -505,6 +508,8 @@ import MdcTab from "../../../js/MdcTab.vue";
 import MdcTabContent from "../../../js/MdcTabContent.vue";
 import MdcTabItem from "../../../js/MdcTabItem.vue";
 import MdcTopAppBar from "../../../js/MdcTopAppBar.vue";
+import MdcTopAppBarAction from "../../../js/MdcTopAppBarAction.vue";
+import MdcTopAppBarButton from "../../../js/MdcTopAppBarButton.vue";
 import MdcTopAppBarTitle from "../../../js/MdcTopAppBarTitle.vue";
 
 import imageList from "../../../js/directive/image-list";
@@ -554,6 +559,8 @@ export default {
     MdcTabContent,
     MdcTabItem,
     MdcTopAppBar,
+    MdcTopAppBarAction,
+    MdcTopAppBarButton,
     MdcTopAppBarTitle
   },
   directives: {
