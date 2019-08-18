@@ -520,8 +520,109 @@
 												img(src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" alt="Vienna" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;")
 										mdc-card-content(v-typography="'body1'") Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest layer, consists of a mixture of soft, fresh cheese (typically cream cheese or ricotta), eggs, and sugar. If there is a bottom layer,
 										mdc-card-action
+											mdc-button(v-card-action-button slot="button") comment
 											mdc-icon-button(v-card-action-icon slot="icon" icon="share")
 											mdc-icon-button(v-card-action-icon slot="icon" icon="favorite_border")
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Text field
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-text-field(id="dessert" label="Dessert")
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Text field with helper text
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									mdc-text-field(id="dessert" label="Dessert")
+										div(slot="helper-text") Choose a cake or an ice cream.
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Text field without label
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-text-field(id="dessert")
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Disabled text field
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-text-field(id="dessert" label="Dessert" disabled)
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Outlined text field
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-text-field(id="dessert" label="Dessert" outlined)
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Outlined text field without label
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-text-field(id="dessert" outlined)
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Full width text field
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-text-field(id="dessert" full-width)
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Text area text field
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-text-field(id="dessert" textarea label="Extra request")
+								mdc-tab-content(slot="content" v-text-center)
+				mdc-grid-cell(desktop="6" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Text area without label
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" v-text-center active)
+									mdc-text-field(id="dessert" textarea)
 								mdc-tab-content(slot="content" v-text-center)
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
@@ -646,6 +747,7 @@ import MdcFab from "../../../js/MdcFab.vue";
 import MdcGrid from "../../../js/MdcGrid.vue";
 import MdcGridCell from "../../../js/MdcGridCell.vue";
 import MdcGridRow from "../../../js/MdcGridRow.vue";
+import MdcHelperText from "../../../js/MdcHelperText.vue";
 import MdcIconButton from "../../../js/MdcIconButton.vue";
 import MdcImageList from "../../../js/MdcImageList.vue";
 import MdcImageListItem from "../../../js/MdcImageListItem.vue";
@@ -666,6 +768,7 @@ import MdcSwitch from "../../../js/MdcSwitch.vue";
 import MdcTab from "../../../js/MdcTab.vue";
 import MdcTabContent from "../../../js/MdcTabContent.vue";
 import MdcTabItem from "../../../js/MdcTabItem.vue";
+import MdcTextField from "../../../js/MdcTextField.vue";
 import MdcTopAppBar from "../../../js/MdcTopAppBar.vue";
 import MdcTopAppBarAction from "../../../js/MdcTopAppBarAction.vue";
 import MdcTopAppBarButton from "../../../js/MdcTopAppBarButton.vue";
@@ -704,6 +807,7 @@ export default {
     MdcGrid,
     MdcGridCell,
     MdcGridRow,
+    MdcHelperText,
     MdcIconButton,
     MdcImageList,
     MdcImageListItem,
@@ -723,6 +827,7 @@ export default {
     MdcSnackbarLabel,
     MdcTab,
     MdcTabContent,
+    MdcTextField,
     MdcTabItem,
     MdcTopAppBar,
     MdcTopAppBarAction,
