@@ -13,6 +13,7 @@
 		"@babel/preset-env": "7.*",
 		"@babel/register": "7.*",
 		"@babel/runtime": "7.*",
+		"babel-plugin-transform-export-extensions": "6.*",
 		"babelify": "10.*",
 		"brfs": "2.*",
 		"browser-sync": "2.*",
