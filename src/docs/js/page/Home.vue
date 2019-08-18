@@ -1,10 +1,16 @@
 <template lang="pug">
 	div
 		mdc-top-app-bar(dense)
-			mdc-top-app-bar-button(slot="start") menu
+			mdc-top-app-bar-button(slot="start" @click="showSidebar") menu
 			mdc-top-app-bar-title(slot="start") MDC Vue
 			a(slot="end" href="https://github.com/khalyomede/material-components-web-vue" style="text-decoration: none")
 				mdc-button.mdc-top-app-bar__action-item Github
+		mdc-drawer(modal ref="sidebar")
+			mdc-list
+				mdc-list-item(v-ripple) Components
+				mdc-list-item(v-ripple) Directives
+				mdc-list-item(v-ripple) Github
+		mdc-drawer-scrim
 		div
 			br
 			br
@@ -743,6 +749,8 @@ import MdcCheckbox from "../../../js/MdcCheckbox.vue";
 import MdcDataTable from "../../../js/MdcDataTable.vue";
 import MdcDataTableRow from "../../../js/MdcDataTableRow.vue";
 import MdcDataTableCell from "../../../js/MdcDataTableCell.vue";
+import MdcDrawer from "../../../js/MdcDrawer.vue";
+import MdcDrawerScrim from "../../../js/MdcDrawerScrim.vue";
 import MdcFab from "../../../js/MdcFab.vue";
 import MdcGrid from "../../../js/MdcGrid.vue";
 import MdcGridCell from "../../../js/MdcGridCell.vue";
@@ -803,6 +811,8 @@ export default {
     MdcDataTable,
     MdcDataTableCell,
     MdcDataTableRow,
+    MdcDrawer,
+    MdcDrawerScrim,
     MdcFab,
     MdcGrid,
     MdcGridCell,
@@ -860,6 +870,9 @@ export default {
     },
     closeSnackbarLeading() {
       this.$refs.snackbarLeading.element.close();
+    },
+    showSidebar() {
+      this.$refs.sidebar.element.open = true;
     }
   },
   mounted() {
