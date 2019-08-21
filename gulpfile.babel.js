@@ -21,10 +21,21 @@ const docsJs = () =>
 						"babelify",
 						{
 							presets: ["@babel/preset-env"],
-							plugins: ["@babel/plugin-transform-runtime", "transform-export-extensions"]
+							plugins: [
+								"@babel/plugin-transform-runtime",
+								"transform-export-extensions",
+								"@babel/plugin-proposal-export-default-from"
+							]
 						}
 					],
-					"vueify",
+					[
+						"vueify",
+						{
+							sass: {
+								includePaths: ["node_modules"]
+							}
+						}
+					],
 					"envify",
 					"brfs"
 				],
@@ -104,7 +115,7 @@ const start = () => {
 	});
 
 	watch("src/js/**/*.{vue,js}", series(libJs, docsJs, reload));
-	watch(["src/docs/js/**/*.{vue,js}", "src/docs/example/**/*.{vue,js}"], series(docsJs, reload));
+	watch("src/docs/js/**/*.{vue,js}", series(docsJs, reload));
 	watch("src/css/**/*.sass", series(libCss, docsCss, reload));
 	watch("src/docs/css/**/*.sass", series(docsCss, reload));
 	watch("src/docs/html/**/*.pug", series(docsHtml, reload));

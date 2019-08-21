@@ -1,4 +1,8 @@
 {
 	"presets": ["@babel/preset-env"],
-	"plugins": ["@babel/plugin-transform-runtime", "transform-export-extensions"]
+	"plugins": [
+		"@babel/plugin-transform-runtime",
+		"transform-export-extensions",
+		"@babel/plugin-proposal-export-default-from"
+	]
 }

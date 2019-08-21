@@ -29,9 +29,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-button Text
+									example-mdc-button
 								mdc-tab-content(slot="content" v-text-center)
-									base-code(lang="html") {{ button.button }}
+									base-code(lang="html") {{ button }}
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -43,7 +43,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button(raised) Raised
 								mdc-tab-content(slot="content" v-text-center) 
-									base-code(lang="html") {{ button.raised }}
+									base-code(lang="html")
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -55,7 +55,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button(unelevated) Unelevated
 								mdc-tab-content(slot="content" v-text-center)
-									base-code(lang="html") {{ button.unelevated }}
+									base-code(lang="html")
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -67,7 +67,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-button(outlined) Outlined
 								mdc-tab-content(slot="content" v-text-center)
-									base-code(lang="html") {{button.outlined}}
+									base-code(lang="html")
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -782,6 +782,8 @@ import MdcTopAppBarAction from "../../../js/MdcTopAppBarAction.vue";
 import MdcTopAppBarButton from "../../../js/MdcTopAppBarButton.vue";
 import MdcTopAppBarTitle from "../../../js/MdcTopAppBarTitle.vue";
 
+import ExampleMdcButton from "../component/example/MdcButton.vue";
+
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
 import imageList from "../../../js/directive/image-list";
@@ -789,7 +791,9 @@ import ripple from "../../../js/directive/ripple";
 import textCenter from "../../../js/directive/text-center";
 import typography from "../../../js/directive/typography";
 
-import examples from "../../example";
+import examples from "../example";
+
+console.log("examples", examples);
 
 import Prism from "prismjs";
 
@@ -802,6 +806,7 @@ export default {
   },
   components: {
     BaseCode,
+    ExampleMdcButton,
     MdcButton,
     MdcCard,
     MdcCardAction,
