@@ -41,9 +41,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-button(raised) Raised
+									example-mdc-raised-button
 								mdc-tab-content(slot="content" v-text-center) 
-									base-code(lang="html")
+									base-code(lang="html") {{ raisedButton }}
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -53,9 +53,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-button(unelevated) Unelevated
+									example-mdc-unelevated-button
 								mdc-tab-content(slot="content" v-text-center)
-									base-code(lang="html")
+									base-code(lang="html") {{ unelevatedButton }}
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -65,9 +65,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-button(outlined) Outlined
+									example-mdc-outlined-button
 								mdc-tab-content(slot="content" v-text-center)
-									base-code(lang="html")
+									base-code(lang="html") {{ outlinedButton }}
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -77,8 +77,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-button(disabled) Disabled
+									example-mdc-disabled-button
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ disabledButton }}
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -88,8 +89,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-button(dense) Dense
+									example-mdc-dense-button
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ denseButton }}
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -99,19 +101,21 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-button(icon="favorite") Icon
+									example-mdc-icon-button
 								mdc-tab-content(slot="content")
+									base-code(lang="html") {{ iconButton }}
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
-							h2(v-typography="'headline6'") Right icon Button
+							h2(v-typography="'headline6'") Trailing icon Button
 						mdc-card-content(:padding="false")
 							mdc-tab
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-button(icon="favorite" icon-direction="right") Right icon
+									example-mdc-trailing-icon-button
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ trailingIconButton }}
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -783,6 +787,13 @@ import MdcTopAppBarButton from "../../../js/MdcTopAppBarButton.vue";
 import MdcTopAppBarTitle from "../../../js/MdcTopAppBarTitle.vue";
 
 import ExampleMdcButton from "../component/example/MdcButton.vue";
+import ExampleMdcRaisedButton from "../component/example/MdcRaisedButton.vue";
+import ExampleMdcUnelevatedButton from "../component/example/MdcUnelevatedButton.vue";
+import ExampleMdcOutlinedButton from "../component/example/MdcOutlinedButton.vue";
+import ExampleMdcDisabledButton from "../component/example/MdcDisabledButton.vue";
+import ExampleMdcDenseButton from "../component/example/MdcDenseButton.vue";
+import ExampleMdcIconButton from "../component/example/MdcIconButton.vue";
+import ExampleMdcTrailingIconButton from "../component/example/MdcTrailingIconButton.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -792,8 +803,6 @@ import textCenter from "../../../js/directive/text-center";
 import typography from "../../../js/directive/typography";
 
 import examples from "../example";
-
-console.log("examples", examples);
 
 import Prism from "prismjs";
 
@@ -807,6 +816,13 @@ export default {
   components: {
     BaseCode,
     ExampleMdcButton,
+    ExampleMdcRaisedButton,
+    ExampleMdcUnelevatedButton,
+    ExampleMdcOutlinedButton,
+    ExampleMdcDisabledButton,
+    ExampleMdcDenseButton,
+    ExampleMdcIconButton,
+    ExampleMdcTrailingIconButton,
     MdcButton,
     MdcCard,
     MdcCardAction,

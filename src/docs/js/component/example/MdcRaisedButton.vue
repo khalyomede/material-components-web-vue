@@ -1,5 +1,5 @@
 <template>
-  <mdc-button>Log in</mdc-button>
+  <mdc-button raised>Log in</mdc-button>
 </template>
 
 <script>
