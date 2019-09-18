@@ -137,8 +137,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-icon-button(icon="favorite")
+									example-mdc-icon-button-only
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ iconButtonOnly }}
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -795,6 +796,7 @@ import ExampleMdcDenseButton from "../component/example/MdcDenseButton.vue";
 import ExampleMdcIconButton from "../component/example/MdcIconButton.vue";
 import ExampleMdcTrailingIconButton from "../component/example/MdcTrailingIconButton.vue";
 import ExampleMdcButtonWithoutRipple from "../component/example/MdcButtonWithoutRipple.vue";
+import ExampleMdcIconButtonOnly from "../component/example/MdcIconButtonOnly.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -825,6 +827,7 @@ export default {
     ExampleMdcIconButton,
     ExampleMdcTrailingIconButton,
     ExampleMdcButtonWithoutRipple,
+    ExampleMdcIconButtonOnly,
     MdcCard,
     MdcCardAction,
     MdcCardContent,
@@ -840,7 +843,6 @@ export default {
     MdcGridCell,
     MdcGridRow,
     MdcHelperText,
-    MdcIconButton,
     MdcImageList,
     MdcImageListItem,
     MdcListItemPrimary,
