@@ -125,8 +125,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-button(:ripple="false") Without ripple
+									example-mdc-button-without-ripple
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ buttonWithoutRipple }}
 				mdc-grid-cell(desktop="6" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -744,7 +745,6 @@
 </template>
 <script>
 import BaseCode from "../component/BaseCode.vue";
-import MdcButton from "../../../js/MdcButton.vue";
 import MdcCard from "../../../js/MdcCard.vue";
 import MdcCardAction from "../../../js/MdcCardAction.vue";
 import MdcCardContent from "../../../js/MdcCardContent.vue";
@@ -794,6 +794,7 @@ import ExampleMdcDisabledButton from "../component/example/MdcDisabledButton.vue
 import ExampleMdcDenseButton from "../component/example/MdcDenseButton.vue";
 import ExampleMdcIconButton from "../component/example/MdcIconButton.vue";
 import ExampleMdcTrailingIconButton from "../component/example/MdcTrailingIconButton.vue";
+import ExampleMdcButtonWithoutRipple from "../component/example/MdcButtonWithoutRipple.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -823,7 +824,7 @@ export default {
     ExampleMdcDenseButton,
     ExampleMdcIconButton,
     ExampleMdcTrailingIconButton,
-    MdcButton,
+    ExampleMdcButtonWithoutRipple,
     MdcCard,
     MdcCardAction,
     MdcCardContent,

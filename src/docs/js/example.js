@@ -48,6 +48,13 @@ const trailingIconButton = fs
 	.replace(/(from\s")(.*)(";$)/gm, "$1material-components-web-vue$3")
 	.replace(/(@import\s")([./]+)(.*)/gm, "$1material-components-web-vue/$3");
 
+
+const buttonWithoutRipple = fs
+	.readFileSync(__dirname + "/component/example/MdcButtonWithoutRipple.vue")
+	.toString()
+	.replace(/(from\s")(.*)(";$)/gm, "$1material-components-web-vue$3")
+	.replace(/(@import\s")([./]+)(.*)/gm, "$1material-components-web-vue/$3");
+
 export default {
 	button,
 	raisedButton,
@@ -56,5 +63,6 @@ export default {
 	disabledButton,
 	denseButton,
 	iconButton,
-	trailingIconButton
+	trailingIconButton,
+	buttonWithoutRipple
 };
