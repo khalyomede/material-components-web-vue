@@ -159,8 +159,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-icon-button(icon="favorite" disabled)
+									example-mdc-icon-button-only-disabled
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ iconButtonOnlyDisabled }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -797,6 +798,7 @@ import ExampleMdcTrailingIconButton from "../component/example/MdcTrailingIconBu
 import ExampleMdcButtonWithoutRipple from "../component/example/MdcButtonWithoutRipple.vue";
 import ExampleMdcIconButtonOnly from "../component/example/MdcIconButtonOnly.vue";
 import ExampleMdcIconButtonOnlyWithoutRipple from "../component/example/MdcIconButtonOnlyWithoutRipple.vue";
+import ExampleMdcIconButtonOnlyDisabled from "../component/example/MdcIconButtonOnlyDisabled.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -806,8 +808,6 @@ import textCenter from "../../../js/directive/text-center";
 import typography from "../../../js/directive/typography";
 
 import examples from "../example";
-
-console.log(examples);
 
 import Prism from "prismjs";
 
@@ -831,6 +831,7 @@ export default {
     ExampleMdcButtonWithoutRipple,
     ExampleMdcIconButtonOnly,
     ExampleMdcIconButtonOnlyWithoutRipple,
+    ExampleMdcIconButtonOnlyDisabled,
     MdcCard,
     MdcCardAction,
     MdcCardContent,

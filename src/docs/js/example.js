@@ -107,6 +107,24 @@ export default {
 @import "material-components-web-vue/lib/css/icon-button";
 </style>
 `,
+	iconButtonOnlyDisabled: `<template>
+  <mdc-icon-button icon="favorite" disabled />
+</template>
+
+<script>
+import { MdcIconButton } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcIconButton
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/icon-button";
+</style>
+`,
 	iconButtonOnlyWithoutRipple: `<template>
   <mdc-icon-button icon="favorite" :ripple="false" />
 </template>
