@@ -1,5 +1,5 @@
 <template lang="pug">
-	li(:class="classes" tabindex="0" :role="role" :aria-selected="ariaSelected")
+	a(:class="classes" tabindex="0" :role="role" :aria-selected="ariaSelected")
 		span.mdc-list-item__text
 			slot
 </template>

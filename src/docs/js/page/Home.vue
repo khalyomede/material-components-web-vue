@@ -7,9 +7,7 @@
 				mdc-button.mdc-top-app-bar__action-item Github
 		mdc-drawer(modal ref="sidebar")
 			mdc-list
-				mdc-list-item(v-ripple) Components
-				mdc-list-item(v-ripple) Directives
-				mdc-list-item(v-ripple) Github
+				mdc-list-item(v-ripple href="https://github.com/khalyomede/material-components-web-vue")  Github
 		mdc-drawer-scrim
 		div
 			br
@@ -808,6 +806,8 @@ import textCenter from "../../../js/directive/text-center";
 import typography from "../../../js/directive/typography";
 
 import examples from "../example";
+
+console.log(examples);
 
 import Prism from "prismjs";
 
