@@ -1,5 +1,12 @@
 const fs = require("fs");
 
+const componentsNames = ["MdcButton"];
+
+let examples = {};
+
+for (const componentName of componentsNames) {
+}
+
 const button = fs
 	.readFileSync(__dirname + "/component/example/MdcButton.vue")
 	.toString()
@@ -60,6 +67,12 @@ const iconButtonOnly = fs
 	.replace(/(from\s")(.*)(";$)/gm, "$1material-components-web-vue$3")
 	.replace(/(@import\s")([./]+)(.*)/gm, "$1material-components-web-vue/$3");
 
+const iconButtonOnlyWithoutRipple = fs
+	.readFileSync(__dirname + "/component/example/MdcIconButtonOnlyWithoutRipple.vue")
+	.toString()
+	.replace(/(from\s")(.*)(";$)/gm, "$1material-components-web-vue$3")
+	.replace(/(@import\s")([./]+)(.*)/gm, "$1material-components-web-vue/$3");
+
 export default {
 	button,
 	raisedButton,
@@ -70,5 +83,6 @@ export default {
 	iconButton,
 	trailingIconButton,
 	buttonWithoutRipple,
-	iconButtonOnly
+	iconButtonOnly,
+	iconButtonOnlyWithoutRipple
 };
