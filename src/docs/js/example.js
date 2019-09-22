@@ -179,10 +179,64 @@ export default {
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
-	switches: `<template>
-  <mdc-switch />
+	switchChecked: `<template>
+  <div>
+    <mdc-switch checked />
+  </div>
 </template>
+<script>
+import { MdcSwitch } from "material-components-web-vue";
 
+export default {
+  components: {
+    MdcSwitch
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/switch";
+</style>
+`,
+	switchDisabled: `<template>
+  <mdc-switch disabled />
+</template>
+<script>
+import { MdcSwitch } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcSwitch
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/switch";
+</style>
+`,
+	switches: `<template>
+  <div>
+    <mdc-switch />
+  </div>
+</template>
+<script>
+import { MdcSwitch } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcSwitch
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/switch";
+</style>
+`,
+	switchWithCustomLabels: `<template>
+  <mdc-switch on="oui" off="non" />
+</template>
 <script>
 import { MdcSwitch } from "material-components-web-vue";
 
