@@ -179,6 +179,24 @@ export default {
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
+	switches: `<template>
+  <mdc-switch />
+</template>
+
+<script>
+import { MdcSwitch } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcSwitch
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/switch";
+</style>
+`,
 	trailingIconButton: `<template>
   <mdc-button icon="input" icon-direction="right">Log in</mdc-button>
 </template>

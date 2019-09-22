@@ -18,7 +18,7 @@
 			mdc-grid-row
 				mdc-grid-cell
 					h1(v-typography="'headline3'") Material design components for Vue.js.
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Button
@@ -30,7 +30,7 @@
 									example-mdc-button
 								mdc-tab-content(slot="content" v-text-center)
 									base-code(lang="html") {{ button }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Raised button
@@ -42,7 +42,7 @@
 									example-mdc-raised-button
 								mdc-tab-content(slot="content" v-text-center) 
 									base-code(lang="html") {{ raisedButton }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Unelevated button
@@ -54,7 +54,7 @@
 									example-mdc-unelevated-button
 								mdc-tab-content(slot="content" v-text-center)
 									base-code(lang="html") {{ unelevatedButton }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Outlined button
@@ -66,7 +66,7 @@
 									example-mdc-outlined-button
 								mdc-tab-content(slot="content" v-text-center)
 									base-code(lang="html") {{ outlinedButton }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Disabled button
@@ -78,7 +78,7 @@
 									example-mdc-disabled-button
 								mdc-tab-content(slot="content" v-text-center)
 									base-code(lang="html") {{ disabledButton }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Dense button
@@ -90,7 +90,7 @@
 									example-mdc-dense-button
 								mdc-tab-content(slot="content" v-text-center)
 									base-code(lang="html") {{ denseButton }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Icon button
@@ -102,7 +102,7 @@
 									example-mdc-icon-button
 								mdc-tab-content(slot="content")
 									base-code(lang="html") {{ iconButton }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Trailing icon Button
@@ -114,7 +114,7 @@
 									example-mdc-trailing-icon-button
 								mdc-tab-content(slot="content" v-text-center)
 									base-code(lang="html") {{ trailingIconButton }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Button without ripple
@@ -126,7 +126,7 @@
 									example-mdc-button-without-ripple
 								mdc-tab-content(slot="content" v-text-center)
 									base-code(lang="html") {{ buttonWithoutRipple }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Icon button only 
@@ -138,7 +138,7 @@
 									example-mdc-icon-button-only
 								mdc-tab-content(slot="content" v-text-center)
 									base-code(lang="html") {{ iconButtonOnly }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Icon button only without ripple
@@ -150,7 +150,7 @@
 									example-mdc-icon-button-only-without-ripple
 								mdc-tab-content(slot="content" v-text-center)
 									base-code(lang="html") {{ iconButtonOnlyWithoutRipple }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Disabled icon button only
@@ -162,7 +162,7 @@
 									example-mdc-icon-button-only-disabled
 								mdc-tab-content(slot="content" v-text-center)
 									base-code(lang="html") {{ iconButtonOnlyDisabled }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Switch
@@ -171,9 +171,10 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-switch
+									example-mdc-switches
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+									base-code(lang="html") {{ switches }}
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Switch with custom labels
@@ -184,7 +185,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-switch(on="oui" off="non")
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Disabled switch
@@ -195,7 +196,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-switch(disabled)
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Checkbox
@@ -208,7 +209,7 @@
 									mdc-checkbox(id="c81e728d9d4c2f636f067f89cc14862c" value="c81e728d9d4c2f636f067f89cc14862c" text="Checked" checked)
 									mdc-checkbox(text="Disabled" disabled)
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Radio
@@ -222,7 +223,7 @@
 									mdc-radio(name="gender" id="other" value="ccd448ba2dc4d781bb1a0f0f93047f16" text="Other")
 									mdc-radio(name="gender" id="disabled" value="disabled" text="Disabled" disabled)
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Data list
@@ -255,7 +256,7 @@
 												mdc-data-table-cell(numeric) 6.0
 												mdc-data-table-cell New filing flavor
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") List
@@ -269,7 +270,7 @@
 										mdc-list-item(v-ripple) Single-line item
 										mdc-list-item(v-ripple) Single-line item
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Two line List
@@ -289,7 +290,7 @@
 											mdc-list-item-primary First-line text
 											mdc-list-item-secondary Second-line text
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") List groups
@@ -310,7 +311,7 @@
 											mdc-list-item Line item
 											mdc-list-item Line item
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") List dividers
@@ -326,7 +327,7 @@
 										mdc-list-item Item 1 - Division 2
 										mdc-list-item Item 2 - Division 2
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Single Selection List
@@ -339,7 +340,7 @@
 										mdc-list-item(selectable tabindex="0") Hot Dog
 										mdc-list-item(selectable) Hamburger
 										mdc-list-item(selectable) Tacos
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Pre-selected list item
@@ -353,7 +354,7 @@
 										mdc-list-item(selectable active) Crumble
 										mdc-list-item(selectable) Black forest cake
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") List with radio group
@@ -367,7 +368,7 @@
 										mdc-list-item-radio(name="flavor" id="c81e728d9d4c2f636f067f89cc14862c") Vanilla
 										mdc-list-item-radio(name="flavor" id="eccbc87e4b5ce2fe28308fd9f2a7baf3") No flavor
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") List with checkbox items
@@ -381,7 +382,7 @@
 										mdc-list-item-checkbox(name="topping" id="c81e728d9d4c2f636f067f89cc14862c") Kit kat topping
 										mdc-list-item-checkbox(name="topping" id="eccbc87e4b5ce2fe28308fd9f2a7baf3") With chocolatey sauce
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Snackbar
@@ -397,7 +398,7 @@
 									mdc-button(@click="closeSnackbarNormal") Close
 									mdc-button(@click="openSnackbarNormal" unelevated) Open
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Stacked snackbar
@@ -413,7 +414,7 @@
 									mdc-button(@click="closeSnackbarStacked") Close
 									mdc-button(@click="openSnackbarStacked" unelevated) Open
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Leading snackbar
@@ -429,7 +430,7 @@
 									mdc-button(@click="closeSnackbarLeading") Close
 									mdc-button(@click="openSnackbarLeading" unelevated) Open
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Card
@@ -441,7 +442,7 @@
 									mdc-card
 										mdc-card-content(v-typography="'body1'") Ice cream (derived from earlier iced cream or cream ice) is a sweetened frozen food typically eaten as a snack or dessert.
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Outlined card
@@ -453,7 +454,7 @@
 									mdc-card(outlined)
 										mdc-card-content(v-typography="'body1'") Chocolate is a usually sweet, brown food preparation of roasted and ground cacao seeds that is made in the form of a liquid, paste, or in a block, or used as a flavoring ingredient in other foods.
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Rich media card
@@ -469,7 +470,7 @@
 												img(src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" alt="Vienna" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;")
 										mdc-card-content(v-typography="'body1'") An éclair (also known as a sweet baguette) is an oblong pastry made with choux dough filled with a cream and topped with chocolate icing.
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Card actions
@@ -483,7 +484,7 @@
 										mdc-card-action.text-right
 											mdc-button(v-card-action-button) read more
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Full width card action
@@ -497,7 +498,7 @@
 										mdc-card-action
 											mdc-button(v-card-action-button raised style="width: 100%;") order
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Card with actions icon and button
@@ -513,7 +514,7 @@
 											mdc-button(v-card-action-button slot="button") share
 											mdc-icon-button(v-card-action-icon slot="icon" icon="bookmark_order")
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Combined example
@@ -536,7 +537,7 @@
 											mdc-icon-button(v-card-action-icon slot="icon" icon="share")
 											mdc-icon-button(v-card-action-icon slot="icon" icon="favorite_border")
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Text field
@@ -547,7 +548,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-text-field(id="dessert" label="Dessert")
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Text field with helper text
@@ -559,7 +560,7 @@
 									mdc-text-field(id="dessert" label="Dessert")
 										div(slot="helper-text") Choose a cake or an ice cream.
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Text field without label
@@ -570,7 +571,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-text-field(id="dessert")
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Disabled text field
@@ -581,7 +582,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-text-field(id="dessert" label="Dessert" disabled)
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Outlined text field
@@ -592,7 +593,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-text-field(id="dessert" label="Dessert" outlined)
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Outlined text field without label
@@ -603,7 +604,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-text-field(id="dessert" outlined)
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Full width text field
@@ -614,7 +615,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-text-field(id="dessert" full-width)
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Text area text field
@@ -625,7 +626,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-text-field(id="dessert" textarea label="Extra request")
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Text area without label
@@ -636,7 +637,7 @@
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-text-field(id="dessert" textarea)
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Image list
@@ -671,7 +672,7 @@
 										mdc-image-list-item
 											img(v-image-list src="https://picsum.photos/id/1012/3973/2639" alt="Photo 12")
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Image list with text overlay
@@ -706,7 +707,7 @@
 										mdc-image-list-item(text="Photo 12")
 											img(v-image-list src="https://picsum.photos/id/1012/3973/2639" alt="Photo 12")
 								mdc-tab-content(slot="content" v-text-center)
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+				mdc-grid-cell(desktop="4" tablet="6" phone="12")
 					mdc-card
 						mdc-card-content
 							h2(v-typography="'headline6'") Image list with text below
@@ -799,6 +800,7 @@ import ExampleMdcButtonWithoutRipple from "../component/example/MdcButtonWithout
 import ExampleMdcIconButtonOnly from "../component/example/MdcIconButtonOnly.vue";
 import ExampleMdcIconButtonOnlyWithoutRipple from "../component/example/MdcIconButtonOnlyWithoutRipple.vue";
 import ExampleMdcIconButtonOnlyDisabled from "../component/example/MdcIconButtonOnlyDisabled.vue";
+import ExampleMdcSwitches from "../component/example/MdcSwitches.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -832,6 +834,7 @@ export default {
     ExampleMdcIconButtonOnly,
     ExampleMdcIconButtonOnlyWithoutRipple,
     ExampleMdcIconButtonOnlyDisabled,
+    ExampleMdcSwitches,
     MdcCard,
     MdcCardAction,
     MdcCardContent,
