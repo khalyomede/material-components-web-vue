@@ -1,6 +1,6 @@
 <template lang="pug">
 	div
-		div(ref="component" :class="{ 'mdc-switch': true, 'mdc-switch--checked': $attrs.checked }")
+		div(ref="component" :class="classes")
 			.mdc-switch__track
 			.mdc-switch__thumb-underlay
 				.mdc-switch__thumb
@@ -12,6 +12,7 @@ import { MDCSwitch } from "@material/switch";
 import nonEmpty from "../js/validator/non-empty";
 
 export default {
+  inheritAttrs: false,
   props: {
     off: {
       type: String,
@@ -24,12 +25,26 @@ export default {
       validator: nonEmpty
     }
   },
+  computed: {
+    classes() {
+      return {
+        "mdc-switch": true,
+        "mdc-switch--checked": this.checked,
+        "mdc-switch--disabled": this.disabled
+      };
+    },
+    disabled() {
+      return "disabled" in this.$attrs && this.$attrs.disabled !== false;
+    },
+    checked() {
+      return "checked" in this.$attrs && this.$attrs.checked !== false;
+    }
+  },
   mounted() {
     const component = new MDCSwitch(this.$refs.component);
 
-    if ("disabled" in this.$attrs) {
-      component.disabled = this.$attrs.disabled;
-    }
+    component.disabled = this.disabled;
+    component.checked = this.checked;
   }
 };
 </script>
