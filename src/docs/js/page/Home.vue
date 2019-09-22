@@ -219,10 +219,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-checkbox(id="c4ca4238a0b923820dcc509a6f75849b" value="c4ca4238a0b923820dcc509a6f75849b" text="Unchecked")
-									mdc-checkbox(id="c81e728d9d4c2f636f067f89cc14862c" value="c81e728d9d4c2f636f067f89cc14862c" text="Checked" checked)
-									mdc-checkbox(text="Disabled" disabled)
+									example-mdc-checkbox
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ checkbox }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -765,7 +764,6 @@ import MdcCard from "../../../js/MdcCard.vue";
 import MdcCardAction from "../../../js/MdcCardAction.vue";
 import MdcCardContent from "../../../js/MdcCardContent.vue";
 import MdcCardMedia from "../../../js/MdcCardMedia.vue";
-import MdcCheckbox from "../../../js/MdcCheckbox.vue";
 import MdcDataTable from "../../../js/MdcDataTable.vue";
 import MdcDataTableRow from "../../../js/MdcDataTableRow.vue";
 import MdcDataTableCell from "../../../js/MdcDataTableCell.vue";
@@ -816,6 +814,7 @@ import ExampleMdcSwitches from "../component/example/MdcSwitches.vue";
 import ExampleMdcSwitchWithCustomLabels from "../component/example/MdcSwitchWithCustomLabels.vue";
 import ExampleMdcSwitchChecked from "../component/example/MdcSwitchChecked.vue";
 import ExampleMdcSwitchDisabled from "../component/example/MdcSwitchDisabled.vue";
+import ExampleMdcCheckbox from "../component/example/MdcCheckbox.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -853,11 +852,11 @@ export default {
     ExampleMdcSwitchWithCustomLabels,
     ExampleMdcSwitchChecked,
     ExampleMdcSwitchDisabled,
+    ExampleMdcCheckbox,
     MdcCard,
     MdcCardAction,
     MdcCardContent,
     MdcCardMedia,
-    MdcCheckbox,
     MdcDataTable,
     MdcDataTableCell,
     MdcDataTableRow,

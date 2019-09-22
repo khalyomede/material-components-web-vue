@@ -35,6 +35,37 @@ export default {
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
+	checkbox: `<template>
+  <div>
+    <mdc-checkbox
+      id="c4ca4238a0b923820dcc509a6f75849b"
+      value="c4ca4238a0b923820dcc509a6f75849b"
+      text="Unchecked"
+    />
+    <mdc-checkbox
+      id="c81e728d9d4c2f636f067f89cc14862c"
+      value="c81e728d9d4c2f636f067f89cc14862c"
+      text="Checked"
+      checked
+    />
+    <mdc-checkbox text="Disabled" disabled />
+  </div>
+</template>
+
+<script>
+import { MdcCheckbox } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcCheckbox
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/checkbox";
+</style>
+`,
 	denseButton: `<template>
   <mdc-button dense>Log in</mdc-button>
 </template>
@@ -161,6 +192,7 @@ export default {
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
+	radio: ``,
 	raisedButton: `<template>
   <mdc-button raised>Log in</mdc-button>
 </template>

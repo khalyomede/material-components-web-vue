@@ -26,8 +26,15 @@ export default {
     classes() {
       return {
         "mdc-checkbox": true,
-        "mdc-checkbox--disabled": this.$attrs.disabled
+        "mdc-checkbox--disabled": this.disabled,
+        "mdc-checkbox--checked": this.checked
       };
+    },
+    checked() {
+      return "checked" in this.$attrs && this.$attrs.checked !== false;
+    },
+    disabled() {
+      return "disabled" in this.$attrs && this.$attrs.disabled !== false;
     }
   },
   mounted() {
@@ -35,6 +42,8 @@ export default {
     const formField = new MDCFormField(this.$refs.input);
 
     formField.input = checkbox;
+    checkbox.checked = this.checked;
+    checkbox.disabled = this.disabled;
   }
 };
 </script>
