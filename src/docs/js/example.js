@@ -66,6 +66,59 @@ export default {
 @import "material-components-web-vue/lib/css/checkbox";
 </style>
 `,
+	dataTable: `<template>
+  <mdc-data-table label="Desserts" responsive>
+    <thead>
+      <mdc-data-table-row header>
+        <mdc-data-table-cell header>Dessert</mdc-data-table-cell>
+        <mdc-data-table-cell header numeric>Carbs (g)</mdc-data-table-cell>
+        <mdc-data-table-cell header numeric>Protein (g)</mdc-data-table-cell>
+        <mdc-data-table-cell header>Comments</mdc-data-table-cell>
+      </mdc-data-table-row>
+    </thead>
+    <tbody>
+      <mdc-data-table-row>
+        <mdc-data-table-cell>Frozen yogurt</mdc-data-table-cell>
+        <mdc-data-table-cell numeric>24</mdc-data-table-cell>
+        <mdc-data-table-cell numeric>4.0</mdc-data-table-cell>
+        <mdc-data-table-cell>Super tasty</mdc-data-table-cell>
+      </mdc-data-table-row>
+      <mdc-data-table-row>
+        <mdc-data-table-cell>Ice cream sandwich</mdc-data-table-cell>
+        <mdc-data-table-cell numeric>37</mdc-data-table-cell>
+        <mdc-data-table-cell numeric>4.3</mdc-data-table-cell>
+        <mdc-data-table-cell>I like ice cream more</mdc-data-table-cell>
+      </mdc-data-table-row>
+      <mdc-data-table-row>
+        <mdc-data-table-cell>Eclair</mdc-data-table-cell>
+        <mdc-data-table-cell numeric>24</mdc-data-table-cell>
+        <mdc-data-table-cell numeric>6.0</mdc-data-table-cell>
+        <mdc-data-table-cell>New filing flavor</mdc-data-table-cell>
+      </mdc-data-table-row>
+    </tbody>
+  </mdc-data-table>
+</template>
+
+<script>
+import {
+  MdcDataTable,
+  MdcDataTableRow,
+  MdcDataTableCell
+} from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcDataTable,
+    MdcDataTableRow,
+    MdcDataTableCell
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/data-table";
+</style>
+`,
 	denseButton: `<template>
   <mdc-button dense>Log in</mdc-button>
 </template>
@@ -174,6 +227,29 @@ export default {
 @import "material-components-web-vue/lib/css/icon-button";
 </style>
 `,
+	list: `<template>
+  <mdc-list>
+    <mdc-list-item v-ripple>Single-line item</mdc-list-item>
+    <mdc-list-item v-ripple>Single-line item</mdc-list-item>
+    <mdc-list-item v-ripple>Single-line item</mdc-list-item>
+  </mdc-list>
+</template>
+
+<script>
+import { MdcList, MdcListItem } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcList,
+    MdcListItem
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/list";
+</style>
+`,
 	outlinedButton: `<template>
   <mdc-button outlined>Log in</mdc-button>
 </template>
@@ -192,7 +268,29 @@ export default {
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
-	radio: ``,
+	radio: `<template>
+  <div>
+    <mdc-radio name="gender" id="woman" value="1" text="Woman" />
+    <mdc-radio name="gender" id="man" value="2" text="Man" />
+    <mdc-radio name="gender" id="checked" value="3" text="Checked" checked />
+    <mdc-radio name="gender" id="disabled" value="0" text="Disabled" disabled />
+  </div>
+</template>
+
+<script>
+import { MdcRadio } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcRadio
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/radio";
+</style>
+`,
 	raisedButton: `<template>
   <mdc-button raised>Log in</mdc-button>
 </template>

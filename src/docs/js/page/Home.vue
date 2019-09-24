@@ -243,30 +243,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-data-table(label="Desserts" responsive)
-										thead
-											mdc-data-table-row(header)
-												mdc-data-table-cell(header) Dessert
-												mdc-data-table-cell(header numeric) Carbs (g)
-												mdc-data-table-cell(header numeric) Protein (g)
-												mdc-data-table-cell(header) Comments
-										tbody
-											mdc-data-table-row
-												mdc-data-table-cell Frozen yogurt
-												mdc-data-table-cell(numeric) 24
-												mdc-data-table-cell(numeric) 4.0
-												mdc-data-table-cell Super tasty
-											mdc-data-table-row
-												mdc-data-table-cell Ice cream sandwich
-												mdc-data-table-cell(numeric) 37
-												mdc-data-table-cell(numeric) 4.3
-												mdc-data-table-cell I like ice cream more
-											mdc-data-table-row
-												mdc-data-table-cell Eclair
-												mdc-data-table-cell(numeric) 24
-												mdc-data-table-cell(numeric) 6.0
-												mdc-data-table-cell New filing flavor
+									example-mdc-data-table
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ dataTable }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -277,10 +256,9 @@
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
 									mdc-list
-										mdc-list-item(v-ripple) Single-line item
-										mdc-list-item(v-ripple) Single-line item
-										mdc-list-item(v-ripple) Single-line item
+										example-mdc-list
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ list }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -762,9 +740,6 @@ import MdcCard from "../../../js/MdcCard.vue";
 import MdcCardAction from "../../../js/MdcCardAction.vue";
 import MdcCardContent from "../../../js/MdcCardContent.vue";
 import MdcCardMedia from "../../../js/MdcCardMedia.vue";
-import MdcDataTable from "../../../js/MdcDataTable.vue";
-import MdcDataTableRow from "../../../js/MdcDataTableRow.vue";
-import MdcDataTableCell from "../../../js/MdcDataTableCell.vue";
 import MdcDrawer from "../../../js/MdcDrawer.vue";
 import MdcDrawerScrim from "../../../js/MdcDrawerScrim.vue";
 import MdcFab from "../../../js/MdcFab.vue";
@@ -778,7 +753,6 @@ import MdcList from "../../../js/MdcList.vue";
 import MdcListDivider from "../../../js/MdcListDivider.vue";
 import MdcListGroup from "../../../js/MdcListGroup.vue";
 import MdcListGroupTitle from "../../../js/MdcListGroupTitle.vue";
-import MdcListItem from "../../../js/MdcListItem.vue";
 import MdcListItemPrimary from "../../../js/MdcListItemPrimary.vue";
 import MdcListItemRadio from "../../../js/MdcListItemRadio.vue";
 import MdcListItemCheckbox from "../../../js/MdcListItemCheckbox.vue";
@@ -814,6 +788,8 @@ import ExampleMdcSwitchChecked from "../component/example/MdcSwitchChecked.vue";
 import ExampleMdcSwitchDisabled from "../component/example/MdcSwitchDisabled.vue";
 import ExampleMdcCheckbox from "../component/example/MdcCheckbox.vue";
 import ExampleMdcRadio from "../component/example/MdcRadio.vue";
+import ExampleMdcDataTable from "../component/example/MdcDataTable.vue";
+import ExampleMdcList from "../component/example/MdcList.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -853,13 +829,12 @@ export default {
     ExampleMdcSwitchDisabled,
     ExampleMdcCheckbox,
     ExampleMdcRadio,
+    ExampleMdcDataTable,
+    ExampleMdcList,
     MdcCard,
     MdcCardAction,
     MdcCardContent,
     MdcCardMedia,
-    MdcDataTable,
-    MdcDataTableCell,
-    MdcDataTableRow,
     MdcDrawer,
     MdcDrawerScrim,
     MdcFab,
@@ -877,7 +852,6 @@ export default {
     MdcListItemRadio,
     MdcListItemCheckbox,
     MdcListGroupTitle,
-    MdcListItem,
     MdcRadio,
     MdcSnackbar,
     MdcSnackbarAction,
