@@ -1,7 +1,7 @@
 <template lang="pug">
 	.mdc-form-field
-		.mdc-radio
-			input.mdc-radio__native-control(ref="input" type="radio" v-bind="$attrs" v-on="$listeners")
+		.mdc-radio(ref="component")
+			input.mdc-radio__native-control(type="radio" v-bind="$attrs" v-on="$listeners")
 			.mdc-radio__background
 				.mdc-radio__outer-circle
 				.mdc-radio__inner-circle
@@ -20,10 +20,21 @@ export default {
       default: ""
     }
   },
+  computed: {
+    checked() {
+      return "checked" in this.$attrs && this.$attrs.checked !== false;
+    },
+    disabled() {
+      return "disabled" in this.$attrs && this.$attrs.disabled !== false;
+    }
+  },
   mounted() {
-    // const radio = new MDCRadio(this.$refs.input);
-    // const formField = new MDCFormField(this.$el);
-    // formField.input = radio;
+    const radio = new MDCRadio(this.$refs.component);
+    const formField = new MDCFormField(this.$el);
+    formField.input = radio;
+
+    radio.checked = this.checked;
+    radio.disabled = this.disabled;
   }
 };
 </script>

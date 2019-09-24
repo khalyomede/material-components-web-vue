@@ -231,11 +231,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-radio(name="gender" id="woman" value="364dd90f4ca0a576f196b27651bd1852" text="Woman" checked)
-									mdc-radio(name="gender" id="man" value="40544b125797259e54020558cb8f42a6" text="Man")
-									mdc-radio(name="gender" id="other" value="ccd448ba2dc4d781bb1a0f0f93047f16" text="Other")
-									mdc-radio(name="gender" id="disabled" value="disabled" text="Disabled" disabled)
+									example-mdc-radio
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ radio }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -815,6 +813,7 @@ import ExampleMdcSwitchWithCustomLabels from "../component/example/MdcSwitchWith
 import ExampleMdcSwitchChecked from "../component/example/MdcSwitchChecked.vue";
 import ExampleMdcSwitchDisabled from "../component/example/MdcSwitchDisabled.vue";
 import ExampleMdcCheckbox from "../component/example/MdcCheckbox.vue";
+import ExampleMdcRadio from "../component/example/MdcRadio.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -853,6 +852,7 @@ export default {
     ExampleMdcSwitchChecked,
     ExampleMdcSwitchDisabled,
     ExampleMdcCheckbox,
+    ExampleMdcRadio,
     MdcCard,
     MdcCardAction,
     MdcCardContent,
