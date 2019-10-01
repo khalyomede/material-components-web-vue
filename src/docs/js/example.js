@@ -250,25 +250,74 @@ export default {
 @import "material-components-web-vue/lib/css/list";
 </style>
 `,
-	listTwoLine: `<template lang="pug">
-    mdc-list(two-line)
-        mdc-list-item
-            mdc-list-item-primary First-line text
-            mdc-list-item-secondary Second-line text
-        mdc-list-item
-            mdc-list-item-primary First-line text
-            mdc-list-item-secondary Second-line text
-        mdc-list-item
-            mdc-list-item-primary First-line text
-            mdc-list-item-secondary Second-line text
+	listGroup: `<template>
+  <mdc-list-group>
+    <mdc-list-group-title>List 1</mdc-list-group-title>
+    <mdc-list>
+      <mdc-list-item>Line item</mdc-list-item>
+      <mdc-list-item>Line item</mdc-list-item>
+      <mdc-list-item>Line item</mdc-list-item>
+    </mdc-list>
+    <mdc-list-group-title>List 2</mdc-list-group-title>
+    <mdc-list>
+      <mdc-list-item>Line item</mdc-list-item>
+      <mdc-list-item>Line item</mdc-list-item>
+      <mdc-list-item>Line item</mdc-list-item>
+    </mdc-list>
+  </mdc-list-group>
 </template>
 <script>
-import { MdcList, MdcListItem } from "material-components-web-vue";
+import {
+  MdcList,
+  MdcListItem,
+  MdcListGroup,
+  MdcListGroupTitle
+} from "material-components-web-vue";
 
 export default {
   components: {
     MdcList,
-    MdcListItem
+    MdcListItem,
+    MdcListGroup,
+    MdcListGroupTitle
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/list";
+</style>
+`,
+	listTwoLine: `<template lang="pug">
+	<mdc-list two-line>
+		<mdc-list-item>
+			<mdc-list-item-primary>First-line text</mdc-list-item-primary>
+			<mdc-list-item-secondary>Second-line text</mdc-list-item-secondary>
+		</mdc-list-item>
+		<mdc-list-item>
+			<mdc-list-item-primary>First-line text</mdc-list-item-primary>
+			<mdc-list-item-secondary>Second-line text</mdc-list-item-secondary>
+		</mdc-list-item>
+		<mdc-list-item>
+			<mdc-list-item-primary>First-line text</mdc-list-item-primary>
+			<mdc-list-item-secondary>Second-line text</mdc-list-item-secondary>
+		</mdc-list-item>
+	</mdc-list>
+</template>
+<script>
+import {
+  MdcList,
+  MdcListItem,
+  MdcListItemPrimary,
+  MdcListItemSecondary
+} from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcList,
+    MdcListItem,
+    MdcListItemPrimary,
+    MdcListItemSecondary
   }
 };
 </script>

@@ -270,8 +270,7 @@
 								mdc-tab-content(slot="content" active)
 									example-mdc-list-two-line
 								mdc-tab-content(slot="content" v-text-center)
-									mdc-tab-content(slot="content" v-text-center)
-										base-code(lang="html") {{ listTwoLine }}
+									base-code(lang="html") {{ listTwoLine }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -281,18 +280,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" active)
-									mdc-list-group
-										mdc-list-group-title List 1
-										mdc-list
-											mdc-list-item Line item
-											mdc-list-item Line item
-											mdc-list-item Line item
-										mdc-list-group-title List 2
-										mdc-list
-											mdc-list-item Line item
-											mdc-list-item Line item
-											mdc-list-item Line item
+									example-mdc-list-group
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ listGroup }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -784,6 +774,7 @@ import ExampleMdcRadio from "../component/example/MdcRadio.vue";
 import ExampleMdcDataTable from "../component/example/MdcDataTable.vue";
 import ExampleMdcList from "../component/example/MdcList.vue";
 import ExampleMdcListTwoLine from "../component/example/MdcListTwoLine.vue";
+import ExampleMdcListGroup from "../component/example/MdcListGroup.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -826,6 +817,7 @@ export default {
     ExampleMdcDataTable,
     ExampleMdcList,
     ExampleMdcListTwoLine,
+    ExampleMdcListGroup,
     MdcCard,
     MdcCardAction,
     MdcCardContent,

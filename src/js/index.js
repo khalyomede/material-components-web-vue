@@ -10,3 +10,5 @@ export MdcList from "./MdcList.vue";
 export MdcListItem from "./MdcListItem.vue";
 export MdcListItemPrimary from "./MdcListItemPrimary.vue";
 export MdcListItemSecondary from "./MdcListItemSecondary.vue";
+export MdcListGroup from "./MdcListGroup.vue";
+export MdcListGroupTitle from "./MdcListGroupTitle.vue";
