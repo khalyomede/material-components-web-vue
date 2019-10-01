@@ -8,3 +8,5 @@ export MdcDataTableRow from "./MdcDataTableRow.vue";
 export MdcDataTableCell from "./MdcDataTableCell.vue";
 export MdcList from "./MdcList.vue";
 export MdcListItem from "./MdcListItem.vue";
+export MdcListItemPrimary from "./MdcListItemPrimary.vue";
+export MdcListItemSecondary from "./MdcListItemSecondary.vue";

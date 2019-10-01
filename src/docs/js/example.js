@@ -250,6 +250,33 @@ export default {
 @import "material-components-web-vue/lib/css/list";
 </style>
 `,
+	listTwoLine: `<template lang="pug">
+    mdc-list(two-line)
+        mdc-list-item
+            mdc-list-item-primary First-line text
+            mdc-list-item-secondary Second-line text
+        mdc-list-item
+            mdc-list-item-primary First-line text
+            mdc-list-item-secondary Second-line text
+        mdc-list-item
+            mdc-list-item-primary First-line text
+            mdc-list-item-secondary Second-line text
+</template>
+<script>
+import { MdcList, MdcListItem } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcList,
+    MdcListItem
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/list";
+</style>
+`,
 	outlinedButton: `<template>
   <mdc-button outlined>Log in</mdc-button>
 </template>

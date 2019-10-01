@@ -267,18 +267,11 @@
 							mdc-tab
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
-								mdc-tab-content(slot="content" v-text-center active)
-									mdc-list(two-line)
-										mdc-list-item
-											mdc-list-item-primary First-line text
-											mdc-list-item-secondary Second-line text
-										mdc-list-item
-											mdc-list-item-primary First-line text
-											mdc-list-item-secondary Second-line text
-										mdc-list-item
-											mdc-list-item-primary First-line text
-											mdc-list-item-secondary Second-line text
+								mdc-tab-content(slot="content" active)
+									example-mdc-list-two-line
 								mdc-tab-content(slot="content" v-text-center)
+									mdc-tab-content(slot="content" v-text-center)
+										base-code(lang="html") {{ listTwoLine }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -790,6 +783,7 @@ import ExampleMdcCheckbox from "../component/example/MdcCheckbox.vue";
 import ExampleMdcRadio from "../component/example/MdcRadio.vue";
 import ExampleMdcDataTable from "../component/example/MdcDataTable.vue";
 import ExampleMdcList from "../component/example/MdcList.vue";
+import ExampleMdcListTwoLine from "../component/example/MdcListTwoLine.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -831,6 +825,7 @@ export default {
     ExampleMdcRadio,
     ExampleMdcDataTable,
     ExampleMdcList,
+    ExampleMdcListTwoLine,
     MdcCard,
     MdcCardAction,
     MdcCardContent,
