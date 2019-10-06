@@ -400,9 +400,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" active)
-									mdc-card
-										mdc-card-content(v-typography="'body1'") Ice cream (derived from earlier iced cream or cream ice) is a sweetened frozen food typically eaten as a snack or dessert.
+									example-mdc-card
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ card }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -764,6 +764,7 @@ import ExampleMdcListSingleSelection from "../component/example/MdcListSingleSel
 import ExampleMdcListPreselectedItem from "../component/example/MdcListPreselectedItem.vue";
 import ExampleMdcListRadioGroup from "../component/example/MdcListRadioGroup.vue";
 import ExampleMdcListCheckboxItem from "../component/example/MdcListCheckboxItem.vue";
+import ExampleMdcCard from "../component/example/MdcCard.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -813,6 +814,7 @@ export default {
     ExampleMdcListRadioGroup,
     ExampleMdcCheckbox,
     ExampleMdcListCheckboxItem,
+    ExampleMdcCard,
     MdcCard,
     MdcCardAction,
     MdcCardContent,

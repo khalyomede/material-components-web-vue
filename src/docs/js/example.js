@@ -35,6 +35,32 @@ export default {
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
+	card: `<template>
+  <mdc-card>
+    <mdc-card-content
+      v-typography="'body1'"
+    >Ice cream (derived from earlier iced cream or cream ice) is a sweetened frozen food typically eaten as a snack or dessert.</mdc-card-content>
+  </mdc-card>
+</template>
+
+<script>
+import { MdcCard, MdcCardContent, typography } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcCard,
+    MdcCardContent
+  },
+  directives: {
+    typography
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/card";
+</style>
+`,
 	checkbox: `<template>
   <div>
     <mdc-checkbox
