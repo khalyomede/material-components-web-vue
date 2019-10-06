@@ -304,10 +304,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-list(selectable)
-										mdc-list-item(selectable tabindex="0") Hot Dog
-										mdc-list-item(selectable) Hamburger
-										mdc-list-item(selectable) Tacos
+									example-mdc-list-single-selection
+								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ listSingleSelection }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -769,6 +768,7 @@ import ExampleMdcList from "../component/example/MdcList.vue";
 import ExampleMdcListTwoLine from "../component/example/MdcListTwoLine.vue";
 import ExampleMdcListGroup from "../component/example/MdcListGroup.vue";
 import ExampleMdcListDivider from "../component/example/MdcListDivider.vue";
+import ExampleMdcListSingleSelection from "../component/example/MdcListSingleSelection.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -813,6 +813,7 @@ export default {
     ExampleMdcListTwoLine,
     ExampleMdcListGroup,
     ExampleMdcListDivider,
+    ExampleMdcListSingleSelection,
     MdcCard,
     MdcCardAction,
     MdcCardContent,
