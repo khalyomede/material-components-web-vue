@@ -292,13 +292,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-list
-										mdc-list-item Item 1 - Division 1
-										mdc-list-item Item 2 - Division 1
-										mdc-list-divider
-										mdc-list-item Item 1 - Division 2
-										mdc-list-item Item 2 - Division 2
+									example-mdc-list-divider
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ listDivider }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -733,9 +729,6 @@ import MdcHelperText from "../../../js/MdcHelperText.vue";
 import MdcImageList from "../../../js/MdcImageList.vue";
 import MdcImageListItem from "../../../js/MdcImageListItem.vue";
 import MdcList from "../../../js/MdcList.vue";
-import MdcListDivider from "../../../js/MdcListDivider.vue";
-import MdcListGroup from "../../../js/MdcListGroup.vue";
-import MdcListGroupTitle from "../../../js/MdcListGroupTitle.vue";
 import MdcListItemPrimary from "../../../js/MdcListItemPrimary.vue";
 import MdcListItemRadio from "../../../js/MdcListItemRadio.vue";
 import MdcListItemCheckbox from "../../../js/MdcListItemCheckbox.vue";
@@ -775,6 +768,7 @@ import ExampleMdcDataTable from "../component/example/MdcDataTable.vue";
 import ExampleMdcList from "../component/example/MdcList.vue";
 import ExampleMdcListTwoLine from "../component/example/MdcListTwoLine.vue";
 import ExampleMdcListGroup from "../component/example/MdcListGroup.vue";
+import ExampleMdcListDivider from "../component/example/MdcListDivider.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -818,6 +812,7 @@ export default {
     ExampleMdcList,
     ExampleMdcListTwoLine,
     ExampleMdcListGroup,
+    ExampleMdcListDivider,
     MdcCard,
     MdcCardAction,
     MdcCardContent,
@@ -834,11 +829,8 @@ export default {
     MdcListItemPrimary,
     MdcListItemSecondary,
     MdcList,
-    MdcListDivider,
-    MdcListGroup,
     MdcListItemRadio,
     MdcListItemCheckbox,
-    MdcListGroupTitle,
     MdcRadio,
     MdcSnackbar,
     MdcSnackbarAction,
