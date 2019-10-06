@@ -316,11 +316,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-list(selectable)
-										mdc-list-item(selectable tabindex="0") Ice cream
-										mdc-list-item(selectable active) Crumble
-										mdc-list-item(selectable) Black forest cake
+									example-mdc-list-preselected-item
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ listPreselectedItem }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -330,11 +328,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-list(radio)
-										mdc-list-item-radio(name="flavor" id="c4ca4238a0b923820dcc509a6f75849b") Chocolate
-										mdc-list-item-radio(name="flavor" id="c81e728d9d4c2f636f067f89cc14862c") Vanilla
-										mdc-list-item-radio(name="flavor" id="eccbc87e4b5ce2fe28308fd9f2a7baf3") No flavor
+									example-mdc-list-radio-group
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ listRadioGroup }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -344,11 +340,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-list(checkbox)
-										mdc-list-item-checkbox(name="topping" id="c4ca4238a0b923820dcc509a6f75849b") Oreo topping
-										mdc-list-item-checkbox(name="topping" id="c81e728d9d4c2f636f067f89cc14862c") Kit kat topping
-										mdc-list-item-checkbox(name="topping" id="eccbc87e4b5ce2fe28308fd9f2a7baf3") With chocolatey sauce
+									example-mdc-list-checkbox-item
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ listCheckboxItem }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -729,8 +723,6 @@ import MdcImageList from "../../../js/MdcImageList.vue";
 import MdcImageListItem from "../../../js/MdcImageListItem.vue";
 import MdcList from "../../../js/MdcList.vue";
 import MdcListItemPrimary from "../../../js/MdcListItemPrimary.vue";
-import MdcListItemRadio from "../../../js/MdcListItemRadio.vue";
-import MdcListItemCheckbox from "../../../js/MdcListItemCheckbox.vue";
 import MdcListItemSecondary from "../../../js/MdcListItemSecondary.vue";
 import MdcRadio from "../../../js/MdcRadio.vue";
 import MdcSnackbar from "../../../js/MdcSnackbar.vue";
@@ -769,6 +761,9 @@ import ExampleMdcListTwoLine from "../component/example/MdcListTwoLine.vue";
 import ExampleMdcListGroup from "../component/example/MdcListGroup.vue";
 import ExampleMdcListDivider from "../component/example/MdcListDivider.vue";
 import ExampleMdcListSingleSelection from "../component/example/MdcListSingleSelection.vue";
+import ExampleMdcListPreselectedItem from "../component/example/MdcListPreselectedItem.vue";
+import ExampleMdcListRadioGroup from "../component/example/MdcListRadioGroup.vue";
+import ExampleMdcListCheckboxItem from "../component/example/MdcListCheckboxItem.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -814,6 +809,10 @@ export default {
     ExampleMdcListGroup,
     ExampleMdcListDivider,
     ExampleMdcListSingleSelection,
+    ExampleMdcListPreselectedItem,
+    ExampleMdcListRadioGroup,
+    ExampleMdcCheckbox,
+    ExampleMdcListCheckboxItem,
     MdcCard,
     MdcCardAction,
     MdcCardContent,
@@ -830,8 +829,6 @@ export default {
     MdcListItemPrimary,
     MdcListItemSecondary,
     MdcList,
-    MdcListItemRadio,
-    MdcListItemCheckbox,
     MdcRadio,
     MdcSnackbar,
     MdcSnackbarAction,

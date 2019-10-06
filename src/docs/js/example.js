@@ -250,6 +250,29 @@ export default {
 @import "material-components-web-vue/lib/css/list";
 </style>
 `,
+	listCheckboxItem: `<template>
+  <mdc-list checkbox>
+    <mdc-list-item-checkbox name="topping">Oreo topping</mdc-list-item-checkbox>
+    <mdc-list-item-checkbox name="topping">Kit kat topping</mdc-list-item-checkbox>
+    <mdc-list-item-checkbox name="topping">With chocolatey sauce</mdc-list-item-checkbox>
+  </mdc-list>
+</template>
+
+<script>
+import { MdcList, MdcListItemCheckbox } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcList,
+    MdcListItemCheckbox
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/list";
+</style>
+`,
 	listDivider: `<template>
   <mdc-list>
     <mdc-list-item>Item 1 - Division 1</mdc-list-item>
@@ -306,6 +329,52 @@ export default {
     MdcListItem,
     MdcListGroup,
     MdcListGroupTitle
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/list";
+</style>
+`,
+	listPreselectedItem: `<template>
+  <mdc-list selectable>
+    <mdc-list-item selectable tabindex="0">Ice cream</mdc-list-item>
+    <mdc-list-item selectable active>Crumble</mdc-list-item>
+    <mdc-list-item selectable>Black forest cake</mdc-list-item>
+  </mdc-list>
+</template>
+
+<script>
+import { MdcList, MdcListItem } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcList,
+    MdcListItem
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/list";
+</style>
+`,
+	listRadioGroup: `<template>
+  <mdc-list radio>
+    <mdc-list-item-radio name="flavor">Chocolate</mdc-list-item-radio>
+    <mdc-list-item-radio name="flavor">Vanilla</mdc-list-item-radio>
+    <mdc-list-item-radio name="flavor">No flavor</mdc-list-item-radio>
+  </mdc-list>
+</template>
+
+<script>
+import { MdcList, MdcListItemRadio } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcList,
+    MdcListItemRadio
   }
 };
 </script>
