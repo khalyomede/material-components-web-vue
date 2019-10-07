@@ -61,6 +61,173 @@ export default {
 @import "material-components-web-vue/lib/css/card";
 </style>
 `,
+	cardAction: `<template>
+  	<mdc-card>
+		<mdc-card-content v-typography="'body1'">
+			A croissant is a buttery, flaky, viennoiserie pastry of Austrian and French origin, named for its historical crescent shape.
+		</mdc-card-content>
+		<mdc-card-action>
+			<mdc-button v-card-action-button>
+				read more
+			</mdc-button>
+		</mdc-card-action>
+	</mdc-card>
+</template>
+
+<script>
+import { MdcButton, MdcCard, MdcCardContent, MdcCardAction, typography, cardActionButton } from "material-components-web-vue";
+
+export default {
+  components: {
+	MdcButton,
+    MdcCard,
+	MdcCardContent,
+	MdcCardAction
+  },
+  directives: {
+	typography,
+	cardActionButton
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/button";
+@import "material-components-web-vue/lib/css/card";
+</style>
+`,
+	cardActionIconButton: `<template>
+	<mdc-card>
+		<mdc-card-content v-typography="'body1'">
+			A macaron or French macaroon is a sweet meringue-based confection made with egg white, icing sugar, granulated sugar, almond powder or ground almond, and food coloring.
+		</mdc-card-content>
+		<mdc-card-action>
+			<mdc-button v-card-action-button slot="button">read more</mdc-button>
+			<mdc-button v-card-action-button slot="button">share</mdc-button>
+			<mdc-icon-button v-card-action-icon slot="icon" icon="bookmark_order" />
+		</mdc-card-action>
+	</mdc-card>
+</template>
+
+<script>
+import { MdcButton, MdcIconButton, MdcCard, MdcCardContent, MdcCardAction, typography, cardActionButton } from "material-components-web-vue";
+
+export default {
+  components: {
+	MdcButton,
+	MdcIconButton,
+    MdcCard,
+	MdcCardContent,
+	MdcCardAction
+  },
+  directives: {
+	cardActionButton,
+    typography
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/button";
+@import "material-components-web-vue/lib/css/icon-button";
+@import "material-components-web-vue/lib/css/card";
+</style>
+`,
+	cardFullWidthAction: `<template>
+  	<mdc-card>
+		<mdc-card-content v-typography="'body1'">
+			Black Forest gâteau (British English) or Black Forest cake (American English) is a chocolate sponge cake with a rich cherry filling based on the German dessert Schwarzwälder Kirschtorte, literally "Black Forest Cherry-torte".
+		</mdc-card-content>
+		<mdc-card-action>
+			<mdc-button v-card-action-button raised style="width: 100%;">
+				order
+			</mdc-button>
+		</mdc-card-action>
+	</mdc-card>
+</template>
+
+<script>
+import { MdcButton, MdcCard, MdcCardContent, MdcCardAction, typography, cardActionButton } from "material-components-web-vue";
+
+export default {
+  components: {
+	MdcButton,
+    MdcCard,
+	MdcCardContent,
+	MdcCardAction
+  },
+  directives: {
+	cardActionButton,
+    typography
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/button";
+@import "material-components-web-vue/lib/css/card";
+</style>
+`,
+	cardOutlined: `<template>
+  <mdc-card outlined>
+    <mdc-card-content
+      v-typography="'body1'"
+    >Chocolate is a usually sweet, brown food preparation of roasted and ground cacao seeds that is made in the form of a liquid, paste, or in a block, or used as a flavoring ingredient in other foods.</mdc-card-content>
+  </mdc-card>
+</template>
+
+<script>
+import { MdcCard, MdcCardContent, typography } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcCard,
+    MdcCardContent
+  },
+  directives: {
+    typography
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/card";
+</style>
+`,
+	cardRichMedia: `<template>
+  	<mdc-card>
+		<mdc-card-media>
+			<picture>
+				<source srcset="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" type="image/jpeg">
+					<img src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" alt="Vienna" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;" />
+				</source>
+			</picture>
+		</mdc-card-media>
+		<mdc-card-content v-typography="'body1'">
+			An éclair (also known as a sweet baguette) is an oblong pastry made with choux dough filled with a cream and topped with chocolate icing.
+		</mdc-card-content>
+	</mdc-card>
+</template>
+
+<script>
+import { MdcCard, MdcCardContent, MdcCardMedia, typography } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcCard,
+	MdcCardContent,
+	MdcCardMedia
+  },
+  directives: {
+    typography
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "material-components-web-vue/lib/css/card";
+</style>
+`,
 	checkbox: `<template>
   <div>
     <mdc-checkbox

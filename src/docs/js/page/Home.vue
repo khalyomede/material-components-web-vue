@@ -412,9 +412,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" active)
-									mdc-card(outlined)
-										mdc-card-content(v-typography="'body1'") Chocolate is a usually sweet, brown food preparation of roasted and ground cacao seeds that is made in the form of a liquid, paste, or in a block, or used as a flavoring ingredient in other foods.
+									example-mdc-card-outlined
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ cardOutlined }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -424,13 +424,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" active)
-									mdc-card
-										mdc-card-media
-											picture
-												source(srcset="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" type="image/jpeg")
-												img(src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" alt="Vienna" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;")
-										mdc-card-content(v-typography="'body1'") An éclair (also known as a sweet baguette) is an oblong pastry made with choux dough filled with a cream and topped with chocolate icing.
+									example-mdc-card-rich-media
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ cardRichMedia }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -440,11 +436,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" active)
-									mdc-card
-										mdc-card-content(v-typography="'body1'") A croissant is a buttery, flaky, viennoiserie pastry of Austrian and French origin, named for its historical crescent shape.
-										mdc-card-action.text-right
-											mdc-button(v-card-action-button) read more
+									example-mdc-card-action
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ cardAction }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -454,11 +448,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" active)
-									mdc-card
-										mdc-card-content(v-typography="'body1'") Black Forest gâteau (British English) or Black Forest cake (American English) is a chocolate sponge cake with a rich cherry filling based on the German dessert Schwarzwälder Kirschtorte, literally "Black Forest Cherry-torte".
-										mdc-card-action
-											mdc-button(v-card-action-button raised style="width: 100%;") order
+									example-mdc-card-full-width-action
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ cardFullWidthAction }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -468,12 +460,7 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" active)
-									mdc-card
-										mdc-card-content(v-typography="'body1'") A macaron or French macaroon is a sweet meringue-based confection made with egg white, icing sugar, granulated sugar, almond powder or ground almond, and food coloring.
-										mdc-card-action
-											mdc-button(v-card-action-button slot="button") read more
-											mdc-button(v-card-action-button slot="button") share
-											mdc-icon-button(v-card-action-icon slot="icon" icon="bookmark_order")
+									example-mdc-card-action-icon-button
 								mdc-tab-content(slot="content" v-text-center)
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
@@ -765,6 +752,11 @@ import ExampleMdcListPreselectedItem from "../component/example/MdcListPreselect
 import ExampleMdcListRadioGroup from "../component/example/MdcListRadioGroup.vue";
 import ExampleMdcListCheckboxItem from "../component/example/MdcListCheckboxItem.vue";
 import ExampleMdcCard from "../component/example/MdcCard.vue";
+import ExampleMdcCardOutlined from "../component/example/MdcCardOutlined.vue";
+import ExampleMdcCardRichMedia from "../component/example/MdcCardRichMedia.vue";
+import ExampleMdcCardAction from "../component/example/MdcCardAction.vue";
+import ExampleMdcCardFullWidthAction from "../component/example/MdcCardFullWIdthAction.vue";
+import ExampleMdcCardActionIconButton from "../component/example/MdcCardActionIconButton.vue";
 
 import cardActionButton from "../../../js/directive/card-action-button";
 import cardActionIconButton from "../../../js/directive/card-action-icon-button";
@@ -815,6 +807,11 @@ export default {
     ExampleMdcCheckbox,
     ExampleMdcListCheckboxItem,
     ExampleMdcCard,
+	ExampleMdcCardOutlined,
+	ExampleMdcCardRichMedia,
+	ExampleMdcCardAction,
+	ExampleMdcCardFullWidthAction,
+	ExampleMdcCardActionIconButton,
     MdcCard,
     MdcCardAction,
     MdcCardContent,
