@@ -1,5 +1,5 @@
 <template>
-  <mdc-button>Log in</mdc-button>
+  <mdc-button>default</mdc-button>
 </template>
 
 <script>
@@ -12,6 +12,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../../../../lib/css/button";
 </style>

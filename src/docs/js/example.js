@@ -1,6 +1,6 @@
 export default {
 	button: `<template>
-  <mdc-button>Log in</mdc-button>
+  <mdc-button>default</mdc-button>
 </template>
 
 <script>
@@ -13,7 +13,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
@@ -57,7 +57,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/card";
 </style>
 `,
@@ -91,7 +91,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 @import "material-components-web-vue/lib/css/card";
 </style>
@@ -110,7 +110,7 @@ export default {
 </template>
 
 <script>
-import { MdcButton, MdcIconButton, MdcCard, MdcCardContent, MdcCardAction, typography, cardActionButton } from "material-components-web-vue";
+import { MdcButton, MdcIconButton, MdcCard, MdcCardContent, MdcCardAction, typography, cardActionButton, cardActionIcon } from "material-components-web-vue";
 
 export default {
   components: {
@@ -122,12 +122,13 @@ export default {
   },
   directives: {
 	cardActionButton,
+	cardActionIcon,
     typography
   }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 @import "material-components-web-vue/lib/css/icon-button";
 @import "material-components-web-vue/lib/css/card";
@@ -163,7 +164,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 @import "material-components-web-vue/lib/css/card";
 </style>
@@ -190,7 +191,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/card";
 </style>
 `,
@@ -224,7 +225,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/card";
 </style>
 `,
@@ -255,7 +256,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/checkbox";
 </style>
 `,
@@ -308,12 +309,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/data-table";
 </style>
 `,
 	denseButton: `<template>
-  <mdc-button dense>Log in</mdc-button>
+  <mdc-button dense>dense</mdc-button>
 </template>
 
 <script>
@@ -326,7 +327,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
@@ -344,12 +345,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
 	iconButton: `<template>
-  <mdc-button icon="input">Log in</mdc-button>
+  <mdc-button icon="favorite">icon</mdc-button>
 </template>
 
 <script>
@@ -362,7 +363,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
@@ -380,7 +381,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/icon-button";
 </style>
 `,
@@ -398,7 +399,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/icon-button";
 </style>
 `,
@@ -416,7 +417,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/icon-button";
 </style>
 `,
@@ -439,7 +440,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
 `,
@@ -462,7 +463,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
 `,
@@ -488,7 +489,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
 `,
@@ -526,7 +527,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
 `,
@@ -549,7 +550,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
 `,
@@ -572,8 +573,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/list";
+@import "material-components-web-vue/lib/css/radio";
 </style>
 `,
 	listSingleSelection: `<template>
@@ -595,7 +597,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
 `,
@@ -633,7 +635,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
 `,
@@ -651,7 +653,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
@@ -674,7 +676,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/radio";
 </style>
 `,
@@ -692,14 +694,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
 	switchChecked: `<template>
-  <div>
     <mdc-switch checked />
-  </div>
 </template>
 <script>
 import { MdcSwitch } from "material-components-web-vue";
@@ -711,7 +711,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/switch";
 </style>
 `,
@@ -728,14 +728,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/switch";
 </style>
 `,
 	switches: `<template>
-  <div>
     <mdc-switch />
-  </div>
 </template>
 <script>
 import { MdcSwitch } from "material-components-web-vue";
@@ -747,7 +745,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/switch";
 </style>
 `,
@@ -764,7 +762,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/switch";
 </style>
 `,
@@ -782,7 +780,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
@@ -800,7 +798,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
 `

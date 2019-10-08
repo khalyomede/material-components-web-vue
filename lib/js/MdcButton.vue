@@ -1,9 +1,9 @@
 <template lang="pug">
-	button(:class="classes" v-on="$listeners")
-		i.material-icons.mdc-button__icon(v-if="icon && iconDirection == 'left'" aria-hidden="true") {{ icon }}
-		.mdc-button__label
+	button(:class="classes" v-bind="$attrs" v-on="$listeners")
+		i.material-icons.mdc-button__icon.mdc-button__icon-left(v-if="icon && iconDirection === 'left'" aria-hidden="true") {{ icon }}
+		span.mdc-button__label
 			slot
-		i.material-icons.mdc-button__icon(v-if="icon && iconDirection == 'right'" aria-hidden="true") {{ icon }}
+		i.material-icons.mdc-button__icon.mdc-button__icon-right(v-if="icon && iconDirection === 'right'" aria-hidden="true") {{ icon }}
 </template>
 <script>
 import { MDCRipple } from "@material/ripple";

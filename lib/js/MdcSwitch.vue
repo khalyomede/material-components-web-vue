@@ -1,11 +1,15 @@
 <template lang="pug">
-	div
-		div(ref="component" :class="classes")
-			.mdc-switch__track
-			.mdc-switch__thumb-underlay
-				.mdc-switch__thumb
-					input.mdc-switch__native-control(type="checkbox" role="switch" v-bind="$attrs" v-on="$listeners")
-		label(:for="$attrs.id") {{ off }} / {{ on }}
+	<div>
+		<div class="mdc-switch" ref="component">
+			<div class="mdc-switch__track"></div>
+			<div class="mdc-switch__thumb-underlay">
+				<div class="mdc-switch__thumb">
+					<input type="checkbox" id="basic-switch" class="mdc-switch__native-control" role="switch">
+				</div>
+			</div>
+		</div>
+		<label for="basic-switch">off/on</label>
+	</div>
 </template>
 <script>
 import { MDCSwitch } from "@material/switch";

@@ -1,7 +1,5 @@
 <template>
-  <div>
     <mdc-switch />
-  </div>
 </template>
 <script>
 import { MdcSwitch } from "../../../../../lib/js";
@@ -13,6 +11,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../../../../lib/css/switch";
 </style>

@@ -17,6 +17,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../../../../lib/css/list";
+@import "../../../../../lib/css/radio";
 </style>

@@ -16,6 +16,7 @@ export MdcListDivider from "./MdcListDivider.vue";
 export MdcListItemRadio from "./MdcListItemRadio.vue";
 export MdcListItemCheckbox from "./MdcListItemCheckbox.vue";
 export MdcCard from "./MdcCard.vue";
+export MdcCardAction from "./MdcCardAction.vue";
 export MdcCardContent from "./MdcCardContent.vue";
 export MdcCardMedia from "./MdcCardMedia.vue";
 export cardActionButton from "./directive/card-action-button.js";

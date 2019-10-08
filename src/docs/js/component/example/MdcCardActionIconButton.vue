@@ -30,7 +30,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../../../../lib/css/button";
 @import "../../../../../lib/css/icon-button";
 @import "../../../../../lib/css/card";

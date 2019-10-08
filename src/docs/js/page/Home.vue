@@ -462,6 +462,7 @@
 								mdc-tab-content(slot="content" active)
 									example-mdc-card-action-icon-button
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ cardActionIconButton }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -696,29 +697,15 @@
 <script>
 import BaseCode from "../component/BaseCode.vue";
 import MdcCard from "../../../js/MdcCard.vue";
-import MdcCardAction from "../../../js/MdcCardAction.vue";
 import MdcCardContent from "../../../js/MdcCardContent.vue";
-import MdcCardMedia from "../../../js/MdcCardMedia.vue";
 import MdcDrawer from "../../../js/MdcDrawer.vue";
 import MdcDrawerScrim from "../../../js/MdcDrawerScrim.vue";
-import MdcFab from "../../../js/MdcFab.vue";
 import MdcGrid from "../../../js/MdcGrid.vue";
 import MdcGridCell from "../../../js/MdcGridCell.vue";
 import MdcGridRow from "../../../js/MdcGridRow.vue";
-import MdcHelperText from "../../../js/MdcHelperText.vue";
-import MdcImageList from "../../../js/MdcImageList.vue";
-import MdcImageListItem from "../../../js/MdcImageListItem.vue";
-import MdcList from "../../../js/MdcList.vue";
-import MdcListItemPrimary from "../../../js/MdcListItemPrimary.vue";
-import MdcListItemSecondary from "../../../js/MdcListItemSecondary.vue";
-import MdcRadio from "../../../js/MdcRadio.vue";
-import MdcSnackbar from "../../../js/MdcSnackbar.vue";
-import MdcSnackbarLabel from "../../../js/MdcSnackbarLabel.vue";
-import MdcSnackbarAction from "../../../js/MdcSnackbarAction.vue";
 import MdcTab from "../../../js/MdcTab.vue";
 import MdcTabContent from "../../../js/MdcTabContent.vue";
 import MdcTabItem from "../../../js/MdcTabItem.vue";
-import MdcTextField from "../../../js/MdcTextField.vue";
 import MdcTopAppBar from "../../../js/MdcTopAppBar.vue";
 import MdcTopAppBarAction from "../../../js/MdcTopAppBarAction.vue";
 import MdcTopAppBarButton from "../../../js/MdcTopAppBarButton.vue";
@@ -758,8 +745,6 @@ import ExampleMdcCardAction from "../component/example/MdcCardAction.vue";
 import ExampleMdcCardFullWidthAction from "../component/example/MdcCardFullWIdthAction.vue";
 import ExampleMdcCardActionIconButton from "../component/example/MdcCardActionIconButton.vue";
 
-import cardActionButton from "../../../js/directive/card-action-button";
-import cardActionIconButton from "../../../js/directive/card-action-icon-button";
 import imageList from "../../../js/directive/image-list";
 import ripple from "../../../js/directive/ripple";
 import textCenter from "../../../js/directive/text-center";
@@ -807,34 +792,20 @@ export default {
     ExampleMdcCheckbox,
     ExampleMdcListCheckboxItem,
     ExampleMdcCard,
-	ExampleMdcCardOutlined,
-	ExampleMdcCardRichMedia,
-	ExampleMdcCardAction,
-	ExampleMdcCardFullWidthAction,
-	ExampleMdcCardActionIconButton,
+    ExampleMdcCardOutlined,
+    ExampleMdcCardRichMedia,
+    ExampleMdcCardAction,
+    ExampleMdcCardFullWidthAction,
+    ExampleMdcCardActionIconButton,
     MdcCard,
-    MdcCardAction,
     MdcCardContent,
-    MdcCardMedia,
     MdcDrawer,
     MdcDrawerScrim,
-    MdcFab,
     MdcGrid,
     MdcGridCell,
     MdcGridRow,
-    MdcHelperText,
-    MdcImageList,
-    MdcImageListItem,
-    MdcListItemPrimary,
-    MdcListItemSecondary,
-    MdcList,
-    MdcRadio,
-    MdcSnackbar,
-    MdcSnackbarAction,
-    MdcSnackbarLabel,
     MdcTab,
     MdcTabContent,
-    MdcTextField,
     MdcTabItem,
     MdcTopAppBar,
     MdcTopAppBarAction,
@@ -842,35 +813,7 @@ export default {
     MdcTopAppBarTitle
   },
   directives: {
-    cardActionButton,
-    cardActionIconButton,
-    imageList,
-    ripple,
-    textCenter,
     typography
-  },
-  methods: {
-    openSnackbarNormal() {
-      this.$refs.snackbarNormal.element.open();
-    },
-    openSnackbarStacked() {
-      this.$refs.snackbarStacked.element.open();
-    },
-    openSnackbarLeading() {
-      this.$refs.snackbarLeading.element.open();
-    },
-    closeSnackbarNormal() {
-      this.$refs.snackbarNormal.element.close();
-    },
-    closeSnackbarStacked() {
-      this.$refs.snackbarStacked.element.close();
-    },
-    closeSnackbarLeading() {
-      this.$refs.snackbarLeading.element.close();
-    },
-    showSidebar() {
-      this.$refs.sidebar.element.open = true;
-    }
   },
   mounted() {
     Prism.highlightAll();
