@@ -472,20 +472,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" active)
-									mdc-card
-										mdc-card-content
-											h3(v-typography="'headline6'" style="margin: 0px") Google
-											span(v-typography="'overline'") 2 hours ago
-										mdc-card-media
-											picture
-												source(srcset="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" type="image/jpeg")
-												img(src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" alt="Vienna" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;")
-										mdc-card-content(v-typography="'body1'") Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest layer, consists of a mixture of soft, fresh cheese (typically cream cheese or ricotta), eggs, and sugar. If there is a bottom layer,
-										mdc-card-action
-											mdc-button(v-card-action-button slot="button") comment
-											mdc-icon-button(v-card-action-icon slot="icon" icon="share")
-											mdc-icon-button(v-card-action-icon slot="icon" icon="favorite_border")
+									example-mdc-card-combined-example
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ cardCombinedExample }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -744,6 +733,7 @@ import ExampleMdcCardRichMedia from "../component/example/MdcCardRichMedia.vue";
 import ExampleMdcCardAction from "../component/example/MdcCardAction.vue";
 import ExampleMdcCardFullWidthAction from "../component/example/MdcCardFullWIdthAction.vue";
 import ExampleMdcCardActionIconButton from "../component/example/MdcCardActionIconButton.vue";
+import ExampleMdcCardCombinedExample from "../component/example/MdcCardCombinedExample.vue";
 
 import imageList from "../../../js/directive/image-list";
 import ripple from "../../../js/directive/ripple";
@@ -796,7 +786,8 @@ export default {
     ExampleMdcCardRichMedia,
     ExampleMdcCardAction,
     ExampleMdcCardFullWidthAction,
-    ExampleMdcCardActionIconButton,
+	ExampleMdcCardActionIconButton,
+	ExampleMdcCardCombinedExample,
     MdcCard,
     MdcCardContent,
     MdcDrawer,
