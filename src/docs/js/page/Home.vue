@@ -442,18 +442,6 @@
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
-							h2(v-typography="'headline6'") Full width card action
-						mdc-card-content(:padding="false")
-							mdc-tab
-								mdc-tab-item(icon="desktop_mac" active) Preview
-								mdc-tab-item(icon="code") Code
-								mdc-tab-content(slot="content" active)
-									example-mdc-card-full-width-action
-								mdc-tab-content(slot="content" v-text-center)
-									base-code(lang="html") {{ cardFullWidthAction }}
-				mdc-grid-cell(desktop="4" tablet="4" phone="4")
-					mdc-card
-						mdc-card-content
 							h2(v-typography="'headline6'") Card with actions icon and button
 						mdc-card-content(:padding="false")
 							mdc-tab
@@ -484,8 +472,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-text-field(id="dessert" label="Dessert")
+									example-mdc-text-field
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ textField }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -495,9 +484,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" active)
-									mdc-text-field(id="dessert" label="Dessert")
-										div(slot="helper-text") Choose a cake or an ice cream.
+									example-mdc-text-field-helper-text
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ textFieldHelperText }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -506,9 +495,10 @@
 							mdc-tab
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
-								mdc-tab-content(slot="content" v-text-center active)
-									mdc-text-field(id="dessert")
+								mdc-tab-content(slot="content" active)
+									example-mdc-text-field-without-label
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ textFieldWithoutLabel }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -517,9 +507,10 @@
 							mdc-tab
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
-								mdc-tab-content(slot="content" v-text-center active)
-									mdc-text-field(id="dessert" label="Dessert" disabled)
+								mdc-tab-content(slot="content" active)
+									example-mdc-text-field-disabled
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ textFieldWithoutLabel }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -529,8 +520,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-text-field(id="dessert" label="Dessert" outlined)
+									example-mdc-text-field-outlined
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ textFieldOutlined }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -540,8 +532,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-text-field(id="dessert" outlined)
+									example-mdc-text-field-outlined-without-label
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ textFieldOutlinedWithoutLabel }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -551,8 +544,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-text-field(id="dessert" full-width)
+									example-mdc-text-field-full-width
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ textFieldFullWidth }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -562,8 +556,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-text-field(id="dessert" textarea label="Extra request")
+									example-mdc-text-field-text-area
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ textFieldTextArea }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -573,8 +568,9 @@
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
 								mdc-tab-content(slot="content" v-text-center active)
-									mdc-text-field(id="dessert" textarea)
+									example-mdc-text-field-text-area-without-label
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ textFieldTextAreaWithoutLabel }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -731,9 +727,17 @@ import ExampleMdcCard from "../component/example/MdcCard.vue";
 import ExampleMdcCardOutlined from "../component/example/MdcCardOutlined.vue";
 import ExampleMdcCardRichMedia from "../component/example/MdcCardRichMedia.vue";
 import ExampleMdcCardAction from "../component/example/MdcCardAction.vue";
-import ExampleMdcCardFullWidthAction from "../component/example/MdcCardFullWIdthAction.vue";
 import ExampleMdcCardActionIconButton from "../component/example/MdcCardActionIconButton.vue";
 import ExampleMdcCardCombinedExample from "../component/example/MdcCardCombinedExample.vue";
+import ExampleMdcTextField from "../component/example/MdcTextField.vue";
+import ExampleMdcTextFieldHelperText from "../component/example/MdcTextFieldHelperText.vue";
+import ExampleMdcTextFieldWithoutLabel from "../component/example/MdcTextFieldWithoutLabel.vue";
+import ExampleMdcTextFieldDisabled from "../component/example/MdcTextFieldDisabled.vue";
+import ExampleMdcTextFieldOutlined from "../component/example/MdcTextFieldOutlined.vue";
+import ExampleMdcTextFieldOutlinedWithoutLabel from "../component/example/MdcTextFieldOutlinedWithoutLabel.vue";
+import ExampleMdcTextFieldFullWidth from "../component/example/MdcTextFieldFullWidth.vue";
+import ExampleMdcTextFieldTextArea from "../component/example/MdcTextFieldTextArea.vue";
+import ExampleMdcTextFieldTextAreaWithoutLabel from "../component/example/MdcTextFieldTextAreaWithoutLabel.vue";
 
 import imageList from "../../../js/directive/image-list";
 import ripple from "../../../js/directive/ripple";
@@ -785,9 +789,17 @@ export default {
     ExampleMdcCardOutlined,
     ExampleMdcCardRichMedia,
     ExampleMdcCardAction,
-    ExampleMdcCardFullWidthAction,
-	ExampleMdcCardActionIconButton,
-	ExampleMdcCardCombinedExample,
+    ExampleMdcCardActionIconButton,
+    ExampleMdcCardCombinedExample,
+    ExampleMdcTextField,
+    ExampleMdcTextFieldHelperText,
+    ExampleMdcTextFieldWithoutLabel,
+    ExampleMdcTextFieldDisabled,
+    ExampleMdcTextFieldOutlined,
+    ExampleMdcTextFieldOutlinedWithoutLabel,
+    ExampleMdcTextFieldFullWidth,
+    ExampleMdcTextFieldTextArea,
+    ExampleMdcTextFieldTextAreaWithoutLabel,
     MdcCard,
     MdcCardContent,
     MdcDrawer,

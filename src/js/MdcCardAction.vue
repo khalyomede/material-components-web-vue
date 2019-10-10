@@ -1,10 +1,11 @@
 <template lang="pug">
-	div(:class="classes")
-		slot
-		.mdc-card__action-buttons
-			slot(name="button")
-		.mdc-card__action-icons
-			slot(name="icon")
+	div(:class="parentClasses")
+		div(:class="classes")
+			slot
+			.mdc-card__action-buttons
+				slot(name="button")
+			.mdc-card__action-icons
+				slot(name="icon")
 </template>
 <script>
 export default {
@@ -17,7 +18,11 @@ export default {
   computed: {
     classes() {
       return {
-        "mdc-card__actions": true,
+        "mdc-card__actions": true
+      };
+    },
+    parentClasses() {
+      return {
         "mdc-card__actions--full-bleed": this.fullBleed
       };
     }
