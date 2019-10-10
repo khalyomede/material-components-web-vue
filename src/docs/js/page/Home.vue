@@ -574,108 +574,39 @@
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
-							h2(v-typography="'headline6'") Image list
+							h2(v-typography="'headline6'") Linear progress
 						mdc-card-content(:padding="false")
 							mdc-tab
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
-								mdc-tab-content(slot="content" v-text-center active)
-									mdc-image-list
-										mdc-image-list-item
-											img(v-image-list src="https://picsum.photos/id/0/5616/3744" alt="Photo 1")
-										mdc-image-list-item
-											img(v-image-list src="https://picsum.photos/id/1/5616/3744" alt="Photo 2")
-										mdc-image-list-item
-											img(v-image-list src="https://picsum.photos/id/100/2500/1656" alt="Photo 3")
-										mdc-image-list-item
-											img(v-image-list src="https://picsum.photos/id/1000/5626/3635" alt="Photo 4")
-										mdc-image-list-item
-											img(v-image-list src="https://picsum.photos/id/1001/5616/3744" alt="Photo 5")
-										mdc-image-list-item
-											img(v-image-list src="https://picsum.photos/id/1002/4312/2868" alt="Photo 6")
-										mdc-image-list-item
-											img(v-image-list src="https://picsum.photos/id/1004/5616/3744" alt="Photo 7")
-										mdc-image-list-item
-											img(v-image-list src="https://picsum.photos/id/1006/3000/2000" alt="Photo 8")
-										mdc-image-list-item
-											img(v-image-list src="https://picsum.photos/id/1008/5616/3744" alt="Photo 9")
-										mdc-image-list-item
-											img(v-image-list src="https://picsum.photos/id/1009/5000/7502" alt="Photo 10")
-										mdc-image-list-item
-											img(v-image-list src="https://picsum.photos/id/1010/5184/3456" alt="Photo 11")
-										mdc-image-list-item
-											img(v-image-list src="https://picsum.photos/id/1012/3973/2639" alt="Photo 12")
+								mdc-tab-content(slot="content" active)
+									example-mdc-linear-progress
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ linearProgress }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
-							h2(v-typography="'headline6'") Image list with text overlay
+							h2(v-typography="'headline6'") Undeterminate linear progress
 						mdc-card-content(:padding="false")
 							mdc-tab
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
-								mdc-tab-content(slot="content" v-text-center active)
-									mdc-image-list(text-overlay)
-										mdc-image-list-item(text="Photo 1")
-											img(v-image-list src="https://picsum.photos/id/0/5616/3744" alt="Photo 1")
-										mdc-image-list-item(text="Photo 2")
-											img(v-image-list src="https://picsum.photos/id/1/5616/3744" alt="Photo 2")
-										mdc-image-list-item(text="Photo 3")
-											img(v-image-list src="https://picsum.photos/id/100/2500/1656" alt="Photo 3")
-										mdc-image-list-item(text="Photo 4")
-											img(v-image-list src="https://picsum.photos/id/1000/5626/3635" alt="Photo 4")
-										mdc-image-list-item(text="Photo 5")
-											img(v-image-list src="https://picsum.photos/id/1001/5616/3744" alt="Photo 5")
-										mdc-image-list-item(text="Photo 6")
-											img(v-image-list src="https://picsum.photos/id/1002/4312/2868" alt="Photo 6")
-										mdc-image-list-item(text="Photo 7")
-											img(v-image-list src="https://picsum.photos/id/1004/5616/3744" alt="Photo 7")
-										mdc-image-list-item(text="Photo 8")
-											img(v-image-list src="https://picsum.photos/id/1006/3000/2000" alt="Photo 8")
-										mdc-image-list-item(text="Photo 9")
-											img(v-image-list src="https://picsum.photos/id/1008/5616/3744" alt="Photo 9")
-										mdc-image-list-item(text="Photo 10")
-											img(v-image-list src="https://picsum.photos/id/1009/5000/7502" alt="Photo 10")
-										mdc-image-list-item(text="Photo 11")
-											img(v-image-list src="https://picsum.photos/id/1010/5184/3456" alt="Photo 11")
-										mdc-image-list-item(text="Photo 12")
-											img(v-image-list src="https://picsum.photos/id/1012/3973/2639" alt="Photo 12")
+								mdc-tab-content(slot="content" active)
+									example-mdc-linear-progress-undeterminate
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ linearProgressUndeterminate }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
-							h2(v-typography="'headline6'") Image list with text below
+							h2(v-typography="'headline6'") Reversed undeterminate linear progress
 						mdc-card-content(:padding="false")
 							mdc-tab
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
-								mdc-tab-content(slot="content" v-text-center active)
-									mdc-image-list
-										mdc-image-list-item(text="Photo 1")
-											img(v-image-list src="https://picsum.photos/id/0/5616/3744" alt="Photo 1")
-										mdc-image-list-item(text="Photo 2")
-											img(v-image-list src="https://picsum.photos/id/1/5616/3744" alt="Photo 2")
-										mdc-image-list-item(text="Photo 3")
-											img(v-image-list src="https://picsum.photos/id/100/2500/1656" alt="Photo 3")
-										mdc-image-list-item(text="Photo 4")
-											img(v-image-list src="https://picsum.photos/id/1000/5626/3635" alt="Photo 4")
-										mdc-image-list-item(text="Photo 5")
-											img(v-image-list src="https://picsum.photos/id/1001/5616/3744" alt="Photo 5")
-										mdc-image-list-item(text="Photo 6")
-											img(v-image-list src="https://picsum.photos/id/1002/4312/2868" alt="Photo 6")
-										mdc-image-list-item(text="Photo 7")
-											img(v-image-list src="https://picsum.photos/id/1004/5616/3744" alt="Photo 7")
-										mdc-image-list-item(text="Photo 8")
-											img(v-image-list src="https://picsum.photos/id/1006/3000/2000" alt="Photo 8")
-										mdc-image-list-item(text="Photo 9")
-											img(v-image-list src="https://picsum.photos/id/1008/5616/3744" alt="Photo 9")
-										mdc-image-list-item(text="Photo 10")
-											img(v-image-list src="https://picsum.photos/id/1009/5000/7502" alt="Photo 10")
-										mdc-image-list-item(text="Photo 11")
-											img(v-image-list src="https://picsum.photos/id/1010/5184/3456" alt="Photo 11")
-										mdc-image-list-item(text="Photo 12")
-											img(v-image-list src="https://picsum.photos/id/1012/3973/2639" alt="Photo 12")
+								mdc-tab-content(slot="content" active)
+									example-mdc-linear-progress-undeterminate-reverse
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ linearProgressUndeterminateReverse }}
 		div
 			br
 </template>
@@ -738,6 +669,9 @@ import ExampleMdcTextFieldOutlinedWithoutLabel from "../component/example/MdcTex
 import ExampleMdcTextFieldFullWidth from "../component/example/MdcTextFieldFullWidth.vue";
 import ExampleMdcTextFieldTextArea from "../component/example/MdcTextFieldTextArea.vue";
 import ExampleMdcTextFieldTextAreaWithoutLabel from "../component/example/MdcTextFieldTextAreaWithoutLabel.vue";
+import ExampleMdcLinearProgress from "../component/example/MdcLinearProgress.vue";
+import ExampleMdcLinearProgressUndeterminate from "../component/example/MdcLinearProgressUndeterminate.vue";
+import ExampleMdcLinearProgressUndeterminateReverse from "../component/example/MdcLinearProgressUndeterminateReverse.vue";
 
 import imageList from "../../../js/directive/image-list";
 import ripple from "../../../js/directive/ripple";
@@ -800,6 +734,9 @@ export default {
     ExampleMdcTextFieldFullWidth,
     ExampleMdcTextFieldTextArea,
     ExampleMdcTextFieldTextAreaWithoutLabel,
+    ExampleMdcLinearProgress,
+    ExampleMdcLinearProgressUndeterminate,
+    ExampleMdcLinearProgressUndeterminateReverse,
     MdcCard,
     MdcCardContent,
     MdcDrawer,

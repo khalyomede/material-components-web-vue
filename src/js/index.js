@@ -6,6 +6,7 @@ export MdcRadio from "./MdcRadio.vue";
 export MdcDataTable from "./MdcDataTable.vue";
 export MdcDataTableRow from "./MdcDataTableRow.vue";
 export MdcDataTableCell from "./MdcDataTableCell.vue";
+export MdcLinearProgress from "./MdcLinearProgress.vue";
 export MdcList from "./MdcList.vue";
 export MdcListItem from "./MdcListItem.vue";
 export MdcListItemPrimary from "./MdcListItemPrimary.vue";
