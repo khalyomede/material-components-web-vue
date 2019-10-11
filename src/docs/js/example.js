@@ -454,6 +454,66 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/linear-progress";
 </style>
+`,"linearProgressBuffer": `<template>
+  <mdc-linear-progress buffer="30" />
+</template>
+<script>
+import { MdcLinearProgress } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcLinearProgress
+  }
+};
+</script>
+<style lang="scss">
+@import "material-components-web-vue/lib/css/linear-progress";
+</style>
+`,"linearProgressBufferFull": `<template>
+  <mdc-linear-progress progress="30" buffer="100" />
+</template>
+<script>
+import { MdcLinearProgress } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcLinearProgress
+  }
+};
+</script>
+<style lang="scss">
+@import "material-components-web-vue/lib/css/linear-progress";
+</style>
+`,"linearProgressBufferReverse": `<template>
+  <mdc-linear-progress buffer="30" reverse />
+</template>
+<script>
+import { MdcLinearProgress } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcLinearProgress
+  }
+};
+</script>
+<style lang="scss">
+@import "material-components-web-vue/lib/css/linear-progress";
+</style>
+`,"linearProgressReverse": `<template>
+  <mdc-linear-progress progress="30" reverse />
+</template>
+<script>
+import { MdcLinearProgress } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcLinearProgress
+  }
+};
+</script>
+<style lang="scss">
+@import "material-components-web-vue/lib/css/linear-progress";
+</style>
 `,"linearProgressUndeterminate": `<template>
   <mdc-linear-progress indeterminate />
 </template>

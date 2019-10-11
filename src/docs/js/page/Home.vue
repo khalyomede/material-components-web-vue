@@ -586,6 +586,54 @@
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
+							h2(v-typography="'headline6'") Reversed linear progress 
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									example-mdc-linear-progress-reverse
+								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ linearProgressReverse }}
+				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Buffered linear progress
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									example-mdc-linear-progress-buffer
+								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ linearProgressBuffer }}
+				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Reversed buffered linear progress
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									example-mdc-linear-progress-buffer-reverse
+								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ linearProgressBufferReverse }}
+				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Fully buffered linear progress
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									example-mdc-linear-progress-buffer-full
+								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ linearProgressBufferFull }}
+				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
 							h2(v-typography="'headline6'") Undeterminate linear progress
 						mdc-card-content(:padding="false")
 							mdc-tab
@@ -670,6 +718,10 @@ import ExampleMdcTextFieldFullWidth from "../component/example/MdcTextFieldFullW
 import ExampleMdcTextFieldTextArea from "../component/example/MdcTextFieldTextArea.vue";
 import ExampleMdcTextFieldTextAreaWithoutLabel from "../component/example/MdcTextFieldTextAreaWithoutLabel.vue";
 import ExampleMdcLinearProgress from "../component/example/MdcLinearProgress.vue";
+import ExampleMdcLinearProgressReverse from "../component/example/MdcLinearProgressReverse.vue";
+import ExampleMdcLinearProgressBuffer from "../component/example/MdcLinearProgressBuffer.vue";
+import ExampleMdcLinearProgressBufferReverse from "../component/example/MdcLinearProgressBufferReverse.vue";
+import ExampleMdcLinearProgressBufferFull from "../component/example/MdcLinearProgressBufferFull.vue";
 import ExampleMdcLinearProgressUndeterminate from "../component/example/MdcLinearProgressUndeterminate.vue";
 import ExampleMdcLinearProgressUndeterminateReverse from "../component/example/MdcLinearProgressUndeterminateReverse.vue";
 
@@ -735,6 +787,10 @@ export default {
     ExampleMdcTextFieldTextArea,
     ExampleMdcTextFieldTextAreaWithoutLabel,
     ExampleMdcLinearProgress,
+    ExampleMdcLinearProgressReverse,
+    ExampleMdcLinearProgressBuffer,
+    ExampleMdcLinearProgressBufferFull,
+    ExampleMdcLinearProgressBufferReverse,
     ExampleMdcLinearProgressUndeterminate,
     ExampleMdcLinearProgressUndeterminateReverse,
     MdcCard,
