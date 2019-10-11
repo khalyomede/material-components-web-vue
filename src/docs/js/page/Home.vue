@@ -3,11 +3,10 @@
 		mdc-top-app-bar(dense)
 			mdc-top-app-bar-button(slot="start" @click="showSidebar") menu
 			mdc-top-app-bar-title(slot="start") MDC Vue
-			a(slot="end" href="https://github.com/khalyomede/material-components-web-vue" style="text-decoration: none")
-				mdc-button.mdc-top-app-bar__action-item Github
+			mdc-button.mdc-top-app-bar__action-item(href="https://github.com/khalyomede/material-components-web-vue" slot="end" style="color: white;") Github
 		mdc-drawer(modal ref="sidebar")
 			mdc-list
-				mdc-list-item(v-ripple href="https://github.com/khalyomede/material-components-web-vue")  Github
+				mdc-list-item(href="https://github.com/khalyomede/material-components-web-vue") Github
 		mdc-drawer-scrim
 		div
 			br
@@ -660,10 +659,13 @@
 </template>
 <script>
 import BaseCode from "../component/BaseCode.vue";
+import MdcButton from "../../../js/MdcButton.vue";
 import MdcCard from "../../../js/MdcCard.vue";
 import MdcCardContent from "../../../js/MdcCardContent.vue";
 import MdcDrawer from "../../../js/MdcDrawer.vue";
 import MdcDrawerScrim from "../../../js/MdcDrawerScrim.vue";
+import MdcList from "../../../js/MdcList.vue";
+import MdcListItem from "../../../js/MdcListItem.vue";
 import MdcGrid from "../../../js/MdcGrid.vue";
 import MdcGridCell from "../../../js/MdcGridCell.vue";
 import MdcGridRow from "../../../js/MdcGridRow.vue";
@@ -793,10 +795,13 @@ export default {
     ExampleMdcLinearProgressBufferReverse,
     ExampleMdcLinearProgressUndeterminate,
     ExampleMdcLinearProgressUndeterminateReverse,
+    MdcButton,
     MdcCard,
     MdcCardContent,
     MdcDrawer,
     MdcDrawerScrim,
+    MdcList,
+    MdcListItem,
     MdcGrid,
     MdcGridCell,
     MdcGridRow,
@@ -810,6 +815,11 @@ export default {
   },
   directives: {
     typography
+  },
+  methods: {
+    showSidebar() {
+      this.$refs.sidebar.element.open = true;
+    }
   },
   mounted() {
     Prism.highlightAll();
