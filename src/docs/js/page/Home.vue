@@ -826,3 +826,9 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+h1,
+h2 {
+  margin: 0px;
+}
+</style>
