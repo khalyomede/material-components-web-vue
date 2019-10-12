@@ -350,14 +350,10 @@
 							mdc-tab
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
-								mdc-tab-content(slot="content" v-text-center active)
-									mdc-snackbar(ref="snackbarNormal")
-										mdc-snackbar-label Chocolate soft baked cookies are on the way.
-										mdc-snackbar-action
-											mdc-button undo
-									mdc-button(@click="closeSnackbarNormal") Close
-									mdc-button(@click="openSnackbarNormal" unelevated) Open
+								mdc-tab-content(slot="content" active)
+									example-mdc-snackbar
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ snackbar }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -366,14 +362,10 @@
 							mdc-tab
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
-								mdc-tab-content(slot="content" v-text-center active)
-									mdc-snackbar(ref="snackbarStacked" stacked)
-										mdc-snackbar-label While you were offline, we backed for you a delicious white and black chocolate cake.
-										mdc-snackbar-action
-											mdc-button send
-									mdc-button(@click="closeSnackbarStacked") Close
-									mdc-button(@click="openSnackbarStacked" unelevated) Open
+								mdc-tab-content(slot="content" active)
+									example-mdc-snackbar-stacked
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ snackbarStacked }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -382,14 +374,10 @@
 							mdc-tab
 								mdc-tab-item(icon="desktop_mac" active) Preview
 								mdc-tab-item(icon="code") Code
-								mdc-tab-content(slot="content" v-text-center active)
-									mdc-snackbar(ref="snackbarLeading" leading)
-										mdc-snackbar-label Chocolate stock is at 12% right now.
-										mdc-snackbar-action
-											mdc-button refill
-									mdc-button(@click="closeSnackbarLeading") Close
-									mdc-button(@click="openSnackbarLeading" unelevated) Open
+								mdc-tab-content(slot="content" active)
+									example-mdc-snackbar-leading
 								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ snackbarLeading }}
 				mdc-grid-cell(desktop="4" tablet="4" phone="4")
 					mdc-card
 						mdc-card-content
@@ -726,6 +714,9 @@ import ExampleMdcLinearProgressBufferReverse from "../component/example/MdcLinea
 import ExampleMdcLinearProgressBufferFull from "../component/example/MdcLinearProgressBufferFull.vue";
 import ExampleMdcLinearProgressUndeterminate from "../component/example/MdcLinearProgressUndeterminate.vue";
 import ExampleMdcLinearProgressUndeterminateReverse from "../component/example/MdcLinearProgressUndeterminateReverse.vue";
+import ExampleMdcSnackbar from "../component/example/MdcSnackbar.vue";
+import ExampleMdcSnackbarStacked from "../component/example/MdcSnackbarStacked.vue";
+import ExampleMdcSnackbarLeading from "../component/example/MdcSnackbarLeading.vue";
 
 import imageList from "../../../js/directive/image-list";
 import ripple from "../../../js/directive/ripple";
@@ -795,6 +786,9 @@ export default {
     ExampleMdcLinearProgressBufferReverse,
     ExampleMdcLinearProgressUndeterminate,
     ExampleMdcLinearProgressUndeterminateReverse,
+    ExampleMdcSnackbar,
+    ExampleMdcSnackbarStacked,
+    ExampleMdcSnackbarLeading,
     MdcButton,
     MdcCard,
     MdcCardContent,

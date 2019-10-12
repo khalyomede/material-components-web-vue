@@ -810,6 +810,114 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
+`,"snackbar": `<template>
+  <div>
+    <mdc-snackbar ref="mysnackbar">
+      <mdc-snackbar-label>Chocolate stock is low (15%).</mdc-snackbar-label>
+    </mdc-snackbar>
+    <mdc-button @click="openMySnackbar">open</mdc-button>
+  </div>
+</template>
+<script>
+import {
+  MdcButton,
+  MdcSnackbar,
+  MdcSnackbarLabel
+} from "material-components-web-vue";
+export default {
+  components: {
+    MdcButton,
+    MdcSnackbar,
+    MdcSnackbarLabel
+  },
+  methods: {
+    openMySnackbar() {
+      this.$refs.mysnackbar.element.open();
+    }
+  }
+};
+</script>
+<style lang="scss">
+@import "material-components-web-vue/lib/css/snackbar";
+</style>
+`,"snackbarLeading": `<template>
+  <div>
+    <mdc-snackbar leading ref="mysnackbar">
+      <mdc-snackbar-label>Chocolate stock refilled.</mdc-snackbar-label>
+      <mdc-snackbar-action>
+        <mdc-button v-snackbar-action>cancel</mdc-button>
+      </mdc-snackbar-action>
+    </mdc-snackbar>
+    <mdc-button @click="openMySnackbar">open</mdc-button>
+  </div>
+</template>
+<script>
+import {
+  MdcButton,
+  MdcSnackbar,
+  MdcSnackbarLabel,
+  MdcSnackbarAction,
+  snackbarAction
+} from "material-components-web-vue";
+export default {
+  components: {
+    MdcButton,
+    MdcSnackbar,
+    MdcSnackbarLabel,
+    MdcSnackbarAction
+  },
+  methods: {
+    openMySnackbar() {
+      this.$refs.mysnackbar.element.open();
+    }
+  },
+  directives: {
+    snackbarAction
+  }
+};
+</script>
+<style lang="scss">
+@import "material-components-web-vue/lib/css/snackbar";
+</style>
+`,"snackbarStacked": `<template>
+  <div>
+    <mdc-snackbar stacked ref="mysnackbar">
+      <mdc-snackbar-label>Sending vanilla package supply.</mdc-snackbar-label>
+      <mdc-snackbar-action>
+        <mdc-button v-snackbar-action>cancel</mdc-button>
+      </mdc-snackbar-action>
+    </mdc-snackbar>
+    <mdc-button @click="openMySnackbar">open</mdc-button>
+  </div>
+</template>
+<script>
+import {
+  MdcButton,
+  MdcSnackbar,
+  MdcSnackbarLabel,
+  MdcSnackbarAction,
+  snackbarAction
+} from "material-components-web-vue";
+export default {
+  components: {
+    MdcButton,
+    MdcSnackbar,
+    MdcSnackbarLabel,
+    MdcSnackbarAction
+  },
+  methods: {
+    openMySnackbar() {
+      this.$refs.mysnackbar.element.open();
+    }
+  },
+  directives: {
+    snackbarAction
+  }
+};
+</script>
+<style lang="scss">
+@import "material-components-web-vue/lib/css/snackbar";
+</style>
 `,"switchChecked": `<template>
     <mdc-switch checked />
 </template>
