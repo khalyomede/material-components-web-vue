@@ -642,6 +642,18 @@
 									example-mdc-linear-progress-undeterminate-reverse
 								mdc-tab-content(slot="content" v-text-center)
 									base-code(lang="html") {{ linearProgressUndeterminateReverse }}
+				mdc-grid-cell(desktop="4" tablet="4" phone="4")
+					mdc-card
+						mdc-card-content
+							h2(v-typography="'headline6'") Dialog
+						mdc-card-content(:padding="false")
+							mdc-tab
+								mdc-tab-item(icon="desktop_mac" active) Preview
+								mdc-tab-item(icon="code") Code
+								mdc-tab-content(slot="content" active)
+									example-mdc-dialog
+								mdc-tab-content(slot="content" v-text-center)
+									base-code(lang="html") {{ dialog }}
 		div
 			br
 </template>
@@ -717,6 +729,7 @@ import ExampleMdcLinearProgressUndeterminateReverse from "../component/example/M
 import ExampleMdcSnackbar from "../component/example/MdcSnackbar.vue";
 import ExampleMdcSnackbarStacked from "../component/example/MdcSnackbarStacked.vue";
 import ExampleMdcSnackbarLeading from "../component/example/MdcSnackbarLeading.vue";
+import ExampleMdcDialog from "../component/example/MdcDialog.vue";
 
 import imageList from "../../../js/directive/image-list";
 import ripple from "../../../js/directive/ripple";
@@ -789,6 +802,7 @@ export default {
     ExampleMdcSnackbar,
     ExampleMdcSnackbarStacked,
     ExampleMdcSnackbarLeading,
+    ExampleMdcDialog,
     MdcButton,
     MdcCard,
     MdcCardContent,
