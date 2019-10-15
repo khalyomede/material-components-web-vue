@@ -3,14 +3,16 @@
 		header
 			mdc-top-app-bar(dense)
 				mdc-top-app-bar-button(slot="start" @click="showSidebar") menu
-				mdc-top-app-bar-title(slot="start") MDC Vue
+				mdc-top-app-bar-title(slot="start") 
+					router-link(to="/" style="color: white; text-decoration: none;") MDC Vue
 				mdc-button.mdc-top-app-bar__action-item(href="https://github.com/khalyomede/material-components-web-vue" slot="end" style="color: white;") Github
-				mdc-button.mdc-top-app-bar__action-item(slot="end" style="color: white;" @click="redirect('getting-started')") Getting started
+				mdc-button.mdc-top-app-bar__action-item(slot="end") 
+					router-link(to="/getting-started" style="color: white; text-decoration: none;") Getting started
 			mdc-drawer(modal ref="sidebar")
 				mdc-list
 					mdc-list-item(href="https://github.com/khalyomede/material-components-web-vue") Github
-					router-link(to="/getting-started")
-						mdc-list-item Getting started
+					router-link(to="/getting-started" style="text-decoration: none;") 
+						mdc-list-item Getting started 
 			mdc-drawer-scrim
 			div
 				br
@@ -45,9 +47,6 @@ export default {
   methods: {
     showSidebar() {
       this.$refs.sidebar.element.open = true;
-    },
-    redirect(route) {
-      router.push({ name: route });
     }
   }
 };
