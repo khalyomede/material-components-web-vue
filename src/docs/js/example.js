@@ -350,6 +350,7 @@ import {
   MdcDialog,
   MdcDialogTitle,
   MdcDialogContent,
+  MdcDialogAction,
   dialog
 } from "material-components-web-vue";
 
@@ -358,7 +359,8 @@ export default {
     MdcButton,
     MdcDialog,
     MdcDialogTitle,
-    MdcDialogContent
+    MdcDialogContent,
+    MdcDialogAction
   },
   directives: {
     dialog
@@ -371,6 +373,7 @@ export default {
 };
 </script>
 <style lang="scss">
+@import "material-components-web-vue/lib/css/button";
 @import "material-components-web-vue/lib/css/dialog";
 </style>
 `,"disabledButton": `<template>
@@ -1023,6 +1026,29 @@ export default {
 
 <style lang="scss">
 @import "material-components-web-vue/lib/css/switch";
+</style>
+`,"tab": `<template>
+  <mdc-tab>
+    <mdc-tab-item active>Bakery</mdc-tab-item>
+    <mdc-tab-content
+      slot="content"
+      active
+    >Our bakery is 100% hand made, with a lot of concern about our ingredients quality.</mdc-tab-content>
+  </mdc-tab>
+</template>
+<script>
+import { MdcTab, MdcTabItem, MdcTabContent } from "material-components-web-vue";
+
+export default {
+  components: {
+    MdcTab,
+    MdcTabItem,
+    MdcTabContent
+  }
+};
+</script>
+<style lang="scss">
+@import "material-components-web-vue/lib/css/tab";
 </style>
 `,"textField": `<template>
   <mdc-text-field id="dessert" label="Dessert" />
