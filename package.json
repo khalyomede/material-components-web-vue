@@ -44,6 +44,7 @@
 		"start": "node extra/fix-vueify.js && gulp build && gulp start",
 		"build": "node extra/fix-vueify.js && gulp build",
 		"examples": "node extra/examples.js",
+		"test": "exit 0",
 		"release": "np"
 	},
 	"dependencies": {
