@@ -10,9 +10,9 @@ Material design components for Vue.js.
 ```html
 <template>
 	<div>
-		<mdc-radio name="gender" value="c4ca42" text="Woman" checked />
-		<mdc-radio name="gender" value="38a0b9" text="Man" />
-		<mdc-radio name="gender" value="3820d0" text="Other" />
+		<mdc-radio name="gender" value="1" text="Woman" checked />
+		<mdc-radio name="gender" value="2" text="Man" />
+		<mdc-radio name="gender" value="3" text="Other" />
 
 		<mdc-button outlined>Cancel</mdc-button>
 		<mdc-button elevated icon="check" icon-direction="right">Save</mdc-button>
@@ -56,7 +56,7 @@ npm install --save-dev material-components-web-vue
 
 ## Usage
 
-You can find the components in the [documentation page](https://khalyomede.github.io/material-components-web-vue). Below each components, you will find instructions to copy into your `.vue` components, including the html, javascript, and scss code.
+You can find the components in the [documentation page](https://khalyomede.github.io/material-components-web-vue). For each components, you will find instructions to copy into your `.vue` component, including the html, javascript, and scss code.
 
 ## Feature requests
 
