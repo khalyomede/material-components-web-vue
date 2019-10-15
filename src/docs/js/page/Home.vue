@@ -1,18 +1,5 @@
 <template lang="pug">
 	div
-		mdc-top-app-bar(dense)
-			mdc-top-app-bar-button(slot="start" @click="showSidebar") menu
-			mdc-top-app-bar-title(slot="start") MDC Vue
-			mdc-button.mdc-top-app-bar__action-item(href="https://github.com/khalyomede/material-components-web-vue" slot="end" style="color: white;") Github
-		mdc-drawer(modal ref="sidebar")
-			mdc-list
-				mdc-list-item(href="https://github.com/khalyomede/material-components-web-vue") Github
-		mdc-drawer-scrim
-		div
-			br
-			br
-			br
-			br
 		mdc-grid
 			mdc-grid-row
 				mdc-grid-cell
@@ -662,8 +649,6 @@ import BaseCode from "../component/BaseCode.vue";
 import MdcButton from "../../../js/MdcButton.vue";
 import MdcCard from "../../../js/MdcCard.vue";
 import MdcCardContent from "../../../js/MdcCardContent.vue";
-import MdcDrawer from "../../../js/MdcDrawer.vue";
-import MdcDrawerScrim from "../../../js/MdcDrawerScrim.vue";
 import MdcList from "../../../js/MdcList.vue";
 import MdcListItem from "../../../js/MdcListItem.vue";
 import MdcGrid from "../../../js/MdcGrid.vue";
@@ -672,10 +657,6 @@ import MdcGridRow from "../../../js/MdcGridRow.vue";
 import MdcTab from "../../../js/MdcTab.vue";
 import MdcTabContent from "../../../js/MdcTabContent.vue";
 import MdcTabItem from "../../../js/MdcTabItem.vue";
-import MdcTopAppBar from "../../../js/MdcTopAppBar.vue";
-import MdcTopAppBarAction from "../../../js/MdcTopAppBarAction.vue";
-import MdcTopAppBarButton from "../../../js/MdcTopAppBarButton.vue";
-import MdcTopAppBarTitle from "../../../js/MdcTopAppBarTitle.vue";
 
 import ExampleMdcButton from "../component/example/MdcButton.vue";
 import ExampleMdcRaisedButton from "../component/example/MdcRaisedButton.vue";
@@ -806,8 +787,6 @@ export default {
     MdcButton,
     MdcCard,
     MdcCardContent,
-    MdcDrawer,
-    MdcDrawerScrim,
     MdcList,
     MdcListItem,
     MdcGrid,
@@ -815,19 +794,10 @@ export default {
     MdcGridRow,
     MdcTab,
     MdcTabContent,
-    MdcTabItem,
-    MdcTopAppBar,
-    MdcTopAppBarAction,
-    MdcTopAppBarButton,
-    MdcTopAppBarTitle
+    MdcTabItem
   },
   directives: {
     typography
-  },
-  methods: {
-    showSidebar() {
-      this.$refs.sidebar.element.open = true;
-    }
   },
   mounted() {
     Prism.highlightAll();

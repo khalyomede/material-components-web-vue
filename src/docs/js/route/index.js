@@ -1,3 +1,4 @@
 import home from "./home";
+import gettingStarted from "./getting-started";
 
-export default [home];
+export default [home, gettingStarted];
