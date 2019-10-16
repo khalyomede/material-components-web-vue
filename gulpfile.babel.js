@@ -8,6 +8,7 @@ import rename from "gulp-rename";
 import clean from "gulp-clean";
 import plumber from "gulp-plumber";
 import browserSync from "browser-sync";
+import babelify from "babelify";
 
 const browser = browserSync.create();
 
@@ -18,15 +19,10 @@ const docsJs = () =>
 			browserify({
 				transform: [
 					[
-						"babelify",
-						{
+						babelify.configure({
 							presets: ["@babel/preset-env"],
-							plugins: [
-								"@babel/plugin-transform-runtime",
-								"transform-export-extensions",
-								"@babel/plugin-proposal-export-default-from"
-							]
-						}
+							plugins: ["@babel/plugin-proposal-export-default-from"]
+						})
 					],
 					[
 						"vueify",
