@@ -1,6 +1,6 @@
 {
 	"name": "material-components-web-vue",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "Material design components for Vue.js",
 	"main": "lib/js/index.js",
 	"repository": "https://github.com/khalyomede/material-components-web-vue",
