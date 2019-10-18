@@ -23,6 +23,7 @@
 		"envify": "4.*",
 		"gulp": "4.*",
 		"gulp-autoprefixer": "6.*",
+		"gulp-babel": "8.*",
 		"gulp-bro": "1.*",
 		"gulp-clean": "0.*",
 		"gulp-clean-css": "4.*",
@@ -30,6 +31,8 @@
 		"gulp-pug": "4.*",
 		"gulp-rename": "1.*",
 		"gulp-sass": "4.*",
+		"gulp-vue-compiler": "^1.0.0-beta.1",
+		"gulp-vueify2": "^0.0.3",
 		"install": "^0.13.0",
 		"normalize.css": "8.*",
 		"np": "5.*",
@@ -38,6 +41,7 @@
 		"tinyify": "2.*",
 		"vue": "2.*",
 		"vue-router": "3.*",
+		"vue-template-compiler": "2.*",
 		"vueify": "9.*"
 	},
 	"scripts": {
