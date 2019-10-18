@@ -81,19 +81,7 @@ const libCss = () =>
 		.pipe(browser.stream());
 
 const libJs = () =>
-	src("src/js/**/*.js")
-		.pipe(plumber())
-		.pipe(
-			babel({
-				presets: ["@babel/preset-env"],
-				plugins: ["@babel/plugin-proposal-export-default-from"]
-			})
-		)
-		.pipe(dest("lib/js"))
-		.pipe(browser.stream());
-
-const libVue = () =>
-	src("src/js/**/*.vue")
+	src("src/js/**/*.{js,vue}")
 		.pipe(plumber())
 		.pipe(dest("lib/js"))
 		.pipe(browser.stream());
@@ -114,7 +102,7 @@ const reload = done => {
 	done();
 };
 
-const build = series(clearDocs, clearLib, parallel(libCss, libJs, libVue), parallel(docsJs, docsHtml, docsCss));
+const build = series(clearDocs, clearLib, parallel(libCss, libJs), parallel(docsJs, docsHtml, docsCss));
 
 const start = () => {
 	browser.init({
@@ -123,7 +111,7 @@ const start = () => {
 		}
 	});
 
-	watch("src/js/**/*.{vue,js}", series(libJs, libVue, docsJs, reload));
+	watch("src/js/**/*.{vue,js}", series(libJs, docsJs, reload));
 	watch("src/docs/js/**/*.{vue,js}", series(docsJs, reload));
 	watch("src/css/**/*.sass", series(libCss, docsCss, reload));
 	watch("src/docs/css/**/*.sass", series(docsCss, reload));
