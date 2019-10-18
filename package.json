@@ -10,15 +10,11 @@
 	"devDependencies": {
 		"@babel/core": "7.*",
 		"@babel/plugin-proposal-export-default-from": "7.*",
-		"@babel/plugin-transform-runtime": "7.*",
 		"@babel/preset-env": "7.*",
 		"@babel/register": "7.*",
-		"@babel/runtime": "7.*",
-		"babel-plugin-transform-export-extensions": "6.*",
 		"babelify": "10.*",
 		"brfs": "2.*",
 		"browser-sync": "2.*",
-		"browserify-fs": "1.*",
 		"camelcase": "5.*",
 		"envify": "4.*",
 		"gulp": "4.*",
@@ -31,9 +27,6 @@
 		"gulp-pug": "4.*",
 		"gulp-rename": "1.*",
 		"gulp-sass": "4.*",
-		"gulp-vue-compiler": "^1.0.0-beta.1",
-		"gulp-vueify2": "^0.0.3",
-		"install": "^0.13.0",
 		"normalize.css": "8.*",
 		"np": "5.*",
 		"prismjs": "1.*",
@@ -41,7 +34,6 @@
 		"tinyify": "2.*",
 		"vue": "2.*",
 		"vue-router": "3.*",
-		"vue-template-compiler": "2.*",
 		"vueify": "9.*"
 	},
 	"scripts": {
