@@ -1,21 +1,25 @@
-export default {"button": `<template>
-  <mdc-button>default</mdc-button>
+export default {
+	button: `<template>
+	<mdc-button>default</mdc-button>
 </template>
 
 <script>
-import { MdcButton } from "material-components-web-vue";
+	import {MdcButton} from "material-components-web-vue";
 
-export default {
-  components: {
-    MdcButton
-  }
-};
+	console.log("mdc button", MdcButton);
+
+	export default {
+		components: {
+			MdcButton,
+		},
+	};
 </script>
 
 <style lang="scss">
-@import "material-components-web-vue/lib/css/button";
+	@import "material-components-web-vue/lib/css/button";
 </style>
-`,"buttonWithoutRipple": `<template>
+`,
+	buttonWithoutRipple: `<template>
   <mdc-button :ripple="false">Without ripple</mdc-button>
 </template>
 
@@ -32,70 +36,80 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
-`,"card": `<template>
-  <mdc-card>
-    <mdc-card-content
-      v-typography="'body1'"
-    >Ice cream (derived from earlier iced cream or cream ice) is a sweetened frozen food typically eaten as a snack or dessert.</mdc-card-content>
-  </mdc-card>
+`,
+	card: `<template>
+	<mdc-card>
+		<mdc-card-content
+			v-typography="'body1'"
+		>Ice cream (derived from earlier iced cream or cream ice) is a sweetened frozen food typically eaten as a snack or dessert.</mdc-card-content>
+	</mdc-card>
 </template>
 
 <script>
-import { MdcCard, MdcCardContent, typography } from "material-components-web-vue";
+import {MdcCard, MdcCardContent, typography} from "material-components-web-vue";
 
 export default {
-  components: {
-    MdcCard,
-    MdcCardContent
-  },
-  directives: {
-    typography
-  }
+	components: {
+		MdcCard,
+		MdcCardContent,
+	},
+	directives: {
+		typography,
+	},
 };
 </script>
 
 <style lang="scss">
 @import "material-components-web-vue/lib/css/card";
+@import "material-components-web-vue/lib/css/typography";
 </style>
-`,"cardAction": `<template>
-  	<mdc-card>
-		<mdc-card-content v-typography="'body1'">
-			A croissant is a buttery, flaky, viennoiserie pastry of Austrian and French origin, named for its historical crescent shape.
-		</mdc-card-content>
+`,
+	cardAction: `<template>
+	<mdc-card>
+		<mdc-card-content
+			v-typography="'body1'"
+		>A croissant is a buttery, flaky, viennoiserie pastry of Austrian and French origin, named for its historical crescent shape.</mdc-card-content>
 		<mdc-card-action>
-			<mdc-button v-card-action-button>
-				read more
-			</mdc-button>
+			<mdc-button v-card-action-button>read more</mdc-button>
 		</mdc-card-action>
 	</mdc-card>
 </template>
 
 <script>
-import { MdcButton, MdcCard, MdcCardContent, MdcCardAction, typography, cardActionButton } from "material-components-web-vue";
+import {
+	MdcButton,
+	MdcCard,
+	MdcCardContent,
+	MdcCardAction,
+	typography,
+	cardActionButton,
+} from "material-components-web-vue";
 
 export default {
-  components: {
-	MdcButton,
-    MdcCard,
-	MdcCardContent,
-	MdcCardAction
-  },
-  directives: {
-	typography,
-	cardActionButton
-  }
+	components: {
+		MdcButton,
+		MdcCard,
+		MdcCardContent,
+		MdcCardAction,
+	},
+	directives: {
+		typography,
+		cardActionButton,
+	},
 };
 </script>
 
 <style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 @import "material-components-web-vue/lib/css/card";
+@import "material-components-web-vue/lib/css/typography";
 </style>
-`,"cardActionIconButton": `<template>
+`,
+	cardActionIconButton: `<template>
 	<mdc-card>
-		<mdc-card-content v-typography="'body1'">
-			A macaron or French macaroon is a sweet meringue-based confection made with egg white, icing sugar, granulated sugar, almond powder or ground almond, and food coloring.
-		</mdc-card-content>
+		<mdc-card-content
+			v-typography="'body1'"
+		>A macaron or French macaroon is a sweet meringue-based confection made with egg white, icing sugar, granulated sugar, almond powder or ground almond, and food coloring.</mdc-card-content>
 		<mdc-card-action>
 			<mdc-button v-card-action-button slot="button">read more</mdc-button>
 			<mdc-button v-card-action-button slot="button">share</mdc-button>
@@ -105,21 +119,30 @@ export default {
 </template>
 
 <script>
-import { MdcButton, MdcIconButton, MdcCard, MdcCardContent, MdcCardAction, typography, cardActionButton, cardActionIcon } from "material-components-web-vue";
-
-export default {
-  components: {
+import {
 	MdcButton,
 	MdcIconButton,
-    MdcCard,
+	MdcCard,
 	MdcCardContent,
-	MdcCardAction
-  },
-  directives: {
+	MdcCardAction,
+	typography,
 	cardActionButton,
 	cardActionIcon,
-    typography
-  }
+} from "material-components-web-vue";
+
+export default {
+	components: {
+		MdcButton,
+		MdcIconButton,
+		MdcCard,
+		MdcCardContent,
+		MdcCardAction,
+	},
+	directives: {
+		cardActionButton,
+		cardActionIcon,
+		typography,
+	},
 };
 </script>
 
@@ -127,22 +150,31 @@ export default {
 @import "material-components-web-vue/lib/css/button";
 @import "material-components-web-vue/lib/css/icon-button";
 @import "material-components-web-vue/lib/css/card";
+@import "material-components-web-vue/lib/css/typography";
 </style>
-`,"cardCombinedExample": `<template>
-  	<mdc-card>
+`,
+	cardCombinedExample: `<template>
+	<mdc-card>
 		<mdc-card-content>
 			<h3 v-typography="'headline6'" style="margin: 0px">Google</h3>
 			<span v-typography="'overline'">2 hours ago</span>
 		</mdc-card-content>
 		<mdc-card-media>
 			<picture>
-				<source srcset="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" type="image/jpeg" />
-				<img src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg" alt="Vienna" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;" />
+				<source
+					srcset="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"
+					type="image/jpeg"
+				/>
+				<img
+					src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"
+					alt="Vienna"
+					style="width: 100%; height: 100%; object-fit: cover; object-position: center center;"
+				/>
 			</picture>
 		</mdc-card-media>
-		<mdc-card-content v-typography="'body1'">
-			Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest layer, consists of a mixture of soft, fresh cheese (typically cream cheese or ricotta), eggs, and sugar. If there is a bottom layer,
-		</mdc-card-content>
+		<mdc-card-content
+			v-typography="'body1'"
+		>Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest layer, consists of a mixture of soft, fresh cheese (typically cream cheese or ricotta), eggs, and sugar. If there is a bottom layer,</mdc-card-content>
 		<mdc-card-action>
 			<mdc-button v-card-action-button slot="button">comment</mdc-button>
 			<mdc-icon-button v-card-action-icon slot="icon" icon="share" />
@@ -152,20 +184,28 @@ export default {
 </template>
 
 <script>
-import { MdcButton, MdcCard, MdcCardContent, MdcCardMedia, MdcCardAction, MdcIconButton, typography } from "material-components-web-vue";
-
-export default {
-  components: {
+import {
 	MdcButton,
-    MdcCard,
+	MdcCard,
 	MdcCardContent,
 	MdcCardMedia,
 	MdcCardAction,
-	MdcIconButton
-  },
-  directives: {
-    typography
-  }
+	MdcIconButton,
+	typography,
+} from "material-components-web-vue";
+
+export default {
+	components: {
+		MdcButton,
+		MdcCard,
+		MdcCardContent,
+		MdcCardMedia,
+		MdcCardAction,
+		MdcIconButton,
+	},
+	directives: {
+		typography,
+	},
 };
 </script>
 
@@ -173,33 +213,37 @@ export default {
 @import "material-components-web-vue/lib/css/button";
 @import "material-components-web-vue/lib/css/icon-button";
 @import "material-components-web-vue/lib/css/card";
+@import "material-components-web-vue/lib/css/typography";
 </style>
-`,"cardOutlined": `<template>
-  <mdc-card outlined>
-    <mdc-card-content
-      v-typography="'body1'"
-    >Chocolate is a usually sweet, brown food preparation of roasted and ground cacao seeds that is made in the form of a liquid, paste, or in a block, or used as a flavoring ingredient in other foods.</mdc-card-content>
-  </mdc-card>
+`,
+	cardOutlined: `<template>
+	<mdc-card outlined>
+		<mdc-card-content
+			v-typography="'body1'"
+		>Chocolate is a usually sweet, brown food preparation of roasted and ground cacao seeds that is made in the form of a liquid, paste, or in a block, or used as a flavoring ingredient in other foods.</mdc-card-content>
+	</mdc-card>
 </template>
 
 <script>
-import { MdcCard, MdcCardContent, typography } from "material-components-web-vue";
+import {MdcCard, MdcCardContent, typography} from "material-components-web-vue";
 
 export default {
-  components: {
-    MdcCard,
-    MdcCardContent
-  },
-  directives: {
-    typography
-  }
+	components: {
+		MdcCard,
+		MdcCardContent,
+	},
+	directives: {
+		typography,
+	},
 };
 </script>
 
 <style lang="scss">
 @import "material-components-web-vue/lib/css/card";
+@import "material-components-web-vue/lib/css/typography";
 </style>
-`,"cardRichMedia": `<template>
+`,
+	cardRichMedia: `<template>
   	<mdc-card>
 		<mdc-card-media>
 			<picture>
@@ -231,8 +275,10 @@ export default {
 
 <style lang="scss">
 @import "material-components-web-vue/lib/css/card";
+@import "material-components-web-vue/lib/css/typography";
 </style>
-`,"checkbox": `<template>
+`,
+	checkbox: `<template>
   <div>
     <mdc-checkbox
       id="c4ca4238a0b923820dcc509a6f75849b"
@@ -262,7 +308,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/checkbox";
 </style>
-`,"dataTable": `<template>
+`,
+	dataTable: `<template>
   <mdc-data-table label="Desserts" responsive>
     <thead>
       <mdc-data-table-row header>
@@ -314,7 +361,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/data-table";
 </style>
-`,"denseButton": `<template>
+`,
+	denseButton: `<template>
   <mdc-button dense>dense</mdc-button>
 </template>
 
@@ -331,7 +379,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
-`,"dialog": `<template>
+`,
+	dialog: `<template>
   <div>
     <mdc-button @click="openDialog">open</mdc-button>
     <mdc-dialog ref="mydialog">
@@ -376,7 +425,8 @@ export default {
 @import "material-components-web-vue/lib/css/button";
 @import "material-components-web-vue/lib/css/dialog";
 </style>
-`,"disabledButton": `<template>
+`,
+	disabledButton: `<template>
   <mdc-button disabled>Log in</mdc-button>
 </template>
 
@@ -393,7 +443,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
-`,"iconButton": `<template>
+`,
+	iconButton: `<template>
   <mdc-button icon="favorite">icon</mdc-button>
 </template>
 
@@ -410,7 +461,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
-`,"iconButtonOnly": `<template>
+`,
+	iconButtonOnly: `<template>
   <mdc-icon-button icon="favorite" />
 </template>
 
@@ -427,7 +479,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/icon-button";
 </style>
-`,"iconButtonOnlyDisabled": `<template>
+`,
+	iconButtonOnlyDisabled: `<template>
   <mdc-icon-button icon="favorite" disabled />
 </template>
 
@@ -444,7 +497,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/icon-button";
 </style>
-`,"iconButtonOnlyWithoutRipple": `<template>
+`,
+	iconButtonOnlyWithoutRipple: `<template>
   <mdc-icon-button icon="favorite" :ripple="false" />
 </template>
 
@@ -461,7 +515,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/icon-button";
 </style>
-`,"imageList": `<template>
+`,
+	imageList: `<template>
   <mdc-grid>
     <mdc-grid-row>
       <mdc-grid-cell></mdc-grid-cell>
@@ -484,7 +539,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/grid";
 </style>
-`,"linearProgress": `<template>
+`,
+	linearProgress: `<template>
   <mdc-linear-progress progress="30" />
 </template>
 <script>
@@ -499,7 +555,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/linear-progress";
 </style>
-`,"linearProgressBuffer": `<template>
+`,
+	linearProgressBuffer: `<template>
   <mdc-linear-progress buffer="30" />
 </template>
 <script>
@@ -514,7 +571,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/linear-progress";
 </style>
-`,"linearProgressBufferFull": `<template>
+`,
+	linearProgressBufferFull: `<template>
   <mdc-linear-progress progress="30" buffer="100" />
 </template>
 <script>
@@ -529,7 +587,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/linear-progress";
 </style>
-`,"linearProgressBufferReverse": `<template>
+`,
+	linearProgressBufferReverse: `<template>
   <mdc-linear-progress buffer="30" reverse />
 </template>
 <script>
@@ -544,7 +603,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/linear-progress";
 </style>
-`,"linearProgressReverse": `<template>
+`,
+	linearProgressReverse: `<template>
   <mdc-linear-progress progress="30" reverse />
 </template>
 <script>
@@ -559,7 +619,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/linear-progress";
 </style>
-`,"linearProgressUndeterminate": `<template>
+`,
+	linearProgressUndeterminate: `<template>
   <mdc-linear-progress indeterminate />
 </template>
 <script>
@@ -574,7 +635,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/linear-progress";
 </style>
-`,"linearProgressUndeterminateReverse": `<template>
+`,
+	linearProgressUndeterminateReverse: `<template>
   <mdc-linear-progress indeterminate reverse />
 </template>
 <script>
@@ -589,7 +651,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/linear-progress";
 </style>
-`,"list": `<template>
+`,
+	list: `<template>
   <mdc-list>
     <mdc-list-item v-ripple>Single-line item</mdc-list-item>
     <mdc-list-item v-ripple>Single-line item</mdc-list-item>
@@ -611,7 +674,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
-`,"listCheckboxItem": `<template>
+`,
+	listCheckboxItem: `<template>
   <mdc-list checkbox>
     <mdc-list-item-checkbox name="topping">Oreo topping</mdc-list-item-checkbox>
     <mdc-list-item-checkbox name="topping">Kit kat topping</mdc-list-item-checkbox>
@@ -633,7 +697,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
-`,"listDivider": `<template>
+`,
+	listDivider: `<template>
   <mdc-list>
     <mdc-list-item>Item 1 - Division 1</mdc-list-item>
     <mdc-list-item>Item 2 - Division 1</mdc-list-item>
@@ -658,7 +723,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
-`,"listGroup": `<template>
+`,
+	listGroup: `<template>
   <mdc-list-group>
     <mdc-list-group-title>List 1</mdc-list-group-title>
     <mdc-list>
@@ -695,7 +761,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
-`,"listPreselectedItem": `<template>
+`,
+	listPreselectedItem: `<template>
   <mdc-list selectable>
     <mdc-list-item selectable tabindex="0">Ice cream</mdc-list-item>
     <mdc-list-item selectable active>Crumble</mdc-list-item>
@@ -717,7 +784,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
-`,"listRadioGroup": `<template>
+`,
+	listRadioGroup: `<template>
   <mdc-list radio>
     <mdc-list-item-radio name="flavor">Chocolate</mdc-list-item-radio>
     <mdc-list-item-radio name="flavor">Vanilla</mdc-list-item-radio>
@@ -740,7 +808,8 @@ export default {
 @import "material-components-web-vue/lib/css/list";
 @import "material-components-web-vue/lib/css/radio";
 </style>
-`,"listSingleSelection": `<template>
+`,
+	listSingleSelection: `<template>
   <mdc-list selectable>
     <mdc-list-item selectable tabindex="0">Hot Dog</mdc-list-item>
     <mdc-list-item selectable>Hamburger</mdc-list-item>
@@ -762,7 +831,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
-`,"listTwoLine": `<template lang="pug">
+`,
+	listTwoLine: `<template lang="pug">
 	<mdc-list two-line>
 		<mdc-list-item>
 			<mdc-list-item-primary>First-line text</mdc-list-item-primary>
@@ -799,7 +869,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/list";
 </style>
-`,"outlinedButton": `<template>
+`,
+	outlinedButton: `<template>
   <mdc-button outlined>Log in</mdc-button>
 </template>
 
@@ -816,7 +887,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
-`,"radio": `<template>
+`,
+	radio: `<template>
   <div>
     <mdc-radio name="gender" id="woman" value="1" text="Woman" />
     <mdc-radio name="gender" id="man" value="2" text="Man" />
@@ -838,7 +910,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/radio";
 </style>
-`,"raisedButton": `<template>
+`,
+	raisedButton: `<template>
   <mdc-button raised>Log in</mdc-button>
 </template>
 
@@ -855,7 +928,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
-`,"snackbar": `<template>
+`,
+	snackbar: `<template>
   <div>
     <mdc-snackbar ref="mysnackbar">
       <mdc-snackbar-label>Chocolate stock is low (15%).</mdc-snackbar-label>
@@ -885,7 +959,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/snackbar";
 </style>
-`,"snackbarLeading": `<template>
+`,
+	snackbarLeading: `<template>
   <div>
     <mdc-snackbar leading ref="mysnackbar">
       <mdc-snackbar-label>Chocolate stock refilled.</mdc-snackbar-label>
@@ -924,7 +999,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/snackbar";
 </style>
-`,"snackbarStacked": `<template>
+`,
+	snackbarStacked: `<template>
   <div>
     <mdc-snackbar stacked ref="mysnackbar">
       <mdc-snackbar-label>Sending vanilla package supply.</mdc-snackbar-label>
@@ -963,7 +1039,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/snackbar";
 </style>
-`,"switchChecked": `<template>
+`,
+	switchChecked: `<template>
     <mdc-switch checked />
 </template>
 <script>
@@ -979,7 +1056,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/switch";
 </style>
-`,"switchDisabled": `<template>
+`,
+	switchDisabled: `<template>
   <mdc-switch disabled />
 </template>
 <script>
@@ -995,7 +1073,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/switch";
 </style>
-`,"switches": `<template>
+`,
+	switches: `<template>
     <mdc-switch />
 </template>
 <script>
@@ -1011,7 +1090,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/switch";
 </style>
-`,"switchWithCustomLabels": `<template>
+`,
+	switchWithCustomLabels: `<template>
   <mdc-switch on="oui" off="non" />
 </template>
 <script>
@@ -1027,30 +1107,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/switch";
 </style>
-`,"tab": `<template>
-  <mdc-tab>
-    <mdc-tab-item active>Bakery</mdc-tab-item>
-    <mdc-tab-content
-      slot="content"
-      active
-    >Our bakery is 100% hand made, with a lot of concern about our ingredients quality.</mdc-tab-content>
-  </mdc-tab>
-</template>
-<script>
-import { MdcTab, MdcTabItem, MdcTabContent } from "material-components-web-vue";
-
-export default {
-  components: {
-    MdcTab,
-    MdcTabItem,
-    MdcTabContent
-  }
-};
-</script>
-<style lang="scss">
-@import "material-components-web-vue/lib/css/tab";
-</style>
-`,"textField": `<template>
+`,
+	textField: `<template>
   <mdc-text-field id="dessert" label="Dessert" />
 </template>
 
@@ -1068,7 +1126,8 @@ export default {
 @import "material-components-web-vue/lib/css/text-field";
 @import "material-components-web-vue/lib/css/helper-text";
 </style>
-`,"textFieldDisabled": `<template>
+`,
+	textFieldDisabled: `<template>
   <mdc-text-field id="dessert" disabled />
 </template>
 
@@ -1085,7 +1144,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/text-field";
 </style>
-`,"textFieldFullWidth": `<template>
+`,
+	textFieldFullWidth: `<template>
   <mdc-text-field id="dessert" full-width />
 </template>
 
@@ -1102,7 +1162,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/text-field";
 </style>
-`,"textFieldHelperText": `<template>
+`,
+	textFieldHelperText: `<template>
   <div>
     <mdc-text-field id="dessert" label="Dessert" />
     <mdc-helper-text>Choose a cake or an ice cream.</mdc-helper-text>
@@ -1123,7 +1184,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/text-field";
 </style>
-`,"textFieldOutlined": `<template>
+`,
+	textFieldOutlined: `<template>
   <mdc-text-field id="dessert" label="Dessert" outlined />
 </template>
 
@@ -1140,7 +1202,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/text-field";
 </style>
-`,"textFieldOutlinedWithoutLabel": `<template>
+`,
+	textFieldOutlinedWithoutLabel: `<template>
   <mdc-text-field id="dessert" outlined />
 </template>
 
@@ -1157,7 +1220,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/text-field";
 </style>
-`,"textFieldTextArea": `<template>
+`,
+	textFieldTextArea: `<template>
   <mdc-text-field id="dessert" label="Dessert" textarea />
 </template>
 
@@ -1174,7 +1238,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/text-field";
 </style>
-`,"textFieldTextAreaWithoutLabel": `<template>
+`,
+	textFieldTextAreaWithoutLabel: `<template>
   <mdc-text-field id="dessert" textarea />
 </template>
 
@@ -1191,7 +1256,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/text-field";
 </style>
-`,"textFieldWithoutLabel": `<template>
+`,
+	textFieldWithoutLabel: `<template>
   <mdc-text-field id="dessert" />
 </template>
 
@@ -1208,7 +1274,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/text-field";
 </style>
-`,"trailingIconButton": `<template>
+`,
+	trailingIconButton: `<template>
   <mdc-button icon="input" icon-direction="right">Log in</mdc-button>
 </template>
 
@@ -1225,7 +1292,8 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
-`,"unelevatedButton": `<template>
+`,
+	unelevatedButton: `<template>
   <mdc-button unelevated>Log in</mdc-button>
 </template>
 
@@ -1242,4 +1310,5 @@ export default {
 <style lang="scss">
 @import "material-components-web-vue/lib/css/button";
 </style>
-`};
+`,
+};

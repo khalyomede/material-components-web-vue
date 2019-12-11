@@ -30,4 +30,5 @@ export default {
 
 <style lang="scss">
 @import "../../../../../lib/css/card";
+@import "../../../../../lib/css/typography";
 </style>

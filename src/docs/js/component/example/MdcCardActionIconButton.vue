@@ -1,8 +1,8 @@
 <template>
 	<mdc-card>
-		<mdc-card-content v-typography="'body1'">
-			A macaron or French macaroon is a sweet meringue-based confection made with egg white, icing sugar, granulated sugar, almond powder or ground almond, and food coloring.
-		</mdc-card-content>
+		<mdc-card-content
+			v-typography="'body1'"
+		>A macaron or French macaroon is a sweet meringue-based confection made with egg white, icing sugar, granulated sugar, almond powder or ground almond, and food coloring.</mdc-card-content>
 		<mdc-card-action>
 			<mdc-button v-card-action-button slot="button">read more</mdc-button>
 			<mdc-button v-card-action-button slot="button">share</mdc-button>
@@ -12,21 +12,30 @@
 </template>
 
 <script>
-import { MdcButton, MdcIconButton, MdcCard, MdcCardContent, MdcCardAction, typography, cardActionButton, cardActionIcon } from "../../../../../lib/js";
-
-export default {
-  components: {
+import {
 	MdcButton,
 	MdcIconButton,
-    MdcCard,
+	MdcCard,
 	MdcCardContent,
-	MdcCardAction
-  },
-  directives: {
+	MdcCardAction,
+	typography,
 	cardActionButton,
 	cardActionIcon,
-    typography
-  }
+} from "../../../../../lib/js";
+
+export default {
+	components: {
+		MdcButton,
+		MdcIconButton,
+		MdcCard,
+		MdcCardContent,
+		MdcCardAction,
+	},
+	directives: {
+		cardActionButton,
+		cardActionIcon,
+		typography,
+	},
 };
 </script>
 
@@ -34,4 +43,5 @@ export default {
 @import "../../../../../lib/css/button";
 @import "../../../../../lib/css/icon-button";
 @import "../../../../../lib/css/card";
+@import "../../../../../lib/css/typography";
 </style>
