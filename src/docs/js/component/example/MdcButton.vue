@@ -1,17 +1,19 @@
 <template>
-  <mdc-button>default</mdc-button>
+	<mdc-button>default</mdc-button>
 </template>
 
 <script>
-import { MdcButton } from "../../../../../lib/js";
+	import {MdcButton} from "../../../../../lib/js";
 
-export default {
-  components: {
-    MdcButton
-  }
-};
+	console.log("mdc button", MdcButton);
+
+	export default {
+		components: {
+			MdcButton,
+		},
+	};
 </script>
 
 <style lang="scss">
-@import "../../../../../lib/css/button";
+	@import "../../../../../lib/css/button";
 </style>

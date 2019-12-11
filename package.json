@@ -18,15 +18,17 @@
 		"camelcase": "5.*",
 		"envify": "4.*",
 		"gulp": "4.*",
-		"gulp-autoprefixer": "6.*",
+		"gulp-autoprefixer": "7.*",
 		"gulp-babel": "8.*",
-		"gulp-bro": "1.*",
+		"gulp-bro": "2.*",
 		"gulp-clean": "0.*",
 		"gulp-clean-css": "4.*",
+		"gulp-npm-check": "1.*",
 		"gulp-plumber": "1.*",
 		"gulp-pug": "4.*",
-		"gulp-rename": "1.*",
+		"gulp-rename": "2.*",
 		"gulp-sass": "4.*",
+		"gulp-vue-compiler": "0.*",
 		"normalize.css": "8.*",
 		"np": "5.*",
 		"prismjs": "1.*",
@@ -34,7 +36,7 @@
 		"tinyify": "2.*",
 		"vue": "2.*",
 		"vue-router": "3.*",
-		"vueify": "9.*"
+		"vueify-fork": "9.*"
 	},
 	"scripts": {
 		"start": "node extra/fix-vueify.js && gulp build && gulp start",
@@ -44,7 +46,7 @@
 		"release": "np"
 	},
 	"dependencies": {
-		"material-components-web": "3.*"
+		"material-components-web": "4.*"
 	},
 	"files": [
 		"lib",

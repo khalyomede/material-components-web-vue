@@ -645,168 +645,168 @@
 			br
 </template>
 <script>
-import BaseCode from "../component/BaseCode.vue";
-import MdcButton from "../../../js/MdcButton.vue";
-import MdcCard from "../../../js/MdcCard.vue";
-import MdcCardContent from "../../../js/MdcCardContent.vue";
-import MdcList from "../../../js/MdcList.vue";
-import MdcListItem from "../../../js/MdcListItem.vue";
-import MdcGrid from "../../../js/MdcGrid.vue";
-import MdcGridCell from "../../../js/MdcGridCell.vue";
-import MdcGridRow from "../../../js/MdcGridRow.vue";
-import MdcTab from "../../../js/MdcTab.vue";
-import MdcTabContent from "../../../js/MdcTabContent.vue";
-import MdcTabItem from "../../../js/MdcTabItem.vue";
+	import BaseCode from "../component/BaseCode.vue";
+	import MdcButton from "../../../js/MdcButton.vue";
+	import MdcCard from "../../../js/MdcCard.vue";
+	import MdcCardContent from "../../../js/MdcCardContent.vue";
+	import MdcList from "../../../js/MdcList.vue";
+	import MdcListItem from "../../../js/MdcListItem.vue";
+	import MdcGrid from "../../../js/MdcGrid.vue";
+	import MdcGridCell from "../../../js/MdcGridCell.vue";
+	import MdcGridRow from "../../../js/MdcGridRow.vue";
+	import MdcTab from "../../../js/MdcTab.vue";
+	import MdcTabContent from "../../../js/MdcTabContent.vue";
+	import MdcTabItem from "../../../js/MdcTabItem.vue";
 
-import ExampleMdcButton from "../component/example/MdcButton.vue";
-import ExampleMdcRaisedButton from "../component/example/MdcRaisedButton.vue";
-import ExampleMdcUnelevatedButton from "../component/example/MdcUnelevatedButton.vue";
-import ExampleMdcOutlinedButton from "../component/example/MdcOutlinedButton.vue";
-import ExampleMdcDisabledButton from "../component/example/MdcDisabledButton.vue";
-import ExampleMdcDenseButton from "../component/example/MdcDenseButton.vue";
-import ExampleMdcIconButton from "../component/example/MdcIconButton.vue";
-import ExampleMdcTrailingIconButton from "../component/example/MdcTrailingIconButton.vue";
-import ExampleMdcButtonWithoutRipple from "../component/example/MdcButtonWithoutRipple.vue";
-import ExampleMdcIconButtonOnly from "../component/example/MdcIconButtonOnly.vue";
-import ExampleMdcIconButtonOnlyWithoutRipple from "../component/example/MdcIconButtonOnlyWithoutRipple.vue";
-import ExampleMdcIconButtonOnlyDisabled from "../component/example/MdcIconButtonOnlyDisabled.vue";
-import ExampleMdcSwitches from "../component/example/MdcSwitches.vue";
-import ExampleMdcSwitchWithCustomLabels from "../component/example/MdcSwitchWithCustomLabels.vue";
-import ExampleMdcSwitchChecked from "../component/example/MdcSwitchChecked.vue";
-import ExampleMdcSwitchDisabled from "../component/example/MdcSwitchDisabled.vue";
-import ExampleMdcCheckbox from "../component/example/MdcCheckbox.vue";
-import ExampleMdcRadio from "../component/example/MdcRadio.vue";
-import ExampleMdcDataTable from "../component/example/MdcDataTable.vue";
-import ExampleMdcList from "../component/example/MdcList.vue";
-import ExampleMdcListTwoLine from "../component/example/MdcListTwoLine.vue";
-import ExampleMdcListGroup from "../component/example/MdcListGroup.vue";
-import ExampleMdcListDivider from "../component/example/MdcListDivider.vue";
-import ExampleMdcListSingleSelection from "../component/example/MdcListSingleSelection.vue";
-import ExampleMdcListPreselectedItem from "../component/example/MdcListPreselectedItem.vue";
-import ExampleMdcListRadioGroup from "../component/example/MdcListRadioGroup.vue";
-import ExampleMdcListCheckboxItem from "../component/example/MdcListCheckboxItem.vue";
-import ExampleMdcCard from "../component/example/MdcCard.vue";
-import ExampleMdcCardOutlined from "../component/example/MdcCardOutlined.vue";
-import ExampleMdcCardRichMedia from "../component/example/MdcCardRichMedia.vue";
-import ExampleMdcCardAction from "../component/example/MdcCardAction.vue";
-import ExampleMdcCardActionIconButton from "../component/example/MdcCardActionIconButton.vue";
-import ExampleMdcCardCombinedExample from "../component/example/MdcCardCombinedExample.vue";
-import ExampleMdcTextField from "../component/example/MdcTextField.vue";
-import ExampleMdcTextFieldHelperText from "../component/example/MdcTextFieldHelperText.vue";
-import ExampleMdcTextFieldWithoutLabel from "../component/example/MdcTextFieldWithoutLabel.vue";
-import ExampleMdcTextFieldDisabled from "../component/example/MdcTextFieldDisabled.vue";
-import ExampleMdcTextFieldOutlined from "../component/example/MdcTextFieldOutlined.vue";
-import ExampleMdcTextFieldOutlinedWithoutLabel from "../component/example/MdcTextFieldOutlinedWithoutLabel.vue";
-import ExampleMdcTextFieldFullWidth from "../component/example/MdcTextFieldFullWidth.vue";
-import ExampleMdcTextFieldTextArea from "../component/example/MdcTextFieldTextArea.vue";
-import ExampleMdcTextFieldTextAreaWithoutLabel from "../component/example/MdcTextFieldTextAreaWithoutLabel.vue";
-import ExampleMdcLinearProgress from "../component/example/MdcLinearProgress.vue";
-import ExampleMdcLinearProgressReverse from "../component/example/MdcLinearProgressReverse.vue";
-import ExampleMdcLinearProgressBuffer from "../component/example/MdcLinearProgressBuffer.vue";
-import ExampleMdcLinearProgressBufferReverse from "../component/example/MdcLinearProgressBufferReverse.vue";
-import ExampleMdcLinearProgressBufferFull from "../component/example/MdcLinearProgressBufferFull.vue";
-import ExampleMdcLinearProgressUndeterminate from "../component/example/MdcLinearProgressUndeterminate.vue";
-import ExampleMdcLinearProgressUndeterminateReverse from "../component/example/MdcLinearProgressUndeterminateReverse.vue";
-import ExampleMdcSnackbar from "../component/example/MdcSnackbar.vue";
-import ExampleMdcSnackbarStacked from "../component/example/MdcSnackbarStacked.vue";
-import ExampleMdcSnackbarLeading from "../component/example/MdcSnackbarLeading.vue";
-import ExampleMdcDialog from "../component/example/MdcDialog.vue";
+	import ExampleMdcButton from "../component/example/MdcButton.vue";
+	import ExampleMdcRaisedButton from "../component/example/MdcRaisedButton.vue";
+	import ExampleMdcUnelevatedButton from "../component/example/MdcUnelevatedButton.vue";
+	import ExampleMdcOutlinedButton from "../component/example/MdcOutlinedButton.vue";
+	import ExampleMdcDisabledButton from "../component/example/MdcDisabledButton.vue";
+	import ExampleMdcDenseButton from "../component/example/MdcDenseButton.vue";
+	import ExampleMdcIconButton from "../component/example/MdcIconButton.vue";
+	import ExampleMdcTrailingIconButton from "../component/example/MdcTrailingIconButton.vue";
+	import ExampleMdcButtonWithoutRipple from "../component/example/MdcButtonWithoutRipple.vue";
+	import ExampleMdcIconButtonOnly from "../component/example/MdcIconButtonOnly.vue";
+	import ExampleMdcIconButtonOnlyWithoutRipple from "../component/example/MdcIconButtonOnlyWithoutRipple.vue";
+	import ExampleMdcIconButtonOnlyDisabled from "../component/example/MdcIconButtonOnlyDisabled.vue";
+	import ExampleMdcSwitches from "../component/example/MdcSwitches.vue";
+	import ExampleMdcSwitchWithCustomLabels from "../component/example/MdcSwitchWithCustomLabels.vue";
+	import ExampleMdcSwitchChecked from "../component/example/MdcSwitchChecked.vue";
+	import ExampleMdcSwitchDisabled from "../component/example/MdcSwitchDisabled.vue";
+	import ExampleMdcCheckbox from "../component/example/MdcCheckbox.vue";
+	import ExampleMdcRadio from "../component/example/MdcRadio.vue";
+	import ExampleMdcDataTable from "../component/example/MdcDataTable.vue";
+	import ExampleMdcList from "../component/example/MdcList.vue";
+	import ExampleMdcListTwoLine from "../component/example/MdcListTwoLine.vue";
+	import ExampleMdcListGroup from "../component/example/MdcListGroup.vue";
+	import ExampleMdcListDivider from "../component/example/MdcListDivider.vue";
+	import ExampleMdcListSingleSelection from "../component/example/MdcListSingleSelection.vue";
+	import ExampleMdcListPreselectedItem from "../component/example/MdcListPreselectedItem.vue";
+	import ExampleMdcListRadioGroup from "../component/example/MdcListRadioGroup.vue";
+	import ExampleMdcListCheckboxItem from "../component/example/MdcListCheckboxItem.vue";
+	import ExampleMdcCard from "../component/example/MdcCard.vue";
+	import ExampleMdcCardOutlined from "../component/example/MdcCardOutlined.vue";
+	import ExampleMdcCardRichMedia from "../component/example/MdcCardRichMedia.vue";
+	import ExampleMdcCardAction from "../component/example/MdcCardAction.vue";
+	import ExampleMdcCardActionIconButton from "../component/example/MdcCardActionIconButton.vue";
+	import ExampleMdcCardCombinedExample from "../component/example/MdcCardCombinedExample.vue";
+	import ExampleMdcTextField from "../component/example/MdcTextField.vue";
+	import ExampleMdcTextFieldHelperText from "../component/example/MdcTextFieldHelperText.vue";
+	import ExampleMdcTextFieldWithoutLabel from "../component/example/MdcTextFieldWithoutLabel.vue";
+	import ExampleMdcTextFieldDisabled from "../component/example/MdcTextFieldDisabled.vue";
+	import ExampleMdcTextFieldOutlined from "../component/example/MdcTextFieldOutlined.vue";
+	import ExampleMdcTextFieldOutlinedWithoutLabel from "../component/example/MdcTextFieldOutlinedWithoutLabel.vue";
+	import ExampleMdcTextFieldFullWidth from "../component/example/MdcTextFieldFullWidth.vue";
+	import ExampleMdcTextFieldTextArea from "../component/example/MdcTextFieldTextArea.vue";
+	import ExampleMdcTextFieldTextAreaWithoutLabel from "../component/example/MdcTextFieldTextAreaWithoutLabel.vue";
+	import ExampleMdcLinearProgress from "../component/example/MdcLinearProgress.vue";
+	import ExampleMdcLinearProgressReverse from "../component/example/MdcLinearProgressReverse.vue";
+	import ExampleMdcLinearProgressBuffer from "../component/example/MdcLinearProgressBuffer.vue";
+	import ExampleMdcLinearProgressBufferReverse from "../component/example/MdcLinearProgressBufferReverse.vue";
+	import ExampleMdcLinearProgressBufferFull from "../component/example/MdcLinearProgressBufferFull.vue";
+	import ExampleMdcLinearProgressUndeterminate from "../component/example/MdcLinearProgressUndeterminate.vue";
+	import ExampleMdcLinearProgressUndeterminateReverse from "../component/example/MdcLinearProgressUndeterminateReverse.vue";
+	import ExampleMdcSnackbar from "../component/example/MdcSnackbar.vue";
+	import ExampleMdcSnackbarStacked from "../component/example/MdcSnackbarStacked.vue";
+	import ExampleMdcSnackbarLeading from "../component/example/MdcSnackbarLeading.vue";
+	import ExampleMdcDialog from "../component/example/MdcDialog.vue";
 
-import imageList from "../../../js/directive/image-list";
-import ripple from "../../../js/directive/ripple";
-import textCenter from "../../../js/directive/text-center";
-import typography from "../../../js/directive/typography";
+	import imageList from "../../../js/directive/image-list";
+	import ripple from "../../../js/directive/ripple";
+	import textCenter from "../../../js/directive/text-center";
+	import typography from "../../../js/directive/typography";
 
-import examples from "../example";
+	import examples from "../example";
 
-import Prism from "prismjs";
+	import Prism from "prismjs";
 
-import "prismjs/components/prism-sass";
-import "prismjs/components/prism-javascript";
+	import "prismjs/components/prism-sass";
+	import "prismjs/components/prism-javascript";
 
-export default {
-  data() {
-    return examples;
-  },
-  components: {
-    BaseCode,
-    ExampleMdcButton,
-    ExampleMdcRaisedButton,
-    ExampleMdcUnelevatedButton,
-    ExampleMdcOutlinedButton,
-    ExampleMdcDisabledButton,
-    ExampleMdcDenseButton,
-    ExampleMdcIconButton,
-    ExampleMdcTrailingIconButton,
-    ExampleMdcButtonWithoutRipple,
-    ExampleMdcIconButtonOnly,
-    ExampleMdcIconButtonOnlyWithoutRipple,
-    ExampleMdcIconButtonOnlyDisabled,
-    ExampleMdcSwitches,
-    ExampleMdcSwitchWithCustomLabels,
-    ExampleMdcSwitchChecked,
-    ExampleMdcSwitchDisabled,
-    ExampleMdcCheckbox,
-    ExampleMdcRadio,
-    ExampleMdcDataTable,
-    ExampleMdcList,
-    ExampleMdcListTwoLine,
-    ExampleMdcListGroup,
-    ExampleMdcListDivider,
-    ExampleMdcListSingleSelection,
-    ExampleMdcListPreselectedItem,
-    ExampleMdcListRadioGroup,
-    ExampleMdcCheckbox,
-    ExampleMdcListCheckboxItem,
-    ExampleMdcCard,
-    ExampleMdcCardOutlined,
-    ExampleMdcCardRichMedia,
-    ExampleMdcCardAction,
-    ExampleMdcCardActionIconButton,
-    ExampleMdcCardCombinedExample,
-    ExampleMdcTextField,
-    ExampleMdcTextFieldHelperText,
-    ExampleMdcTextFieldWithoutLabel,
-    ExampleMdcTextFieldDisabled,
-    ExampleMdcTextFieldOutlined,
-    ExampleMdcTextFieldOutlinedWithoutLabel,
-    ExampleMdcTextFieldFullWidth,
-    ExampleMdcTextFieldTextArea,
-    ExampleMdcTextFieldTextAreaWithoutLabel,
-    ExampleMdcLinearProgress,
-    ExampleMdcLinearProgressReverse,
-    ExampleMdcLinearProgressBuffer,
-    ExampleMdcLinearProgressBufferFull,
-    ExampleMdcLinearProgressBufferReverse,
-    ExampleMdcLinearProgressUndeterminate,
-    ExampleMdcLinearProgressUndeterminateReverse,
-    ExampleMdcSnackbar,
-    ExampleMdcSnackbarStacked,
-    ExampleMdcSnackbarLeading,
-    ExampleMdcDialog,
-    MdcButton,
-    MdcCard,
-    MdcCardContent,
-    MdcList,
-    MdcListItem,
-    MdcGrid,
-    MdcGridCell,
-    MdcGridRow,
-    MdcTab,
-    MdcTabContent,
-    MdcTabItem
-  },
-  directives: {
-    typography
-  },
-  mounted() {
-    Prism.highlightAll();
-  }
-};
+	export default {
+		data() {
+			return examples;
+		},
+		components: {
+			BaseCode,
+			ExampleMdcButton,
+			ExampleMdcRaisedButton,
+			ExampleMdcUnelevatedButton,
+			ExampleMdcOutlinedButton,
+			ExampleMdcDisabledButton,
+			ExampleMdcDenseButton,
+			ExampleMdcIconButton,
+			ExampleMdcTrailingIconButton,
+			ExampleMdcButtonWithoutRipple,
+			ExampleMdcIconButtonOnly,
+			ExampleMdcIconButtonOnlyWithoutRipple,
+			ExampleMdcIconButtonOnlyDisabled,
+			ExampleMdcSwitches,
+			ExampleMdcSwitchWithCustomLabels,
+			ExampleMdcSwitchChecked,
+			ExampleMdcSwitchDisabled,
+			ExampleMdcCheckbox,
+			ExampleMdcRadio,
+			ExampleMdcDataTable,
+			ExampleMdcList,
+			ExampleMdcListTwoLine,
+			ExampleMdcListGroup,
+			ExampleMdcListDivider,
+			ExampleMdcListSingleSelection,
+			ExampleMdcListPreselectedItem,
+			ExampleMdcListRadioGroup,
+			ExampleMdcCheckbox,
+			ExampleMdcListCheckboxItem,
+			ExampleMdcCard,
+			ExampleMdcCardOutlined,
+			ExampleMdcCardRichMedia,
+			ExampleMdcCardAction,
+			ExampleMdcCardActionIconButton,
+			ExampleMdcCardCombinedExample,
+			ExampleMdcTextField,
+			ExampleMdcTextFieldHelperText,
+			ExampleMdcTextFieldWithoutLabel,
+			ExampleMdcTextFieldDisabled,
+			ExampleMdcTextFieldOutlined,
+			ExampleMdcTextFieldOutlinedWithoutLabel,
+			ExampleMdcTextFieldFullWidth,
+			ExampleMdcTextFieldTextArea,
+			ExampleMdcTextFieldTextAreaWithoutLabel,
+			ExampleMdcLinearProgress,
+			ExampleMdcLinearProgressReverse,
+			ExampleMdcLinearProgressBuffer,
+			ExampleMdcLinearProgressBufferFull,
+			ExampleMdcLinearProgressBufferReverse,
+			ExampleMdcLinearProgressUndeterminate,
+			ExampleMdcLinearProgressUndeterminateReverse,
+			ExampleMdcSnackbar,
+			ExampleMdcSnackbarStacked,
+			ExampleMdcSnackbarLeading,
+			ExampleMdcDialog,
+			MdcButton,
+			MdcCard,
+			MdcCardContent,
+			MdcList,
+			MdcListItem,
+			MdcGrid,
+			MdcGridCell,
+			MdcGridRow,
+			MdcTab,
+			MdcTabContent,
+			MdcTabItem,
+		},
+		directives: {
+			typography,
+		},
+		mounted() {
+			Prism.highlightAll();
+		},
+	};
 </script>
 <style lang="scss" scoped>
-h1,
-h2 {
-  margin: 0px;
-}
+	h1,
+	h2 {
+		margin: 0px;
+	}
 </style>

@@ -1,4 +1,4 @@
-import { src, dest, watch, series, parallel } from "gulp";
+import {src, dest, watch, series, parallel} from "gulp";
 import pug from "gulp-pug";
 import sass from "gulp-sass";
 import autoprefixer from "gulp-autoprefixer";
@@ -10,6 +10,8 @@ import plumber from "gulp-plumber";
 import browserSync from "browser-sync";
 import babelify from "babelify";
 import babel from "gulp-babel";
+import vueCompiler from "gulp-vue-compiler";
+import npmCheck from "gulp-npm-check";
 
 const browser = browserSync.create();
 
@@ -22,26 +24,28 @@ const docsJs = () =>
 					[
 						babelify.configure({
 							presets: ["@babel/preset-env"],
-							plugins: ["@babel/plugin-proposal-export-default-from"]
-						})
+							plugins: [
+								"@babel/plugin-proposal-export-default-from",
+							],
+						}),
 					],
 					[
-						"vueify",
+						"vueify-fork",
 						{
 							sass: {
-								includePaths: ["node_modules"]
-							}
-						}
+								includePaths: ["node_modules"],
+							},
+						},
 					],
 					"envify",
-					"brfs"
+					"brfs",
 				],
-				plugin: ["tinyify"]
+				plugin: ["tinyify"],
 			})
 		)
 		.pipe(
 			rename({
-				suffix: ".min"
+				suffix: ".min",
 			})
 		)
 		.pipe(dest("docs/js"))
@@ -60,14 +64,14 @@ const docsCss = () =>
 		.pipe(plumber())
 		.pipe(
 			sass({
-				includePaths: ["node_modules"]
+				includePaths: ["node_modules"],
 			})
 		)
 		.pipe(autoprefixer())
 		.pipe(cleanCss())
 		.pipe(
 			rename({
-				suffix: ".min"
+				suffix: ".min",
 			})
 		)
 		.pipe(dest("docs/css"))
@@ -80,19 +84,32 @@ const libCss = () =>
 		.pipe(dest("lib/css"))
 		.pipe(browser.stream());
 
-const libJs = () =>
-	src("src/js/**/*.{js,vue}")
+const libVue = () =>
+	src("src/js/**/*.vue")
 		.pipe(plumber())
+		.pipe(vueCompiler())
+		.pipe(
+			rename({
+				extname: ".js",
+			})
+		)
+		.pipe(dest("lib/js"))
+		.pipe(browser.stream());
+
+const libJs = () =>
+	src("src/js/**/*.js")
+		.pipe(plumber())
+		.pipe(babel())
 		.pipe(dest("lib/js"))
 		.pipe(browser.stream());
 
 const clearDocs = () =>
-	src("docs", { allowEmpty: true })
+	src("docs", {allowEmpty: true})
 		.pipe(plumber())
 		.pipe(clean());
 
 const clearLib = () =>
-	src("lib", { allowEmpty: true })
+	src("lib", {allowEmpty: true})
 		.pipe(plumber())
 		.pipe(clean());
 
@@ -102,20 +119,30 @@ const reload = done => {
 	done();
 };
 
-const build = series(clearDocs, clearLib, parallel(libCss, libJs), parallel(docsJs, docsHtml, docsCss));
+const checkDependencies = done => npmCheck(done);
+
+const build = parallel(
+	series(
+		clearDocs,
+		clearLib,
+		parallel(libCss, series(libVue, libJs)),
+		parallel(docsJs, docsHtml, docsCss)
+	),
+	checkDependencies
+);
 
 const start = () => {
 	browser.init({
 		server: {
-			baseDir: "docs"
-		}
+			baseDir: "docs",
+		},
 	});
 
-	watch("src/js/**/*.{vue,js}", series(libJs, docsJs, reload));
+	watch("src/js/**/*.{vue,js}", series(libVue, libJs, docsJs, reload));
 	watch("src/docs/js/**/*.{vue,js}", series(docsJs, reload));
 	watch("src/css/**/*.sass", series(libCss, docsCss, reload));
 	watch("src/docs/css/**/*.sass", series(docsCss, reload));
 	watch("src/docs/html/**/*.pug", series(docsHtml, reload));
 };
 
-export { start, build };
+export {start, build};
