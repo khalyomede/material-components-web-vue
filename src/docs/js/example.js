@@ -4,9 +4,7 @@ export default {
 </template>
 
 <script>
-	import {MdcButton} from "material-components-web-vue";
-
-	console.log("mdc button", MdcButton);
+	import { MdcButton } from "material-components-web-vue";
 
 	export default {
 		components: {
@@ -442,6 +440,22 @@ export default {
 
 <style lang="scss">
 @import "material-components-web-vue/lib/css/button";
+</style>
+`,
+	fab: `<template>
+	<mdc-fab label="star" icon="star" position="right" />
+</template>
+<script>
+	import { MdcFab } from "material-components-web-vue";
+
+	export default {
+		components: {
+			MdcFab,
+		},
+	};
+</script>
+<style lang="scss">
+	@import "material-components-web-vue/lib/css/fab";
 </style>
 `,
 	grid: `<template>
@@ -1138,6 +1152,37 @@ export default {
 @import "material-components-web-vue/lib/css/switch";
 </style>
 `,
+	tab: `<template>
+	<mdc-tab>
+		<mdc-tab-item active>French desserts</mdc-tab-item>
+		<mdc-tab-item>British desserts</mdc-tab-item>
+		<mdc-tab-content active>
+			In France, a chef that prepares desserts and pastries is called a
+			pâtissier, who is part of a kitchen hierarchy termed brigade de
+			cuisine (kitchen staff).
+		</mdc-tab-content>
+		<mdc-tab-content>
+			The British kitchen has a long tradition of noted sweet-making,
+			particularly with puddings, custards, and creams; custard sauce is
+			called crème anglaise (English cream) in French cuisine.
+		</mdc-tab-content>
+	</mdc-tab>
+</template>
+<script>
+	import { MdcTab, MdcTabContent, MdcTabItem } from "material-components-web-vue";
+
+	export default {
+		components: {
+			MdcTab,
+			MdcTabItem,
+			MdcTabContent,
+		},
+	};
+</script>
+<style lang="scss">
+	@import "material-components-web-vue/lib/css/tab";
+</style>
+`,
 	textField: `<template>
   <mdc-text-field id="dessert" label="Dessert" />
 </template>
@@ -1303,6 +1348,31 @@ export default {
 
 <style lang="scss">
 @import "material-components-web-vue/lib/css/text-field";
+</style>
+`,
+	topAppBar: `<template>
+	<mdc-top-app-bar>
+		<mdc-top-app-bar-button slot="start">menu</mdc-top-app-bar-button>
+		<mdc-top-app-bar-title slot="start">MDC Vue</mdc-top-app-bar-title>
+	</mdc-top-app-bar>
+</template>
+<script>
+	import {
+		MdcTopAppBar,
+		MdcTopAppBarButton,
+		MdcTopAppBarTitle,
+	} from "material-components-web-vue";
+
+	export default {
+		components: {
+			MdcTopAppBar,
+			MdcTopAppBarButton,
+			MdcTopAppBarTitle,
+		},
+	};
+</script>
+<style lang="scss">
+	@import "material-components-web-vue/lib/css/top-app-bar";
 </style>
 `,
 	trailingIconButton: `<template>
