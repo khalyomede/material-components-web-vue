@@ -1,6 +1,5 @@
 <template lang="pug">
-	button(v-if="href" :class="classes" v-bind="$attrs" v-on="$listeners")
-	a(v-else :class="classes" v-bind="$attrs" v-on="$listeners")
+	button(:class="classes")
 		.mdc-button__ripple
 		i.material-icons.mdc-button__icon.mdc-button__icon-left(v-if="icon && iconDirection === 'left'" aria-hidden="true") {{ icon }}
 		span.mdc-button__label
@@ -8,7 +7,7 @@
 		i.material-icons.mdc-button__icon.mdc-button__icon-right(v-if="icon && iconDirection === 'right'" aria-hidden="true") {{ icon }}
 </template>
 <script>
-import {MDCRipple} from "@material/ripple";
+import { MDCRipple } from "@material/ripple";
 
 export default {
 	props: {
