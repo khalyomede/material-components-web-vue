@@ -23,37 +23,37 @@
 			router-view
 </template>
 <script>
-import MdcTopAppBar from "../../../js/MdcTopAppBar.vue";
-import MdcTopAppBarButton from "../../../js/MdcTopAppBarButton.vue";
-import MdcTopAppBarTitle from "../../../js/MdcTopAppBarTitle.vue";
-import MdcButton from "../../../js/MdcButton.vue";
-import MdcDrawer from "../../../js/MdcDrawer.vue";
-import MdcDrawerScrim from "../../../js/MdcDrawerScrim.vue";
-import MdcList from "../../../js/MdcList.vue";
-import MdcListItem from "../../../js/MdcListItem.vue";
-import router from "../router";
+	import MdcTopAppBar from "../../../js/MdcTopAppBar.vue";
+	import MdcTopAppBarButton from "../../../js/MdcTopAppBarButton.vue";
+	import MdcTopAppBarTitle from "../../../js/MdcTopAppBarTitle.vue";
+	import MdcButton from "../../../js/MdcButton.vue";
+	import MdcDrawer from "../../../js/MdcDrawer.vue";
+	import MdcDrawerScrim from "../../../js/MdcDrawerScrim.vue";
+	import MdcList from "../../../js/MdcList.vue";
+	import MdcListItem from "../../../js/MdcListItem.vue";
+	import router from "../router";
 
-export default {
-  components: {
-    MdcTopAppBar,
-    MdcTopAppBarButton,
-    MdcTopAppBarTitle,
-    MdcButton,
-    MdcDrawer,
-    MdcDrawerScrim,
-    MdcList,
-    MdcListItem
-  },
-  methods: {
-    showSidebar() {
-      this.$refs.sidebar.element.open = true;
-    }
-  }
-};
+	export default {
+		components: {
+			MdcTopAppBar,
+			MdcTopAppBarButton,
+			MdcTopAppBarTitle,
+			MdcButton,
+			MdcDrawer,
+			MdcDrawerScrim,
+			MdcList,
+			MdcListItem,
+		},
+		methods: {
+			showSidebar() {
+				this.$refs.sidebar.element.open = true;
+			},
+		},
+	};
 </script>
 <style lang="scss">
-@import "../../../css/button";
-@import "../../../css/top-app-bar";
-@import "../../../css/drawer";
-@import "../../../css/list";
+	@import "../../../css/button";
+	@import "../../../css/top-app-bar";
+	@import "../../../css/drawer";
+	@import "../../../css/list";
 </style>
