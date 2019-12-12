@@ -444,6 +444,36 @@ export default {
 @import "material-components-web-vue/lib/css/button";
 </style>
 `,
+	grid: `<template>
+	<mdc-grid>
+		<mdc-grid-row>
+			<mdc-grid-cell desktop="4" tablet="4" phone="4">
+				Scone
+			</mdc-grid-cell>
+			<mdc-grid-cell desktop="4" tablet="4" phone="4">
+				Shortbread
+			</mdc-grid-cell>
+			<mdc-grid-cell desktop="4" tablet="4" phone="4">
+				Sticky Toffee Pudding
+			</mdc-grid-cell>
+		</mdc-grid-row>
+	</mdc-grid>
+</template>
+<script>
+	import { MdcGrid, MdcGridCell, MdcGridRow } from "material-components-web-vue";
+
+	export default {
+		components: {
+			MdcGrid,
+			MdcGridCell,
+			MdcGridRow,
+		},
+	};
+</script>
+<style lang="scss">
+	@import "material-components-web-vue/lib/css/grid";
+</style>
+`,
 	iconButton: `<template>
   <mdc-button icon="favorite">icon</mdc-button>
 </template>
