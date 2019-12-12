@@ -13,6 +13,7 @@ export MdcDialog from "./MdcDialog.js";
 export MdcDialogAction from "./MdcDialogAction.js";
 export MdcDialogContent from "./MdcDialogContent.js";
 export MdcDialogTitle from "./MdcDialogTitle.js";
+export MdcFab from "./MdcFab.js";
 export MdcGrid from "./MdcGrid.js";
 export MdcGridCell from "./MdcGridCell.js";
 export MdcGridRow from "./MdcGridRow.js";
