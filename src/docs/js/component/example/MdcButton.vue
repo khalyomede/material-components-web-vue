@@ -3,9 +3,7 @@
 </template>
 
 <script>
-	import {MdcButton} from "../../../../../lib/js";
-
-	console.log("mdc button", MdcButton);
+	import { MdcButton } from "../../../../../lib/js";
 
 	export default {
 		components: {
