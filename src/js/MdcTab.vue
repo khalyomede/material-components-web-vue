@@ -7,20 +7,20 @@
 		slot(name="content")
 </template>
 <script>
-import { MDCTabBar } from "@material/tab-bar";
+	import { MDCTabBar } from "@material/tab-bar";
 
-export default {
-  mounted() {
-    const tab = new MDCTabBar(this.$el);
+	export default {
+		mounted() {
+			const tab = new MDCTabBar(this.$el);
 
-    var contents = this.$el.querySelectorAll(".content");
+			var contents = this.$el.querySelectorAll(".content");
 
-    tab.listen("MDCTabBar:activated", event => {
-      this.$el
-        .querySelector(".content--active")
-        .classList.remove("content--active");
-      contents[event.detail.index].classList.add("content--active");
-    });
-  }
-};
+			tab.listen("MDCTabBar:activated", event => {
+				this.$el
+					.querySelector(".content--active")
+					.classList.remove("content--active");
+				contents[event.detail.index].classList.add("content--active");
+			});
+		},
+	};
 </script>
